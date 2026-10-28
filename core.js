@@ -12,12 +12,12 @@
   /* ---------- number formatting ---------- */
   MQ.num = function (n, d) {
     if (!isFinite(n)) return '–';
-    return Number(n).toLocaleString('en-IE', { minimumFractionDigits: 0, maximumFractionDigits: d == null ? 0 : d });
+    return Number(n).toLocaleString(MQ.L.locale, { minimumFractionDigits: 0, maximumFractionDigits: d == null ? 0 : d });
   };
   MQ.eur = function (n, d) {
     d = d || 0;
     if (!isFinite(n)) return '€–';
-    var s = Math.abs(n).toLocaleString('en-IE', { minimumFractionDigits: d, maximumFractionDigits: d });
+    var s = Math.abs(n).toLocaleString(MQ.L.locale, { minimumFractionDigits: d, maximumFractionDigits: d });
     return (n < 0 ? '-' : '') + '€' + s;
   };
   MQ.pct = function (n, d) { return isFinite(n) ? n.toFixed(d == null ? 1 : d) + '%' : '–'; };
@@ -26,9 +26,9 @@
       case 'eur': return MQ.eur(v);
       case 'eur2': return MQ.eur(v, 2);
       case 'pct': return (Math.round(v * 100) / 100) + '%';
-      case 'yr': return v + (v === 1 ? ' yr' : ' yrs');
+      case 'yr': return v + ' ' + MQ.L.units.yr[v === 1 ? 0 : 1];
       case 'x': return (Math.round(v * 100) / 100) + '×';
-      case 'mo': return v + (v === 1 ? ' month' : ' months');
+      case 'mo': return v + ' ' + MQ.L.units.mo[v === 1 ? 0 : 1];
       default: return String(Math.round(v * 1000) / 1000);
     }
   };
@@ -72,35 +72,25 @@
     ct: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>'
   };
   MQ.order = ['found', 'inv', 'trd', 'ci', 'ct'];
-  MQ.tracks = {
-    found: { key: 'found', name: 'Money Foundations', short: 'Basics', kind: 'Everyone starts here', level: 'Beginner',
-      desc: 'Money, inflation, risk, compound interest, the investing toolbox and your own psychology. The base every investor and trader needs.' },
-    inv: { key: 'inv', name: 'Everyday Investor', short: 'Investor', kind: 'Investor · Stocks & ETFs', level: 'Beginner to Intermediate',
-      desc: 'Build wealth slowly with index funds, smart allocation, low costs and calm habits. The path most people should take.' },
-    trd: { key: 'trd', name: 'Day Trader', short: 'Day Trader', kind: 'Trader · Stocks, forex & futures', level: 'Intermediate to Advanced',
-      desc: 'Short-term trading for people who want to treat it like a craft: charts, strategies, strict risk rules and paper trading first.' },
-    ci: { key: 'ci', name: 'Crypto Investor', short: 'Crypto Investor', kind: 'Investor · Crypto', level: 'Beginner to Intermediate',
-      desc: 'Understand blockchain, wallets and security, evaluate projects, size your positions and avoid the scams.' },
-    ct: { key: 'ct', name: 'Crypto Trader', short: 'Crypto Trader', kind: 'Trader · Crypto', level: 'Intermediate to Advanced',
-      desc: '24/7 markets, perpetual futures, leverage and liquidation, market signals, bots, and the psychology of non-stop trading.' }
-  };
+  MQ.tracks = {};
+  MQ.order.forEach(function (k) { var x = MQ.L.tracks[k]; MQ.tracks[k] = { key: k, name: x.name, short: x.short, kind: x.kind, level: x.level, desc: x.desc }; });
   MQ.trackStyle = function (k) { return '--a:var(--' + k + ');--as:var(--' + k + '-s);--on:var(--' + k + '-on)'; };
   MQ.addLessons = function (k, arr) { MQ.lessons[k] = arr; };
 
   /* ---------- content building blocks ---------- */
   var B = MQ.B = {};
   B.box = function (cls, label, html) { return '<aside class="box ' + cls + '"><span class="blabel">' + label + '</span>' + html + '</aside>'; };
-  B.key = function (h) { return B.box('key', 'Key idea', h); };
-  B.ex = function (h) { return B.box('ex', 'Real-life example', h); };
-  B.warn = function (h) { return B.box('warn', 'Watch out', h); };
-  B.tip = function (h) { return B.box('tip', 'Pro tip', h); };
-  B.tryit = function (h) { return B.box('try', 'Try it', h); };
+  B.key = function (h) { return B.box('key', MQ.L.boxes.key, h); };
+  B.ex = function (h) { return B.box('ex', MQ.L.boxes.ex, h); };
+  B.warn = function (h) { return B.box('warn', MQ.L.boxes.warn, h); };
+  B.tip = function (h) { return B.box('tip', MQ.L.boxes.tip, h); };
+  B.tryit = function (h) { return B.box('try', MQ.L.boxes.tryit, h); };
   B.w = function (name, opts) {
     var at = '';
     for (var k in (opts || {})) at += ' data-' + k + '="' + MQ.esc(opts[k]) + '"';
     return '<div class="widget" data-widget="' + name + '"' + at + '></div>';
   };
-  B.take = function (arr) { return '<div class="take"><h3>Key takeaways</h3><ul>' + arr.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul></div>'; };
+  B.take = function (arr) { return '<div class="take"><h3>' + MQ.L.boxes.take + '</h3><ul>' + arr.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul></div>'; };
   B.tbl = function (head, rows) {
     return '<div class="tbl"><table><thead><tr>' + head.map(function (h) { return '<th>' + h + '</th>'; }).join('') + '</tr></thead><tbody>' +
       rows.map(function (r) { return '<tr>' + r.map(function (c, i) { return i === 0 ? '<th scope="row">' + c + '</th>' : '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') +
@@ -212,7 +202,7 @@
         s += '<circle cx="' + X(last).toFixed(1) + '" cy="' + Y(se.data[last]).toFixed(1) + '" r="4.2" style="fill:' + se.color + ';stroke:var(--card)" stroke-width="2"/>';
       }
     });
-    return '<svg viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + MQ.esc(o.label || 'Chart') + '">' + g + s + '</svg>';
+    return '<svg viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + MQ.esc(o.label || MQ.L.sys.chart) + '">' + g + s + '</svg>';
   };
   MQ.legend = function (items) {
     return '<div class="legend">' + items.map(function (it) { return '<span><i style="background:' + it[1] + '"></i>' + it[0] + '</span>'; }).join('') + '</div>';
@@ -229,8 +219,8 @@
       if (el.dataset.mounted) return;
       var fn = MQ.widgets[el.dataset.widget];
       el.dataset.mounted = '1';
-      if (!fn) { el.textContent = 'Widget not found: ' + el.dataset.widget; return; }
-      try { fn(el, el.dataset); } catch (e) { el.textContent = 'This widget could not load.'; if (window.console) console.error(e); }
+      if (!fn) { el.textContent = MQ.L.sys.missing + el.dataset.widget; return; }
+      try { fn(el, el.dataset); } catch (e) { el.textContent = MQ.L.sys.failed; if (window.console) console.error(e); }
     });
   };
 })();

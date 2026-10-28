@@ -1,4 +1,4 @@
-/* Glossary, Pro Path page and Trading Lab pages */
+/* 术语表、专业路径页面和 Trading Lab 页面 */
 (function () {
   'use strict';
   const MQ = window.MQ, B = MQ.B;
@@ -6,179 +6,179 @@
   MQ.misc = {};
 
   MQ.misc.glossary = [
-    ['Altcoin', 'Any crypto-asset other than Bitcoin.'],
-    ['Ask', 'The lowest price at which sellers are willing to sell. You pay the ask when you buy.'],
-    ['Asset allocation', 'How your money is split between asset types such as stocks, bonds, cash and crypto.'],
-    ['ATR (average true range)', 'An indicator of how much an asset typically moves in a period. Used to set stops and position size.'],
-    ['Bear market', 'A long period of falling prices, often defined as a drop of 20% or more from a peak.'],
-    ['Bid', 'The highest price buyers will pay. You receive the bid when you sell.'],
-    ['Blockchain', 'A shared digital record kept by many computers, where blocks of data are chained together and hard to alter.'],
-    ['Bond', 'A loan to a government or company that pays interest and returns the principal at the end.'],
-    ['Broker', 'A company that executes your buy and sell orders in financial markets.'],
-    ['Bull market', 'A long period of rising prices.'],
-    ['Candlestick', 'A chart symbol showing open, high, low and close for a time period.'],
-    ['Capital gains tax', 'Tax on the profit made when you sell an asset for more than you paid.'],
-    ['CFD (contract for difference)', 'A leveraged contract with a broker that tracks an asset\'s price without owning it. High risk for retail traders.'],
-    ['Cold wallet', 'A crypto wallet kept offline (often a hardware device) for strong security.'],
-    ['Compound interest', 'Earning returns on your previous returns, so growth accelerates over time.'],
-    ['Correlation', 'How closely two assets move together. Low correlation helps diversification.'],
-    ['Cost basis', 'What you originally paid for an asset, including fees. Used to calculate gains for tax.'],
-    ['Custodial wallet', 'A wallet where a company (such as an exchange) holds the private keys for you.'],
-    ['DCA (dollar-cost averaging)', 'Investing a fixed amount at regular intervals regardless of price.'],
-    ['DeFi (decentralised finance)', 'Financial services such as lending and trading run by smart contracts instead of traditional institutions.'],
-    ['Derivative', 'A contract whose value depends on another asset: futures, options, CFDs.'],
-    ['Diversification', 'Spreading money across many assets so one failure cannot ruin you.'],
-    ['Dividend', 'A share of company profits paid to shareholders.'],
-    ['Doji', 'A candlestick where open and close are almost equal, signalling indecision.'],
-    ['Drawdown', 'The fall from a peak to a low in your account or portfolio value.'],
-    ['EMA (exponential moving average)', 'A moving average that gives more weight to recent prices.'],
-    ['Emergency fund', 'Savings kept for unexpected costs, usually 3 to 6 months of essential spending.'],
-    ['EPS (earnings per share)', 'A company\'s net profit divided by its number of shares.'],
-    ['ETF (exchange-traded fund)', 'A basket of assets that trades on an exchange like a share.'],
-    ['Exchange', 'A marketplace where assets are bought and sold. In crypto, a platform to trade coins.'],
-    ['Expectancy', 'The average amount you expect to win or lose per trade over many trades.'],
-    ['FDV (fully diluted valuation)', 'Token price times total supply, showing value if all tokens were in circulation.'],
-    ['Fear and Greed Index', 'A 0 to 100 sentiment score for the crypto (or stock) market. Extreme readings can signal overheating or panic.'],
-    ['Fiat', 'Government-issued money such as euros or US dollars.'],
-    ['FOMO', 'Fear of missing out. The urge to buy because others are profiting.'],
-    ['Funding rate', 'A periodic payment between longs and shorts in perpetual futures that keeps the contract price near spot.'],
-    ['Futures', 'Contracts to buy or sell an asset at a set price on a future date.'],
-    ['Gas fee', 'The fee paid to a blockchain network to process a transaction.'],
-    ['Halving', 'A scheduled event that cuts Bitcoin\'s new coin issuance in half, roughly every four years.'],
-    ['Hardware wallet', 'A dedicated physical device that stores crypto private keys offline.'],
-    ['Hash', 'A short digital fingerprint of data. Changing the data changes the hash.'],
-    ['Index fund', 'A fund that copies a market index at low cost.'],
-    ['Inflation', 'A general rise in prices over time that reduces what money can buy.'],
-    ['Isolated margin', 'A margin mode where only the collateral assigned to a position is at risk.'],
-    ['KYC (know your customer)', 'Identity checks required by regulated financial platforms.'],
-    ['Leverage', 'Using borrowed money or contracts to control a larger position than your own cash. Magnifies gains and losses.'],
-    ['Limit order', 'An order to buy or sell only at a specified price or better.'],
-    ['Liquidation', 'Forced closing of a leveraged position when losses use up your margin.'],
-    ['Liquidity', 'How easily an asset can be bought or sold without moving the price.'],
-    ['Long', 'Buying an asset hoping its price rises.'],
-    ['Maker / taker', 'Makers add orders to the order book (lower fee); takers remove them by trading immediately (higher fee).'],
-    ['Margin', 'Collateral you post to open a leveraged position.'],
-    ['Market cap', 'Price multiplied by the number of units in circulation.'],
-    ['Market order', 'An order to buy or sell immediately at the best available price.'],
-    ['Moving average', 'The average price over a set number of periods, smoothing out noise to show trend.'],
-    ['Open interest', 'The total value of outstanding derivative contracts that have not been closed.'],
-    ['P/E ratio', 'Share price divided by earnings per share. How much you pay for each unit of profit.'],
-    ['Paper trading', 'Practising trading with simulated money.'],
-    ['Perpetual futures', 'Futures contracts with no expiry date, kept near spot price by funding payments.'],
-    ['Private key', 'The secret code that proves ownership and lets you move crypto. Never share it.'],
-    ['Proof of stake / proof of work', 'Two ways blockchains reach agreement: by locking up coins (stake) or by spending computing power (work).'],
-    ['Pump and dump', 'A scheme that hypes an asset to raise its price, then sells to buyers who arrive late.'],
-    ['R-multiple', 'A trade result measured in units of initial risk. Risking €50 and making €100 is +2R.'],
-    ['Rebalancing', 'Adjusting your portfolio back to its target mix.'],
-    ['Resistance', 'A price area where selling pressure has repeatedly stopped rallies.'],
-    ['RSI (relative strength index)', 'A momentum indicator ranging from 0 to 100.'],
-    ['Rug pull', 'A scam where developers drain liquidity or abandon a project after raising money.'],
-    ['Scalping', 'Trading very short-term for small gains many times a day.'],
-    ['Seed phrase', 'A list of 12 or 24 words that can recreate your wallet. Whoever has it controls the funds.'],
-    ['Short', 'Selling a borrowed asset hoping to buy it back cheaper.'],
-    ['Slippage', 'The difference between the expected and actual execution price of an order.'],
-    ['Smart contract', 'A program on a blockchain that runs automatically when conditions are met.'],
-    ['Spot', 'Buying or selling the actual asset at the current price, without leverage.'],
-    ['Spread', 'The difference between the bid and the ask price.'],
-    ['Stablecoin', 'A crypto token designed to keep a stable value, often pegged to a currency.'],
-    ['Staking', 'Locking proof-of-stake coins to help secure a network in exchange for rewards.'],
-    ['Stop-loss', 'An order that closes a position if price reaches a set loss level.'],
-    ['Support', 'A price area where buyers have repeatedly stepped in.'],
-    ['Swing trading', 'Holding positions from several days to several weeks.'],
-    ['TER (total expense ratio)', 'The yearly fee charged by a fund as a percentage of your investment.'],
-    ['Tokenomics', 'The economics of a token: supply, distribution, issuance and utility.'],
-    ['UCITS', 'A European regulatory framework for investment funds aimed at retail investors.'],
-    ['Volatility', 'How much and how fast prices move up and down.'],
-    ['Volume', 'The amount of an asset traded during a period.'],
-    ['VWAP', 'Volume-weighted average price, a common intraday benchmark of fair value.'],
-    ['Wallet', 'Software or hardware that stores your crypto keys and lets you send and receive coins.'],
-    ['Whale', 'A holder with a very large amount of an asset, able to move the market.'],
-    ['Yield', 'The income an investment pays, expressed as a percentage of its price.']
+    ['山寨币（Altcoin）', '除比特币以外的任何加密资产。'],
+    ['卖价（Ask）', '卖家愿意出售的最低价格。你买入时支付卖价。'],
+    ['资产配置', '你的资金如何分配在股票、债券、现金和加密货币等资产类别之间。'],
+    ['ATR（平均真实波幅）', '衡量某资产在一段时间内通常波动多大的指标。用于设置止损和仓位大小。'],
+    ['熊市', '价格长期下跌的时期，通常定义为从高点下跌 20% 或更多。'],
+    ['买价（Bid）', '买家愿意支付的最高价格。你卖出时收到买价。'],
+    ['区块链', '由许多计算机共同保存的共享数字账本，数据块相互链接，难以篡改。'],
+    ['债券', '借给政府或公司的贷款，支付利息并在到期时归还本金。'],
+    ['经纪商', '在金融市场上执行你买卖订单的公司。'],
+    ['牛市', '价格长期上涨的时期。'],
+    ['K 线（蜡烛图）', '显示一个时间段的开盘、最高、最低和收盘价的图表符号。'],
+    ['资本利得税', '当你以高于买入价的价格卖出资产时，对所得利润征收的税。'],
+    ['CFD（差价合约）', '与经纪商签订的杠杆合约，跟踪资产价格而无需持有该资产。对散户交易者风险很高。'],
+    ['冷钱包', '保持离线的加密钱包（常为硬件设备），安全性高。'],
+    ['复利', '在以前的收益上继续获得收益，使增长随时间加速。'],
+    ['相关性', '两种资产一起变动的紧密程度。低相关性有助于分散投资。'],
+    ['成本基础', '你最初购买资产所付的价格，含费用。用于计算税务收益。'],
+    ['托管钱包', '由公司（如交易所）替你保管私钥的钱包。'],
+    ['DCA（定期定额投资）', '无论价格如何，按固定间隔投入固定金额。'],
+    ['DeFi（去中心化金融）', '由智能合约而非传统机构运行的借贷、交易等金融服务。'],
+    ['衍生品', '价值取决于另一种资产的合约：期货、期权、CFD。'],
+    ['分散投资', '把资金分散到许多资产中，使一次失败不会毁掉你。'],
+    ['股息', '向股东分配的公司利润份额。'],
+    ['十字星（Doji）', '开盘价和收盘价几乎相等的 K 线，表示犹豫不决。'],
+    ['回撤', '你的账户或投资组合价值从高点到低点的下降。'],
+    ['EMA（指数移动平均线）', '给近期价格更大权重的移动平均线。'],
+    ['应急基金', '为意外开支预留的储蓄，通常是 3 到 6 个月的必要支出。'],
+    ['EPS（每股收益）', '公司净利润除以其股份数。'],
+    ['ETF（交易所交易基金）', '像股票一样在交易所交易的一篮子资产。'],
+    ['交易所', '买卖资产的市场。在加密货币中，指交易币的平台。'],
+    ['期望值（Expectancy）', '在多笔交易中，你预期每笔交易平均赢得或亏损的金额。'],
+    ['FDV（完全稀释估值）', '代币价格乘以总供应量，显示所有代币都在流通时的价值。'],
+    ['恐惧与贪婪指数', '加密货币（或股票）市场的 0 到 100 情绪评分。极端读数可能预示过热或恐慌。'],
+    ['法币（Fiat）', '由政府发行的货币，如欧元或美元。'],
+    ['FOMO', '害怕错过（fear of missing out）。因为别人在赚钱而产生的买入冲动。'],
+    ['资金费率', '永续合约中多头与空头之间的周期性支付，使合约价格保持在现货附近。'],
+    ['期货', '约定在未来某日以固定价格买入或卖出资产的合约。'],
+    ['Gas 费', '为处理一笔交易而支付给区块链网络的费用。'],
+    ['减半（Halving）', '大约每四年一次的预定事件，使比特币新币发行量减半。'],
+    ['硬件钱包', '在离线状态下保存加密私钥的专用实体设备。'],
+    ['哈希（Hash）', '数据的简短数字指纹。数据一变，哈希随之改变。'],
+    ['指数基金', '以低成本复制市场指数的基金。'],
+    ['通货膨胀', '价格随时间普遍上涨，降低货币的购买力。'],
+    ['逐仓保证金', '只有分配给某一仓位的抵押品面临风险的保证金模式。'],
+    ['KYC（了解你的客户）', '受监管的金融平台要求的身份核验。'],
+    ['杠杆', '使用借来的钱或合约控制比自有资金更大的仓位。放大盈亏。'],
+    ['限价单', '仅在指定价格或更优价格买入或卖出的订单。'],
+    ['爆仓（强制平仓）', '当亏损耗尽你的保证金时，杠杆仓位被强制关闭。'],
+    ['流动性', '资产能被轻松买卖而不引起价格变动的程度。'],
+    ['做多（Long）', '买入资产，期望价格上涨。'],
+    ['Maker / Taker', 'Maker 向订单簿添加订单（费用较低）；Taker 通过立即成交取走订单（费用较高）。'],
+    ['保证金', '为开立杠杆仓位而存入的抵押品。'],
+    ['市值', '价格乘以流通单位数量。'],
+    ['市价单', '以当前最佳可得价格立即买入或卖出的订单。'],
+    ['移动平均线', '一定周期数内的平均价格，平滑噪音以显示趋势。'],
+    ['未平仓合约（Open interest）', '尚未平仓的衍生品合约总价值。'],
+    ['市盈率（P/E）', '股价除以每股收益。你为每单位利润付出的价格。'],
+    ['模拟交易（Paper trading）', '用模拟资金练习交易。'],
+    ['永续合约', '没有到期日的期货合约，通过资金费率支付保持在现货价格附近。'],
+    ['私钥', '证明所有权并允许你转移加密货币的秘密代码。绝不分享。'],
+    ['权益证明 / 工作量证明', '区块链达成共识的两种方式：锁定币（权益）或消耗算力（工作）。'],
+    ['拉高出货（Pump and dump）', '通过炒作资产抬高价格，再卖给后来者的骗局。'],
+    ['R 倍数', '以初始风险为单位衡量的交易结果。冒 50 € 风险赚 100 € 就是 +2R。'],
+    ['再平衡', '将你的投资组合调整回目标配比。'],
+    ['阻力位', '卖压多次阻止上涨的价格区域。'],
+    ['RSI（相对强弱指数）', '取值在 0 到 100 之间的动量指标。'],
+    ['跑路（Rug pull）', '开发者在募资后抽走流动性或放弃项目的骗局。'],
+    ['剥头皮（Scalping）', '极短线交易，每天多次赚取小额利润。'],
+    ['助记词（Seed phrase）', '可恢复你的钱包的 12 或 24 个单词。谁拥有它，谁就控制资金。'],
+    ['做空（Short）', '卖出借来的资产，期望以更低价格买回。'],
+    ['滑点', '订单预期成交价与实际成交价之间的差额。'],
+    ['智能合约', '区块链上的程序，满足条件时自动运行。'],
+    ['现货（Spot）', '以当前价格买卖真实资产，不带杠杆。'],
+    ['买卖价差（Spread）', '买价与卖价之间的差额。'],
+    ['稳定币', '旨在保持稳定价值、通常与某种货币挂钩的加密代币。'],
+    ['质押（Staking）', '锁定权益证明币以帮助保护网络，并获得奖励。'],
+    ['止损（Stop-loss）', '价格达到设定亏损水平时平仓的订单。'],
+    ['支撑位', '买家多次介入的价格区域。'],
+    ['波段交易', '持仓数天到数周。'],
+    ['TER（总费用率）', '基金每年收取的费用，占你投资额的百分比。'],
+    ['代币经济学（Tokenomics）', '代币的经济：供应、分配、发行和用途。'],
+    ['UCITS', '欧洲面向散户投资者的投资基金监管框架。'],
+    ['波动率', '价格上下波动的幅度和速度。'],
+    ['成交量', '某一时期内资产的交易量。'],
+    ['VWAP', '成交量加权平均价，是常用的日内公允价值基准。'],
+    ['钱包（Wallet）', '保存你的加密密钥并让你收发币的软件或硬件。'],
+    ['巨鲸（Whale）', '持有大量某资产、足以影响市场的持有者。'],
+    ['收益率（Yield）', '投资支付的收入，以其价格的百分比表示。']
   ];
 
-  /* ---------- Trading Lab: compact card on the home page ---------- */
+  /* ---------- Trading Lab：首页紧凑卡片 ---------- */
   MQ.misc.labCard = `<div class="lab">
     <div>
-      <p class="eyebrow" style="color:#17143A;opacity:.75">Optional · from the creator of this course</p>
-      <h2>Want to go deeper? Meet Trading Lab.</h2>
-      <p>This course is free and complete on its own. If you want extra structure for trading, <b>Trading Lab</b> is the author's paid programme on Gumroad: a full trading course plus a <b>trading bot</b> designed to help traders apply their rules consistently.</p>
-      <ul><li>Complete trading programme to learn and practise</li><li>Includes a trading bot used by many members</li><li>Monthly subscription, no need to buy anything else</li></ul>
-      <div class="btnrow"><a class="btn" href="#lab">See what is inside</a><a class="btn alt" href="${LAB}" target="_blank" rel="noopener noreferrer">Open on Gumroad ↗</a></div>
-      <p class="fine">Trading carries a high risk of loss. No course or bot can guarantee results. Disclosure: Trading Lab is sold by the author of Money Quest Academy.</p>
+      <p class="eyebrow" style="color:#17143A;opacity:.75">可选 · 来自本课程的创作者</p>
+      <h2>想更进一步？认识一下 Trading Lab。</h2>
+      <p>本课程免费且自成体系。如果你想为交易增加结构，<b>Trading Lab</b> 是作者在 Gumroad 上的付费课程：一套完整的交易课程，外加一个旨在帮助交易者一致地执行规则的<b>交易机器人</b>。</p>
+      <ul><li>完整的交易课程，用于学习和练习</li><li>包含众多会员在用的交易机器人</li><li>按月订阅，无需再买其他东西</li></ul>
+      <div class="btnrow"><a class="btn" href="#lab">看看里面有什么</a><a class="btn alt" href="${LAB}" target="_blank" rel="noopener noreferrer">在 Gumroad 上打开 ↗</a></div>
+      <p class="fine">交易存在较高的亏损风险。没有任何课程或机器人能保证结果。披露：Trading Lab 由 Money Quest Academy 的作者出售。</p>
     </div>
-    <div class="price"><small>Trading Lab</small><b>€39</b><small>per month + VAT</small></div>
+    <div class="price"><small>Trading Lab</small><b>39 €</b><small>每月 + 增值税</small></div>
   </div>`;
 
-  /* ---------- Trading Lab: full page ---------- */
+  /* ---------- Trading Lab：完整页面 ---------- */
   MQ.misc.labPage = `<section class="thead" style="--a:var(--ct);--as:var(--ct-s);--on:var(--ct-on)"><div class="wrap thead-g"><span class="pc-icon">${MQ.icons.ct}</span>
-    <div><p class="eyebrow" style="margin-bottom:.4rem">Optional paid programme · by the creator of Money Quest</p><h1>Trading Lab</h1><p>A complete trading programme with a trading bot, for people who want structure after finishing the free Trader paths.</p></div></div></section>
+    <div><p class="eyebrow" style="margin-bottom:.4rem">可选付费课程 · 来自 Money Quest 的创作者</p><h1>Trading Lab</h1><p>一套完整的交易课程，附带交易机器人，适合在完成免费交易者路径后想要结构的人。</p></div></div></section>
   <section class="page"><div class="wrap"><div class="lbody" style="--a:var(--ct);--as:var(--ct-s);--on:var(--ct-on)">
-    ${B.box('warn', 'Disclosure', '<p>Money Quest Academy is free. Trading Lab is a separate, paid product sold by the same author. You do not need it to complete any path in this course.</p>')}
-    <h3>What it is</h3>
-    <p>Trading Lab is a subscription programme available on Gumroad. It brings together the knowledge needed to trade in one place, together with a <b>trading bot</b> that helps traders follow rules consistently instead of making emotional decisions. Many members use it to add structure to their trading.</p>
-    <div class="lab" style="margin:1.4rem 0;box-shadow:var(--shadow)"><div><h2 style="font-size:1.8rem">€39 per month + VAT</h2><p style="margin:0">Everything in one subscription: the trading programme and the bot. Check the Gumroad page for the current price, the full list of what is included and the terms.</p>
-      <div class="btnrow" style="margin-top:1rem"><a class="btn" href="${LAB}" target="_blank" rel="noopener noreferrer">Open Trading Lab on Gumroad ↗</a></div></div><div class="price"><small>Trading Lab</small><b>€39</b><small>per month + VAT</small></div></div>
-    <h3>Who it may suit</h3>
-    <ul><li>People who finished the Day Trader or Crypto Trader path and want a guided programme.</li><li>Traders who struggle with discipline and want rules executed consistently.</li><li>Anyone who prefers a structured system to assembling tools one by one.</li></ul>
-    <h3>Who should skip it</h3>
-    <ul><li>Anyone who has not yet built an emergency fund or who has high-interest debt.</li><li>Anyone expecting guaranteed profit. No honest product offers that.</li><li>Beginners who have not yet practised on a simulator. Do the paper trading lab first.</li></ul>
-    <h3>How it fits with this free course</h3>
-    ${B.tbl(['', 'Money Quest (free)', 'Trading Lab (paid)'], [
-        ['Purpose', 'Teaches the foundations of investing and trading', 'Programme and trading bot for active traders'],
-        ['Cost', 'Free', '€39 per month + VAT'],
-        ['Best for', 'Everyone starting from zero', 'Traders wanting extra structure and automation'],
-        ['Risk', 'Educational, no trading involved', 'Trading carries a real risk of loss']
+    ${B.box('warn', '披露', '<p>Money Quest Academy 是免费的。Trading Lab 是同一作者出售的另一个独立付费产品。完成本课程的任何路径都不需要它。</p>')}
+    <h3>它是什么</h3>
+    <p>Trading Lab 是 Gumroad 上的订阅式课程。它把交易所需的知识集中在一处，并配有一个<b>交易机器人</b>，帮助交易者一致地遵守规则，而不是做情绪化决定。许多会员用它来为自己的交易增加结构。</p>
+    <div class="lab" style="margin:1.4rem 0;box-shadow:var(--shadow)"><div><h2 style="font-size:1.8rem">每月 39 € + 增值税</h2><p style="margin:0">一个订阅包含全部：交易课程和机器人。请查看 Gumroad 页面了解当前价格、完整的包含内容清单和条款。</p>
+      <div class="btnrow" style="margin-top:1rem"><a class="btn" href="${LAB}" target="_blank" rel="noopener noreferrer">在 Gumroad 上打开 Trading Lab ↗</a></div></div><div class="price"><small>Trading Lab</small><b>39 €</b><small>每月 + 增值税</small></div></div>
+    <h3>可能适合谁</h3>
+    <ul><li>完成了日内交易者或加密货币交易者路径、想要一套有指导课程的人。</li><li>在纪律上挣扎、希望规则被一致执行的交易者。</li><li>更喜欢结构化系统，而不是一件件拼凑工具的人。</li></ul>
+    <h3>谁应该跳过</h3>
+    <ul><li>还没有建立应急基金或有高利率债务的人。</li><li>期待保证盈利的人。没有诚实的产品会提供这种保证。</li><li>尚未在模拟器上练习过的新手。请先完成模拟交易实验室。</li></ul>
+    <h3>它与本免费课程如何配合</h3>
+    ${B.tbl(['', 'Money Quest（免费）', 'Trading Lab（付费）'], [
+        ['目的', '教授投资和交易的基础', '面向活跃交易者的课程和交易机器人'],
+        ['费用', '免费', '每月 39 € + 增值税'],
+        ['最适合', '所有从零开始的人', '想要额外结构和自动化的交易者'],
+        ['风险', '教育性质，不涉及交易', '交易存在真实的亏损风险']
       ])}
-    <h3>Honest expectations</h3>
-    <p>A bot is software that follows rules. It can help you stay disciplined, and it never gets tired, but it does not create an edge on its own and it does not remove market risk. Results depend on market conditions, your settings, your risk management and your own behaviour. Use the checklist from the bots lesson: understand the rules, test with small size, use trade-only permissions and set a maximum loss.</p>
-    ${B.warn('<p>Never invest money you cannot afford to lose. Trading, and especially leveraged trading, can lose money quickly.</p>')}
-    <div class="btnrow"><a class="btn" href="${LAB}" target="_blank" rel="noopener noreferrer">Open Trading Lab on Gumroad ↗</a><a class="btn alt" href="#track-ct">Back to the Crypto Trader path</a></div>
+    <h3>诚实的预期</h3>
+    <p>机器人是遵循规则的软件。它能帮助你保持纪律，而且从不疲倦，但它自己并不创造优势，也不会消除市场风险。结果取决于市场状况、你的设置、你的风险管理和你自己的行为。请使用机器人课程中的清单：理解规则，小仓位测试，使用仅交易权限，并设定最大亏损。</p>
+    ${B.warn('<p>永远不要投入你亏不起的钱。交易，尤其是杠杆交易，可能很快亏掉钱。</p>')}
+    <div class="btnrow"><a class="btn" href="${LAB}" target="_blank" rel="noopener noreferrer">在 Gumroad 上打开 Trading Lab ↗</a><a class="btn alt" href="#track-ct">返回加密货币交易者路径</a></div>
   </div></div></section>`;
 
-  /* ---------- Pro Path ---------- */
+  /* ---------- 专业路径 ---------- */
   MQ.misc.proPage = `<section class="thead" style="${MQ.trackStyle('found')}"><div class="wrap thead-g"><span class="pc-icon">${MQ.icons.found}</span>
-    <div><p class="eyebrow" style="margin-bottom:.4rem">After the paths</p><h1>The Pro Path</h1><p>What separates hobbyists from professionals, and the ladder from beginner to someone others trust with money.</p></div></div></section>
+    <div><p class="eyebrow" style="margin-bottom:.4rem">完成各条路径之后</p><h1>专业路径</h1><p>业余爱好者与专业人士的区别，以及从新手到被他人信任管理资金的阶梯。</p></div></div></section>
   <section class="page"><div class="wrap"><div class="lbody" style="${MQ.trackStyle('found')}">
-    <p>"Professional" is not a title you give yourself. It is a way of working. Professionals have <b>process</b>, <b>risk control</b>, <b>records</b> and <b>humility</b>. They survive bad years and compound good ones. The ladder below works for investors, traders and crypto alike.</p>
-    <h3>The four levels</h3>
-    ${B.tbl(['Level', 'What you do', 'Proof you are ready for the next level'], [
-      ['1. Learner', 'Finish the Foundations and your chosen path. Practise with simulators. Build your emergency fund.', 'You can explain risk, diversification, costs and your own plan to a friend. Your money foundation is in place.'],
-      ['2. Apprentice', 'Invest regularly with small real amounts. Keep a journal of decisions. If you trade, use 10% of intended size.', '12 months of consistent habits; 100 journaled decisions; you followed your plan through at least one scary period.'],
-      ['3. Practitioner', 'A tested process with measured results: allocation and rebalancing for investors; positive expectancy and drawdown control for traders.', 'Two or more years of records; costs and taxes understood; losses handled without breaking rules.'],
-      ['4. Professional', 'Others rely on your work: managing money for yourself at scale, working in finance, or running a structured trading business.', 'Verified record, risk framework, continuing education, and the ability to explain every decision.']
+    <p>“专业人士”不是自封的头衔，而是一种工作方式。专业人士拥有<b>流程</b>、<b>风险控制</b>、<b>记录</b>和<b>谦逊</b>。他们熬过糟糕的年份，让好的年份滚雪球。下面的阶梯同样适用于投资者、交易者和加密货币领域。</p>
+    <h3>四个层级</h3>
+    ${B.tbl(['层级', '你做什么', '证明你已准备好进入下一级'], [
+      ['1. 学习者', '完成基础课程和你选择的路径。用模拟器练习。建立你的应急基金。', '你能向朋友解释风险、分散投资、成本和你自己的计划。你的财务基础已就位。'],
+      ['2. 学徒', '定期用少量真钱投资。记录决策日志。如果交易，使用预定规模的 10%。', '12 个月的稳定习惯；100 条有记录的决策；至少在一段令人害怕的时期坚持了自己的计划。'],
+      ['3. 实践者', '经过测试并有量化结果的流程：投资者用配置和再平衡；交易者用正期望和回撤控制。', '两年以上的记录；理解成本和税务；亏损时不违反规则。'],
+      ['4. 专业人士', '他人依赖你的工作：大规模管理自己的资金、在金融行业工作，或经营结构化的交易业务。', '经过验证的业绩、风险框架、持续学习，以及解释每一个决策的能力。']
     ])}
-    <h3>What professionals do differently</h3>
+    <h3>专业人士有何不同</h3>
     <ol>
-      <li><b>They think in probabilities, not predictions.</b> "If this setup occurs 100 times, what happens on average?"</li>
-      <li><b>They define the loss before the gain.</b> Every position has a maximum acceptable loss.</li>
-      <li><b>They obsess over costs, taxes and process</b>, the things they can control.</li>
-      <li><b>They keep records.</b> Journals, performance reports, rule changes with reasons.</li>
-      <li><b>They separate lessons from outcomes.</b> A good decision can lose; a bad decision can win.</li>
-      <li><b>They protect their psychology.</b> Sleep, routine, and limits are part of the job.</li>
-      <li><b>They keep learning.</b> Markets change; so do the rules that work.</li>
+      <li><b>他们以概率而非预测来思考。</b>“如果这个形态出现 100 次，平均会发生什么？”</li>
+      <li><b>他们先定义亏损，再考虑盈利。</b>每个仓位都有可接受的最大亏损。</li>
+      <li><b>他们痴迷于成本、税务和流程</b>，即他们能控制的东西。</li>
+      <li><b>他们保存记录。</b>日志、业绩报告、带理由的规则变更。</li>
+      <li><b>他们把教训与结果分开。</b>好的决策也可能亏损；坏的决策也可能赢。</li>
+      <li><b>他们保护自己的心理。</b>睡眠、日常和限额都是工作的一部分。</li>
+      <li><b>他们不断学习。</b>市场在变，有效的规则也在变。</li>
     </ol>
-    <h3>Career routes in finance</h3>
-    ${B.tbl(['Route', 'What it involves', 'Useful credentials'], [
-      ['Financial analyst / researcher', 'Study companies and markets; write recommendations.', 'Finance or economics degree; CFA programme'],
-      ['Portfolio / fund manager', 'Decide allocations for funds or clients.', 'CFA, strong track record, licences'],
-      ['Risk manager', 'Measure and limit the risks a firm takes.', 'FRM certification, maths and statistics'],
-      ['Quantitative analyst or developer', 'Build models, data pipelines and automated strategies.', 'Maths, statistics, programming'],
-      ['Technical analyst / market strategist', 'Chart-based and market-structure research.', 'CMT programme'],
-      ['Financial adviser / planner', 'Help individuals plan wealth.', 'Local licensing and planner certifications'],
-      ['Independent trader or investor', 'Trade or invest your own capital as a business.', 'Capital, discipline, records, taxes in order'],
-      ['Crypto roles', 'Research, security, compliance, trading and development at crypto firms.', 'Blockchain knowledge, security skills, regulation awareness']
+    <h3>金融领域的职业路线</h3>
+    ${B.tbl(['路线', '工作内容', '有用的资质'], [
+      ['金融分析师 / 研究员', '研究公司和市场；撰写建议。', '金融或经济学学位；CFA 课程'],
+      ['投资组合 / 基金经理', '为基金或客户决定资产配置。', 'CFA、出色业绩、执照'],
+      ['风险经理', '衡量并限制公司承担的风险。', 'FRM 认证、数学和统计'],
+      ['量化分析师或开发者', '构建模型、数据管道和自动化策略。', '数学、统计、编程'],
+      ['技术分析师 / 市场策略师', '基于图表和市场结构的研究。', 'CMT 课程'],
+      ['财务顾问 / 规划师', '帮助个人规划财富。', '当地执照和规划师认证'],
+      ['独立交易者或投资者', '把自己的资金当作一项事业来交易或投资。', '资金、纪律、记录、税务有序'],
+      ['加密货币岗位', '在加密公司从事研究、安全、合规、交易和开发。', '区块链知识、安全技能、监管意识']
     ])}
-    <h3>A note about prop-trading firms</h3>
-    <p>Some firms offer to "fund" traders after they pass an evaluation. Some are legitimate, but many make most of their money from evaluation fees paid by people who fail. Read the rules carefully, check independent reviews, understand the profit split and drawdown limits, and never pay money you cannot afford to lose.</p>
-    <h3>Habits for the next 12 months</h3>
+    <h3>关于自营交易公司的提示</h3>
+    <p>一些公司提议在交易者通过考核后“资助”他们。有些是正规的，但许多公司的大部分收入来自未通过者缴纳的考核费。请仔细阅读规则，查看独立评价，了解利润分成和回撤限制，并且永远不要支付你亏不起的钱。</p>
+    <h3>未来 12 个月的习惯</h3>
     <ul>
-      <li>Read one good book on investing or risk per quarter.</li>
-      <li>Review your plan and results monthly; rewrite the plan once a year.</li>
-      <li>Learn from markets without needing to trade them: study history (1929, 1973, 1987, 2000, 2008, 2020, 2022).</li>
-      <li>Share what you learn. Teaching someone else is the fastest way to find gaps.</li>
-      <li>Stay humble. Markets punish certainty.</li>
+      <li>每个季度读一本关于投资或风险的好书。</li>
+      <li>每月复盘计划和结果；每年重写一次计划。</li>
+      <li>不必交易也能向市场学习：研究历史（1929、1973、1987、2000、2008、2020、2022）。</li>
+      <li>分享你所学。教别人是发现自己漏洞最快的方式。</li>
+      <li>保持谦逊。市场惩罚确信。</li>
     </ul>
-    ${B.key('<p><b>The best professional skill is staying in the game.</b> If you protect your capital and your mind, time and compounding do most of the rest.</p>')}
-    <div class="btnrow"><a class="btn" href="#cert">See my progress and certificate</a><a class="btn alt" href="#home">Back to the paths</a></div>
+    ${B.key('<p><b>最好的专业技能是留在场内。</b>如果你保护好自己的资本和心态，剩下的大部分交给时间和复利。</p>')}
+    <div class="btnrow"><a class="btn" href="#cert">查看我的进度和证书</a><a class="btn alt" href="#home">返回各条路径</a></div>
   </div></div></section>`;
 })();

@@ -1,12 +1,34 @@
 MONEY QUEST ACADEMY - site estatico (HTML + JS, sem servidor, sem base de dados)
 
-Como publicar (gratis, 5 minutos):
-1. Netlify: netlify.com > Add new site > Deploy manually > arrastar esta pasta (ou o zip).
-2. Cloudflare Pages: Create > Pages > Upload assets > enviar a pasta.
-3. GitHub Pages: criar repositorio, enviar estes ficheiros, Settings > Pages.
-4. Vercel: vercel.com > Add new > Project > importar a pasta.
+LINGUAS: English (en), Portugues (pt), Francais (fr), Italiano (it), Deutsch (de), 中文 (zh)
+O visitante escolhe a lingua no seletor do topo. A escolha fica guardada no browser.
+Tambem funciona com ?lang=pt no endereco (ex.: o-teu-site.vercel.app/?lang=de).
 
-Dominio proprio: comprar (ex. .com) e ligar em "Domain settings" da plataforma escolhida.
-Abrir tambem funciona com duplo clique em index.html (precisa de internet para as fontes).
+ESTRUTURA
+- index.html, core.js, app.js ........ comuns a todas as linguas
+- en/ pt/ fr/ it/ de/ zh/ ............ uma pasta por lingua (textos, licoes, widgets, glossario)
+- favicon.svg, robots.txt
 
-Para mudar o link do Trading Lab ou o preco: procurar "gumroad" em content-misc.js e app.js.
+COMO ATUALIZAR O SITE NO VERCEL (GitHub + Vercel)
+1. No GitHub, abre o repositorio do site.
+2. Apaga os ficheiros antigos (ou substitui) e envia os novos: "Add file" > "Upload files",
+   arrastando TODO o conteudo desta pasta (incluindo as pastas en, pt, fr, it, de, zh).
+3. "Commit changes". O Vercel publica sozinho em cerca de 1 minuto.
+
+COMO PUBLICAR DE RAIZ (gratis)
+1. Vercel: vercel.com > Add new > Project > importar o repositorio.
+2. Netlify: Add new site > Deploy manually > arrastar esta pasta.
+3. Cloudflare Pages / GitHub Pages tambem funcionam.
+
+Dominio proprio: comprar (ex. .com) e ligar em "Domains" da plataforma escolhida.
+
+CONTACTO / PAGINA LEGAL
+A pagina "Legal" (#legal) nao tem email de contacto. Para o adicionar, edita o campo "legal"
+em lang.js de cada lingua (secao "legal", ex.: antes de "Copyright"), e acrescenta uma linha com o teu email.
+
+PARA MUDAR O LINK OU O PRECO DO TRADING LAB
+Procura "gumroad" em content-misc.js (em cada pasta de lingua).
+
+PARA ADICIONAR OUTRA LINGUA
+1. Copia a pasta en/ para xx/ e traduz os ficheiros.
+2. Em index.html, junta uma <option> ao seletor (linha com "Deutsch") e "xx" a lista "langs" no script.

@@ -1,416 +1,416 @@
-/* Crypto Trader path: 8 lessons */
+/* 加密货币交易者路径：8 节课 */
 (function () {
   'use strict';
   const MQ = window.MQ, B = MQ.B;
 
   MQ.addLessons('ct', [
     {
-      id: 'd1', m: 12, t: 'Crypto trading 101: 24/7 markets, spot and derivatives',
-      hook: 'How crypto markets differ from stocks, and the main products traders use.',
+      id: 'd1', m: 12, t: '加密货币交易入门：24/7 市场、现货与衍生品',
+      hook: '加密货币市场与股票有何不同，以及交易者使用的主要产品。',
       body: `
-<p>Crypto trading shares the logic of any trading (charts, risk, psychology) but with its own flavour: the market never closes, volatility is higher, products are more exotic and rules vary by country. Before learning tactics, understand the playground.</p>
+<p>加密货币交易与任何交易共享同一套逻辑（图表、风险、心理），但有自己的特色：市场永不收盘，波动更大，产品更加奇特，各国规则也不同。在学习战术之前，先弄懂这片“赛场”。</p>
 
-<h3>What is different about crypto markets?</h3>
+<h3>加密货币市场有何不同？</h3>
 <ul>
-<li><b>24/7/365</b>: no opening bell, no weekends off. Big moves can happen at 3 a.m. while you sleep.</li>
-<li><b>High volatility</b>: daily moves of 3 to 10% are normal for many coins. Opportunity and danger at the same time.</li>
-<li><b>Fragmented venues</b>: hundreds of exchanges, each with its own prices, liquidity, fees and risks.</li>
-<li><b>Lighter regulation</b>: protections are weaker and the risk of manipulation (pump and dump, wash trading) is higher, especially for small coins.</li>
-<li><b>Self-reinforcing sentiment</b>: social media, whales and leverage create fast, emotional moves.</li>
+<li><b>全年无休 24/7/365</b>：没有开盘钟声，没有周末休息。大行情可能在凌晨 3 点你睡着时发生。</li>
+<li><b>高波动</b>：许多币每天波动 3% 到 10% 很正常。机会与危险并存。</li>
+<li><b>交易场所分散</b>：数百家交易所，各有各的价格、流动性、费用和风险。</li>
+<li><b>监管较松</b>：保护较弱，操纵风险（拉高出货、对敲刷量）更高，小币尤甚。</li>
+<li><b>情绪自我强化</b>：社交媒体、巨鲸和杠杆造就快速而情绪化的行情。</li>
 </ul>
 
-<h3>The main products</h3>
-${B.tbl(['Product', 'What it is', 'Leverage', 'Risk'], [
-        ['Spot', 'You buy and own the actual coin', 'None', 'Price risk only. Best for beginners'],
-        ['Margin trading', 'You borrow to buy more than you own', 'Low to high', 'Losses amplified; interest paid on loans'],
-        ['Futures (dated)', 'Contract to buy or sell at a future date', 'Up to 100x or more', 'Liquidation can wipe your margin'],
-        ['Perpetual futures', 'Futures with no expiry, kept near spot price by funding payments', 'Up to 100x or more', 'Funding costs + liquidation + exchange risk'],
-        ['Options', 'Rights to buy or sell at a set price', 'Built-in', 'Complex; can expire worthless']
+<h3>主要产品</h3>
+${B.tbl(['产品', '是什么', '杠杆', '风险'], [
+        ['现货', '你买入并拥有真实的币', '无', '只有价格风险。最适合新手'],
+        ['保证金交易', '借钱买入超出你所持的量', '低到高', '亏损被放大；借款要付利息'],
+        ['交割期货', '在未来某日买入或卖出的合约', '最高 100 倍或更多', '爆仓可能抹掉你的保证金'],
+        ['永续合约', '无到期日的期货，靠资金费率保持接近现货价格', '最高 100 倍或更多', '资金费用 + 爆仓 + 交易所风险'],
+        ['期权', '以约定价格买入或卖出的权利', '内置', '复杂；可能到期作废']
       ])}
-<p>Access differs by country. Many regulators restrict or ban derivatives for retail clients, and platforms may limit leverage for users in certain regions. Always follow your local rules and the terms of a regulated provider.</p>
+<p>各国的可用性不同。许多监管机构限制或禁止向散户提供衍生品，平台也可能在某些地区限制杠杆。请始终遵守当地规则和受监管服务商的条款。</p>
 
-<h3>How exchanges make money: fees</h3>
+<h3>交易所如何赚钱：费用</h3>
 <ul>
-<li><b>Maker</b>: you place a limit order that waits in the order book and adds liquidity. Usually lower fees.</li>
-<li><b>Taker</b>: you take an existing order immediately (market order). Higher fees.</li>
-<li>Fees of 0.02% to 0.1% per trade look small but add up for active traders.</li>
+<li><b>Maker（挂单方）</b>：你下一张限价单，在订单簿中等待并提供流动性。费用通常更低。</li>
+<li><b>Taker（吃单方）</b>：你立即成交已有的订单（市价单）。费用更高。</li>
+<li>每笔 0.02% 到 0.1% 的费用看似很小，但对活跃交易者会累积起来。</li>
 </ul>
 
-<h3>Sessions and liquidity</h3>
-<p>Although the market never stops, activity follows human time zones. Volume is typically strongest when Europe and the US overlap, and weaker on weekends, when prices can move sharply on thin liquidity. Traders often avoid placing big orders in low-liquidity hours.</p>
+<h3>时段与流动性</h3>
+<p>虽然市场从不停止，活动仍随人类时区起伏。欧洲与美国时段重叠时成交量通常最强，周末较弱，流动性薄时价格可能剧烈波动。交易者常避免在低流动性时段下大单。</p>
 
-<h3>Pairs and base currencies</h3>
-<p>Trading pairs are written like BTC/USDT: the first is what you buy or sell, the second is what you pay in. Stablecoin pairs (USDT, USDC) are most liquid. Knowing which currency your profit is measured in matters: a trade can be "up in USDT" while the coin you hold fell against Bitcoin.</p>
+<h3>交易对与计价货币</h3>
+<p>交易对写作 BTC/USDT：前者是你买卖的对象，后者是你用来支付的货币。稳定币交易对（USDT、USDC）流动性最好。要清楚你的利润以哪种货币计量：一笔交易可能“以 USDT 计在赚钱”，但你持有的币相对比特币却在下跌。</p>
 
-${B.ex('<p>It is Sunday 4 a.m. Sam holds a leveraged position and sleeps. A sudden news item hits, liquidity is thin and price spikes 8% against him within minutes. His stop was not set. He wakes up to a liquidation. In traditional markets he would have been protected by closed hours; in crypto, risk management has to work while you sleep (stops, smaller size, no leverage overnight).</p>')}
+${B.ex('<p>周日凌晨 4 点。小山持有一个杠杆仓位并在睡觉。突发消息传来，流动性很薄，几分钟内价格对他不利地飙升 8%。他没有设止损。醒来时已被爆仓。在传统市场，休市时间会保护他；在加密货币里，风险管理必须在你睡觉时也能运转（止损、较小仓位、夜间不加杠杆）。</p>')}
 
-${B.warn('<p>Derivatives are for experienced traders. If you are new, begin with spot trading and small size, and read the next lessons on leverage before touching futures.</p>')}
+${B.warn('<p>衍生品是给有经验的交易者的。如果你是新手，请从小仓位的现货交易开始，并在接触期货之前先读后面关于杠杆的课程。</p>')}
 
-${B.take(['Crypto trades 24/7 with high volatility and weaker protections.', 'Spot means owning the coin; perpetual futures add leverage, funding and liquidation risk.', 'Maker orders add liquidity (lower fee), taker orders remove it (higher fee).', 'Risk controls must work while you sleep: stops, small size, no careless overnight leverage.'])}`,
+${B.take(['加密货币 24/7 交易，波动大，保护较弱。', '现货意味着拥有币；永续合约增加了杠杆、资金费率和爆仓风险。', 'Maker 订单提供流动性（费用较低），Taker 订单消耗流动性（费用较高）。', '风险控制必须在你睡觉时也有效：止损、小仓位、夜间不要随意加杠杆。'])}`,
       q: [
-        ['What is the key difference between spot and perpetual futures?', ['Spot involves owning the coin; perpetuals are leveraged contracts with funding and liquidation', 'There is none', 'Spot always has leverage', 'Perpetuals are safer'], 0, 'Perpetual futures are derivatives with leverage and funding costs.'],
-        ['Which order type usually pays the lower fee?', ['Taker (market) order', 'Maker (limit) order that adds liquidity', 'Both are always equal', 'Stop order'], 1, 'Makers add liquidity to the order book and are typically rewarded with lower fees.'],
-        ['Why is risk management harder in crypto than in stock markets?', ['Markets close too often', 'The market never closes, so big moves can happen while you are away', 'Fees are fixed', 'There is no volatility'], 1, 'Round-the-clock trading means your protections need to be in place at all times.']
+        ['现货与永续合约的关键区别是什么？', ['现货是拥有币；永续合约是带资金费率和爆仓的杠杆合约', '没有区别', '现货总是带杠杆', '永续合约更安全'], 0, '永续合约是带杠杆和资金费用的衍生品。'],
+        ['哪种订单类型通常支付较低的费用？', ['Taker（市价）订单', '提供流动性的 Maker（限价）订单', '两者总是相等', '止损单'], 1, 'Maker 为订单簿提供流动性，通常会获得较低费用的回报。'],
+        ['为什么在加密货币中风险管理比股票市场更难？', ['市场关门太频繁', '市场从不关闭，因此你不在时也可能发生大行情', '费用是固定的', '没有波动'], 1, '全天候交易意味着你的保护措施必须随时到位。']
       ]
     },
     {
-      id: 'd2', m: 14, t: 'Leverage and liquidation: how accounts get wiped',
-      hook: 'The calculator every crypto trader should use before every leveraged trade.',
+      id: 'd2', m: 14, t: '杠杆与爆仓：账户是如何被清零的',
+      hook: '每个加密货币交易者在每笔杠杆交易前都应该使用的计算器。',
       body: `
-<p>Leverage lets you control a position bigger than your own money. It is the feature that attracts most beginners and destroys most of them. Understanding liquidation is not optional.</p>
+<p>杠杆让你控制比自有资金更大的仓位。它吸引了大多数新手，也毁掉了大多数新手。理解爆仓不是可选项。</p>
 
-<h3>How leverage works</h3>
-<p>If you put in €500 (your <b>margin</b>) and use 10x leverage, you control a €5,000 position. A 1% price move changes your account by 10%. A 10% move against you erases the whole €500.</p>
+<h3>杠杆如何运作</h3>
+<p>如果你投入 500 €（你的<b>保证金</b>）并使用 10 倍杠杆，你控制 5,000 € 的仓位。价格 1% 的波动会让你的账户变动 10%。对你不利的 10% 波动会抹掉全部 500 €。</p>
 <ul>
-<li><b>Margin</b>: the collateral you post.</li>
-<li><b>Maintenance margin</b>: the minimum collateral the exchange requires to keep your position open.</li>
-<li><b>Liquidation</b>: when losses push your margin below maintenance, the exchange force-closes your position. You lose the margin, and sometimes fees and extra costs.</li>
-<li><b>Isolated margin</b>: only the margin assigned to that trade is at risk. <b>Cross margin</b>: your whole account balance backs the trade, so one bad position can drain everything.</li>
+<li><b>保证金</b>：你存入的抵押品。</li>
+<li><b>维持保证金</b>：交易所要求保持你仓位的最低抵押品。</li>
+<li><b>爆仓（强平）</b>：当亏损使你的保证金跌破维持水平，交易所会强制平掉你的仓位。你会损失保证金，有时还有费用和额外成本。</li>
+<li><b>逐仓保证金</b>：只有分配给这笔交易的保证金处于风险中。<b>全仓保证金</b>：你整个账户余额都为这笔交易提供支持，因此一个糟糕的仓位可能耗尽一切。</li>
 </ul>
 
-<h3>The simple liquidation formula (approximation)</h3>
-<p>For a long position with isolated margin: <b>liquidation price ≈ entry × (1 − 1/leverage + maintenance margin rate)</b>. For a short, it mirrors above the entry. At 10x, you are liquidated after a move of roughly 9.5% against you. At 50x, after about 1.5%. At 100x, after roughly 0.5%, which is less than a normal coffee-break wiggle for a volatile coin.</p>
+<h3>简单的爆仓公式（近似）</h3>
+<p>对于逐仓保证金的多头仓位：<b>爆仓价 ≈ 入场价 × (1 − 1/杠杆 + 维持保证金率)</b>。空头则是入场价上方的镜像。10 倍杠杆下，价格对你不利波动约 9.5% 就会被爆仓。50 倍时约 1.5%。100 倍时约 0.5%，比一个波动较大的币喝杯咖啡的工夫里的正常抖动还小。</p>
 
-<h3>Try it yourself</h3>
-<p>Choose leverage and see the distance to liquidation compared with the asset's typical daily move.</p>
+<h3>亲自试试</h3>
+<p>选择杠杆，看看到爆仓的距离与该资产典型日波动的对比。</p>
 ${B.w('liq')}
 
-<h3>Why high leverage is a trap</h3>
+<h3>高杠杆为何是陷阱</h3>
 <ul>
-<li><b>Noise kills you</b>: price constantly makes small swings and wicks. Tight liquidation levels get hit by noise, not by "the real trend".</li>
-<li><b>You cannot be wrong even a little</b>: high leverage requires perfect timing.</li>
-<li><b>Liquidation cascades</b>: when price moves, forced liquidations trigger more selling (or buying), which pushes price further and liquidates more traders. In several crashes, billions of dollars of leveraged positions were liquidated in a single day.</li>
-<li><b>Fees and funding</b> are charged on the full position size, so costs rise with leverage.</li>
-<li><b>Auto-deleveraging and slippage</b>: in extreme moves, exchanges may close profitable positions or fill your stop far from where you set it.</li>
+<li><b>噪音会杀死你</b>：价格不断出现小幅摆动和影线。紧凑的爆仓位会被噪音触发，而不是被“真正的趋势”触发。</li>
+<li><b>你连一点错都不能犯</b>：高杠杆要求完美的择时。</li>
+<li><b>爆仓连锁</b>：价格波动时，强制平仓会触发更多卖出（或买入），把价格推得更远，爆掉更多交易者。在几次崩盘中，单日就有数十亿美元的杠杆仓位被清算。</li>
+<li><b>手续费和资金费率</b>按完整仓位规模收取，所以成本随杠杆上升。</li>
+<li><b>自动减仓与滑点</b>：极端行情中，交易所可能平掉盈利仓位，或在远离你设定位置的价格成交你的止损。</li>
 </ul>
 
-<h3>The professional view of leverage</h3>
-<p>Professionals do not see leverage as a way to get rich fast. They treat it as a tool for <b>capital efficiency</b>: use only what is needed to post margin for a position sized by risk. They decide position size from the stop distance (see risk lesson), and the leverage is simply whatever results, usually low (1x to 3x). The key mindset: your <i>risk</i> is the stop distance times your size, not the leverage number.</p>
-${B.ex('<p>Two traders buy at 100 with a stop at 97 and want to risk €50. Both buy the same size: €1,667 worth. Trader A posts margin of €1,667 (1x). Trader B posts €167 (10x). If the stop at 94 works, both lose the same €50. Now imagine the stop was forgotten or moved and a spike takes price down to 90 before it bounces. Trader A (1x) is still in the trade with an unpleasant paper loss. Trader B (10x) was liquidated near 90.5 and lost the whole €167 margin, and the later bounce is of no use to him. The leverage number only changed how much room existed before disaster.</p>')}
+<h3>职业交易者对杠杆的看法</h3>
+<p>职业交易者不把杠杆当作快速致富的手段。他们把它当作<b>资本效率</b>的工具：只用刚好够为按风险确定规模的仓位缴纳保证金的杠杆。他们根据止损距离决定仓位大小（见风险课程），杠杆只是结果，通常很低（1 倍到 3 倍）。关键心态：你的<i>风险</i>是止损距离乘以仓位大小，而不是杠杆数字。</p>
+${B.ex('<p>两个交易者在 100 买入，止损设在 97，都想冒 50 € 的风险。两人买入相同的规模：价值 1,667 €。交易者 A 存入 1,667 € 保证金（1 倍）。交易者 B 存入 167 €（10 倍）。如果 97 的止损生效，两人损失同样的 50 €。现在设想止损被忘记或被移动，一次尖刺让价格跌到 90 后又反弹。交易者 A（1 倍）仍在交易中，账面亏损令人不快。交易者 B（10 倍）在约 90.5 被爆仓，损失了全部 167 € 保证金，之后的反弹对他毫无用处。杠杆数字只改变了灾难发生前的缓冲空间。</p>')}
 
-${B.key('<p><b>Rules for safer leverage:</b> use isolated margin, always set a stop-loss well inside the liquidation price, size the trade by risk (not by leverage), and keep leverage low enough that liquidation is many times a typical daily move away.</p>')}
+${B.key('<p><b>更安全使用杠杆的规则：</b>使用逐仓保证金，始终把止损设在爆仓价之内足够远的位置，按风险（而不是按杠杆）确定交易规模，并让杠杆足够低，使爆仓位距离是典型日波动的许多倍。</p>')}
 
-${B.warn('<p>Exchanges profit from liquidations and fees. Social media rewards screenshots of huge leveraged wins and hides the wiped accounts. Remember the survivors you see are a tiny, self-selected sample.</p>')}
+${B.warn('<p>交易所从爆仓和手续费中获利。社交媒体奖励高杠杆大赚的截图，却隐藏被清零的账户。记住，你看到的幸存者是一个微小的、自我筛选的样本。</p>')}
 
-${B.take(['Leverage multiplies both gains and losses; liquidation takes your entire margin.', 'Isolated margin limits damage to a single trade; cross margin can drain your account.', 'Liquidation price depends on leverage; at 50x or 100x, normal noise is enough to liquidate you.', 'Size trades by stop distance and risk percent; keep leverage low and stops inside liquidation.'])}`,
+${B.take(['杠杆同时放大盈利和亏损；爆仓会拿走你全部的保证金。', '逐仓保证金把损害限制在单笔交易；全仓保证金可能耗尽你的账户。', '爆仓价取决于杠杆；50 倍或 100 倍时，正常的噪音就足以爆掉你。', '按止损距离和风险百分比确定交易规模；保持低杠杆，并让止损位于爆仓价之内。'])}`,
       q: [
-        ['With 20x leverage on a long, roughly how far against you does price need to move to liquidate you?', ['About 20%', 'About 4.5%', 'About 0.5%', 'About 50%'], 1, '1/20 = 5%, minus a small maintenance margin leaves roughly 4.5%.'],
-        ['Which margin mode risks your entire account on one position?', ['Isolated margin', 'Cross margin', 'Spot trading', 'Limit orders'], 1, 'Cross margin uses your total balance as collateral for open positions.'],
-        ['What is the professional mindset about leverage?', ['Always maximise it', 'Size by risk and stop distance; leverage is only the byproduct and stays low', 'Never use stops', 'Use it to recover losses'], 1, 'Risk is stop distance times size, and high leverage leaves no room for error.']
+        ['多头仓位使用 20 倍杠杆，价格大约需要对你不利地波动多少才会爆仓？', ['约 20%', '约 4.5%', '约 0.5%', '约 50%'], 1, '1/20 = 5%，减去一点维持保证金，大约是 4.5%。'],
+        ['哪种保证金模式会把你整个账户押在一个仓位上？', ['逐仓保证金', '全仓保证金', '现货交易', '限价单'], 1, '全仓保证金把你的总余额作为未平仓位的抵押品。'],
+        ['职业交易者对杠杆的心态是什么？', ['总是最大化它', '按风险和止损距离确定规模；杠杆只是副产品且保持较低', '从不设止损', '用它来挽回亏损'], 1, '风险是止损距离乘以规模，高杠杆没有留下任何出错余地。']
       ]
     },
     {
-      id: 'd3', m: 13, t: 'Reading the crypto market: volume, open interest, funding and sentiment',
-      hook: 'Beyond the price chart: the signals specific to crypto, what each one says and how traders misuse them.',
+      id: 'd3', m: 13, t: '读懂加密货币市场：成交量、未平仓合约、资金费率与情绪',
+      hook: '价格图表之外：加密货币特有的信号、它们各说明什么，以及交易者如何误用它们。',
       body: `
-<p>Crypto offers data that traditional markets hide: you can see leveraged positioning, exchange flows and sentiment in near real time. These tools tell you <b>who is crowded where</b>, which is useful because crowded trades often get squeezed.</p>
+<p>加密货币提供了传统市场隐藏的数据：你几乎能实时看到杠杆仓位、交易所资金流和情绪。这些工具告诉你<b>谁在哪里扎堆</b>，这很有用，因为拥挤的交易常常被挤压。</p>
 
-<h3>Price, volume and open interest</h3>
-<p><b>Open interest (OI)</b> is the total value of outstanding futures contracts that are still open. Combined with price, it gives clues:</p>
-${B.tbl(['Price', 'Open interest', 'Typical reading'], [
-        ['Rising', 'Rising', 'New money is entering longs; trend has fuel (but check for crowding)'],
-        ['Rising', 'Falling', 'Short positions closing (short squeeze); rally may be weaker'],
-        ['Falling', 'Rising', 'New shorts piling in; downtrend has momentum'],
-        ['Falling', 'Falling', 'Longs giving up (liquidations); selling may be nearing exhaustion']
+<h3>价格、成交量与未平仓合约</h3>
+<p><b>未平仓合约（OI）</b>是仍未平仓的期货合约总价值。与价格结合，可以给出线索：</p>
+${B.tbl(['价格', '未平仓合约', '典型解读'], [
+        ['上涨', '上升', '新资金进入多头；趋势有燃料（但要检查是否拥挤）'],
+        ['上涨', '下降', '空头正在平仓（逼空）；上涨可能较弱'],
+        ['下跌', '上升', '新空头不断涌入；下跌趋势有动能'],
+        ['下跌', '下降', '多头在放弃（爆仓）；抛售可能接近衰竭']
       ])}
 
-<h3>Funding rate: the crowd thermometer</h3>
-<p>Perpetual futures use <b>funding payments</b> between longs and shorts to keep the contract price near the spot price. When the rate is positive, longs pay shorts. A very high positive rate means many traders are leaning long, and it is also costly to hold. Extremes often occur near local tops, because a crowd with the same trade has nobody left to buy. Extremely negative funding can precede short squeezes. Calculate what funding costs you:</p>
+<h3>资金费率：人群的温度计</h3>
+<p>永续合约使用多头与空头之间的<b>资金费率支付</b>，使合约价格贴近现货价格。当费率为正时，多头向空头付费。很高的正费率意味着许多交易者偏向做多，而且持有成本也高。极端值常出现在局部顶部附近，因为一群持有同样交易的人已经没有后继买家。极端为负的资金费率可能先于逼空出现。计算资金费用会让你花多少钱：</p>
 ${B.w('funding')}
 
-<h3>Liquidation maps and heatmaps</h3>
-<p>Some data services estimate where clusters of leveraged positions would be liquidated. Price is often "attracted" to those areas because forced orders create liquidity. Treat them as hints, not guarantees. Estimates can be wrong.</p>
+<h3>爆仓地图与热力图</h3>
+<p>一些数据服务估算杠杆仓位集中在哪些价位会被爆仓。价格常被这些区域“吸引”，因为强制订单会创造流动性。把它们当作提示，而不是保证。估算可能有误。</p>
 
-<h3>Sentiment indicators</h3>
+<h3>情绪指标</h3>
 <ul>
-<li><b>Fear and Greed Index</b>: combines volatility, momentum, social media and other inputs into a 0 to 100 score. Extreme greed can warn of overheating; extreme fear can show capitulation. It is a contrarian gauge, not a timing tool.</li>
-<li><b>Long/short ratio</b>: share of accounts positioned long vs short on an exchange. Differences between exchanges and between "accounts" and "positions" make it noisy.</li>
-<li><b>Social buzz</b>: when your taxi driver discusses a coin, the move is probably late.</li>
+<li><b>恐惧与贪婪指数</b>：把波动率、动量、社交媒体等输入合成 0 到 100 的分数。极度贪婪可能警示过热；极度恐惧可能显示投降式抛售。它是逆向指标，不是择时工具。</li>
+<li><b>多空比</b>：某交易所做多与做空的账户占比。交易所之间以及“账户”与“仓位”之间的差异使其噪音很大。</li>
+<li><b>社交热度</b>：当你的出租车司机在谈论某个币时，行情大概已经晚了。</li>
 </ul>
 
-<h3>Market-structure signals</h3>
+<h3>市场结构信号</h3>
 <ul>
-<li><b>Bitcoin dominance</b>: Bitcoin's share of the total crypto market cap. Rising dominance often means money is hiding in BTC; falling dominance can accompany "altcoin seasons". Altcoins generally move with Bitcoin but with larger swings (higher "beta").</li>
-<li><b>Stablecoin supply and flows</b>: growing stablecoin supply on exchanges can signal buying power; shrinking can signal exit.</li>
-<li><b>Exchange inflows and outflows</b>: coins moving onto exchanges can precede selling; moving off can signal holding.</li>
-<li><b>ETF flows</b>: where regulated Bitcoin and Ethereum funds exist, daily inflows and outflows influence the market.</li>
+<li><b>比特币占比</b>：比特币占加密货币总市值的份额。占比上升通常意味着资金躲进 BTC；下降可能伴随“山寨币季”。山寨币通常随比特币波动，但幅度更大（更高的“贝塔”）。</li>
+<li><b>稳定币供应与流动</b>：交易所上稳定币增加可能意味着购买力；减少则可能意味着撤出。</li>
+<li><b>交易所流入与流出</b>：币转入交易所可能先于抛售；转出则可能意味着持有。</li>
+<li><b>ETF 资金流</b>：在存在受监管的比特币和以太坊基金的地方，每日流入流出会影响市场。</li>
 </ul>
 
-<h3>The wider world</h3>
-<p>Crypto does not live in isolation. Interest-rate decisions, inflation reports, the US dollar, stock-market sentiment and regulatory news often move it. Keep a calendar of key events and token unlock dates, and reduce risk around them.</p>
+<h3>更广阔的世界</h3>
+<p>加密货币并非孤立存在。利率决议、通胀数据、美元、股市情绪和监管新闻常常推动它。记录关键事件和代币解锁日期的日历，并在这些时点前后降低风险。</p>
 
-${B.ex('<p>Bitcoin has rallied for a week. Open interest is at a record high, funding is extremely positive and the Fear and Greed Index reads "Extreme greed". Nothing guarantees a fall, but the position is crowded: a modest dip can trigger a chain of long liquidations. A trader who sees this may take profit on part of a long, avoid chasing, or wait for a pullback to enter.</p>')}
+${B.ex('<p>比特币已经上涨一周。未平仓合约创历史新高，资金费率极度为正，恐惧与贪婪指数显示“极度贪婪”。没有什么能保证下跌，但仓位已经拥挤：一次温和的回调就可能引发多头连环爆仓。看到这些的交易者可能会对部分多头获利了结，避免追高，或等回调再入场。</p>')}
 
-${B.warn('<p>Indicators describe the crowd, they do not predict it. "Overheated" can stay overheated for weeks. Always combine them with price structure and a stop-loss.</p>')}
+${B.warn('<p>指标描述的是人群，并不预测人群。“过热”可以持续过热数周。始终把它们与价格结构和止损结合使用。</p>')}
 
-${B.take(['Open interest plus price direction shows whether trends have fresh fuel.', 'Funding rates reveal crowded trades and cost money to hold.', 'Sentiment gauges are contrarian clues at extremes, not exact timing tools.', 'Altcoins are higher-beta versions of Bitcoin; watch dominance and macro events.'])}`,
+${B.take(['未平仓合约加上价格方向，可看出趋势是否有新燃料。', '资金费率揭示拥挤的交易，而且持有要花钱。', '情绪指标在极端值时是逆向线索，不是精确的择时工具。', '山寨币是比特币的高贝塔版本；关注占比和宏观事件。'])}`,
       q: [
-        ['Price rising with open interest falling suggests…', ['New longs entering strongly', 'Shorts closing (a squeeze), so the rally may be weaker', 'A guaranteed top', 'A stablecoin issue'], 1, 'Falling OI during a rise often means short covering rather than fresh buying.'],
-        ['A very high positive funding rate means…', ['Shorts pay longs', 'Longs pay shorts and the market is crowded long', 'The exchange is broken', 'Spot prices are zero'], 1, 'Positive funding means longs pay shorts, which shows heavy long positioning.'],
-        ['How should you use the Fear and Greed Index?', ['As an exact buy/sell signal', 'As a contrarian clue at extremes, combined with other analysis', 'Never', 'To set leverage'], 1, 'It reflects crowd mood and can stay extreme for a long time.']
+        ['价格上涨而未平仓合约下降，暗示……', ['新多头强势入场', '空头正在平仓（逼空），所以上涨可能较弱', '保证的顶部', '稳定币问题'], 1, '上涨期间 OI 下降通常意味着空头回补，而不是新的买盘。'],
+        ['很高的正资金费率意味着……', ['空头向多头付费', '多头向空头付费，且市场多头拥挤', '交易所坏了', '现货价格为零'], 1, '正资金费率意味着多头向空头付费，显示多头仓位沉重。'],
+        ['应该如何使用恐惧与贪婪指数？', ['作为精确的买卖信号', '在极端值时作为逆向线索，并与其他分析结合', '从不使用', '用来设定杠杆'], 1, '它反映人群情绪，可能长时间保持极端。']
       ]
     },
     {
-      id: 'd4', m: 14, t: 'Crypto trading strategies',
-      hook: 'Trend, pullback, range, breakout and event trades adapted to crypto, with a full example trade calculated step by step.',
+      id: 'd4', m: 14, t: '加密货币交易策略',
+      hook: '适用于加密货币的趋势、回调、区间、突破和事件交易，并附一个逐步计算的完整示例交易。',
       body: `
-<p>The core ideas from the Day Trader path (trend, levels, breakouts, ranges) apply to crypto charts as well, with a few adjustments: bigger moves, 24/7 trading, and extra data like funding and open interest. Here are the main styles.</p>
+<p>日内交易者路径中的核心思想（趋势、关键位、突破、区间）同样适用于加密货币图表，只需几处调整：更大的波动、24/7 交易，以及资金费率和未平仓合约等额外数据。以下是主要风格。</p>
 
-<h3>1. Trend following on higher timeframes</h3>
-<p>Use the 4-hour or daily chart. Enter when price breaks to new highs with rising volume and above a rising moving average (for example 50 EMA). Place the stop under the last higher low, and trail it. Fewer trades, fewer fees, less screen time, and it suits people with jobs. It also suffers in choppy periods.</p>
+<h3>1. 较大周期上的趋势跟随</h3>
+<p>使用 4 小时或日线图。当价格伴随放大的成交量突破到新高并位于上升的移动平均线（例如 50 EMA）之上时入场。把止损放在最近一个更高低点之下，并随之上移。交易更少，费用更少，盯盘时间更少，适合有工作的人。在震荡行情中也会受苦。</p>
 
-<h3>2. Pullback entries</h3>
-<p>In an uptrend, wait for a drop toward a moving average or a prior resistance that has become support, plus signs that sellers are fading (lower volume, rejection wick). Entry on the reversal candle, stop under the pullback low. Improves reward-to-risk compared with chasing breakouts.</p>
+<h3>2. 回调入场</h3>
+<p>在上升趋势中，等待价格回落到移动平均线或已转为支撑的前阻力位，并出现卖方减弱的迹象（成交量变小、拒绝影线）。在反转 K 线入场，止损放在回调低点下方。比追突破能改善风险回报比。</p>
 
-<h3>3. Range trading</h3>
-<p>Sideways markets are common in crypto. Define a clear support and resistance zone, buy near the bottom, sell near the top, and exit if price closes outside the range. Combine with mean-reversion signals such as funding extremes.</p>
+<h3>3. 区间交易</h3>
+<p>横盘市场在加密货币中很常见。划定清晰的支撑与阻力区域，在接近底部时买入，接近顶部时卖出，价格收盘于区间之外则离场。可结合资金费率极端等均值回归信号。</p>
 
-<h3>4. Breakout and retest</h3>
-<p>Price compresses (a tightening range or falling volatility) and then breaks out. Many false breakouts occur, so wait for a candle close beyond the level, then ideally a <b>retest</b> that holds before entering with a stop just inside the old range.</p>
+<h3>4. 突破与回踩</h3>
+<p>价格收敛（区间收窄或波动率下降）后突破。假突破很多，所以等待 K 线收盘于关键位之外，最好再等一次守住的<b>回踩</b>后入场，止损设在旧区间内侧。</p>
 
-<h3>5. Funding and crowd fades</h3>
-<p>When funding and open interest are extreme and price stalls, some traders fade the crowd (take a small counter-trend position or reduce longs). This is advanced and dangerous without strict stops, because crowded trades can keep going.</p>
+<h3>5. 资金费率与逆人群交易</h3>
+<p>当资金费率与未平仓合约极端、价格停滞时，一些交易者会逆着人群操作（建立小规模逆势仓位或减少多头）。这很高级，没有严格止损时很危险，因为拥挤的交易可能继续下去。</p>
 
-<h3>6. Event and unlock trades</h3>
-<p>Scheduled events (token unlocks, upgrades, listings, central bank meetings) create predictable volatility, but not predictable direction. Beginners usually do better by reducing size or staying out.</p>
+<h3>6. 事件与解锁交易</h3>
+<p>计划中的事件（代币解锁、升级、上线、央行会议）会带来可预期的波动，但方向不可预期。新手通常缩小仓位或不参与会更好。</p>
 
-<h3>7. Bots and grids</h3>
-<p>Automated strategies such as grid bots place a ladder of buy and sell orders in a range. They can work in sideways markets but lose during strong trends. We cover automation in lesson 6.</p>
+<h3>7. 机器人与网格</h3>
+<p>网格机器人等自动化策略在区间内布置一串买卖订单。它们可能在横盘市场奏效，但在强趋势中亏损。我们在第 6 课讲自动化。</p>
 
-<h3>A complete example trade (step by step)</h3>
-<p>Imagine a coin trading at <b>100.00</b>. The daily trend is up. Price pulled back to a prior breakout level at 96 and formed a bullish candle. You have <b>€5,000</b> and your rule is to risk <b>1% (€50)</b> per trade.</p>
+<h3>一个完整的示例交易（逐步）</h3>
+<p>设想某币价格为 <b>100.00</b>。日线趋势向上。价格回调到先前的突破位 96，形成一根看涨 K 线。你有 <b>5,000 €</b>，你的规则是每笔交易冒险 <b>1%（50 €）</b>。</p>
 <ol>
-<li>Entry: 97.00 (above the bullish candle's high).</li>
-<li>Stop: 94.00, below the pullback low (3.00 away from entry).</li>
-<li>Position size = €50 ÷ 3.00 = <b>16.67 units</b> (about €1,617 position, or 0.32x of your account).</li>
-<li>Target: the recent high at 106 (9.00 away), a reward-to-risk of <b>3:1</b>.</li>
-<li>If wrong, you lose €50 (1%). If right, you gain about €150 (3%). With a 40% win rate this is still profitable: 0.4×3 − 0.6×1 = +0.6R.</li>
+<li>入场：97.00（高于该看涨 K 线的最高点）。</li>
+<li>止损：94.00，低于回调低点（距入场 3.00）。</li>
+<li>仓位大小 = 50 € ÷ 3.00 = <b>16.67 个单位</b>（约 1,617 € 的仓位，即账户的 0.32 倍）。</li>
+<li>目标：近期高点 106（距离 9.00），风险回报比为 <b>3:1</b>。</li>
+<li>若判断错误，你损失 50 €（1%）。若正确，你赚约 150 €（3%）。即便胜率只有 40% 仍然盈利：0.4×3 − 0.6×1 = +0.6R。</li>
 </ol>
-<p>Check it with the calculator (the numbers are pre-filled differently, so set them to this example):</p>
+<p>用计算器核对（数字预填的不同，请改成这个示例）：</p>
 ${B.w('possize')}
 
-<h3>Which style fits you?</h3>
-${B.tbl(['Your situation', 'Better fit'], [
-        ['Full-time job, limited time', 'Trend following or pullbacks on 4h / daily charts, with alerts'],
-        ['Likes calm, rule-based routines', 'Range trading with strict levels'],
-        ['Short on patience', 'Be careful: choose a style that limits the number of daily trades'],
-        ['Wants to trade 24/7', 'Use bots with strict limits and still sleep; avoid overnight leverage']
+<h3>哪种风格适合你？</h3>
+${B.tbl(['你的情况', '更合适的选择'], [
+        ['全职工作，时间有限', '在 4 小时 / 日线图上做趋势跟随或回调，并设置提醒'],
+        ['喜欢平静、按规则行事的日常', '设严格关键位的区间交易'],
+        ['缺乏耐心', '小心：选择能限制每日交易次数的风格'],
+        ['想 24/7 交易', '使用设有严格限额的机器人，仍然要睡觉；避免夜间杠杆']
       ])}
 
-${B.warn('<p>Do not copy signals from groups or influencers. Even if they are honest, you cannot control their entries, they may profit from your buying, and you do not learn the process. Build and test your own rules.</p>')}
+${B.warn('<p>不要照抄群组或网红的信号。即使他们诚实，你也无法控制他们的入场，他们可能靠你的买入获利，而你学不到方法。构建并测试你自己的规则。</p>')}
 
-${B.take(['Higher-timeframe trend and pullback strategies fit most people best.', 'Wait for confirmation on breakouts and prefer retests.', 'Calculate every trade: entry, stop, size, target and reward-to-risk before entering.', 'Avoid event trades and crowd fades until you have a proven process.'])}`,
+${B.take(['较大周期的趋势与回调策略最适合大多数人。', '突破要等确认，优先选择回踩。', '入场前计算每笔交易：入场、止损、仓位、目标和风险回报比。', '在拥有经过验证的流程之前，避免事件交易和逆人群交易。'])}`,
       q: [
-        ['In the worked example, why is the position size 16.67 units?', ['Because leverage is 10x', '€50 risk divided by a 3.00 stop distance', 'Because price is 100', 'Random choice'], 1, 'Position size = risk amount ÷ (entry − stop) = 50 ÷ 3.'],
-        ['What does waiting for a retest after a breakout help with?', ['Avoiding fees', 'Reducing the chance of buying a false breakout', 'Guaranteeing a win', 'Increasing leverage'], 1, 'If price returns and the level holds, the breakout is more credible.'],
-        ['Which approach suits a trader with a full-time job?', ['Scalping 1-minute charts all day', 'Trading 4h or daily charts with alerts and fixed stops', 'Using 100x leverage', 'Following random signals'], 1, 'Slower timeframes need less screen time and have lower costs.']
+        ['在这个示例中，为什么仓位大小是 16.67 个单位？', ['因为杠杆是 10 倍', '50 € 风险除以 3.00 的止损距离', '因为价格是 100', '随机选择'], 1, '仓位大小 = 风险金额 ÷（入场 − 止损）= 50 ÷ 3。'],
+        ['突破后等待回踩有什么帮助？', ['避免手续费', '降低买到假突破的可能', '保证盈利', '提高杠杆'], 1, '如果价格回来而关键位守住，突破就更可信。'],
+        ['哪种方式适合有全职工作的交易者？', ['整天在 1 分钟图上剥头皮', '在 4 小时或日线图上交易，并使用提醒和固定止损', '使用 100 倍杠杆', '跟随随机信号'], 1, '较慢的周期需要更少的盯盘时间，成本也更低。']
       ]
     },
     {
-      id: 'd5', m: 13, t: 'Risk management for volatile markets',
-      hook: 'Everything from the Day Trader risk lesson, plus the special dangers of crypto: stablecoins, exchanges, correlation and weekends.',
+      id: 'd5', m: 13, t: '波动市场的风险管理',
+      hook: '日内交易者风险课中的一切，再加上加密货币的特殊危险：稳定币、交易所、相关性和周末。',
       body: `
-<p>The core rules still apply: risk a small fixed percent per trade, place stops by structure, think in R, cap daily losses, and never add to losers. Crypto adds several extra dangers, so adapt.</p>
+<p>核心规则依然适用：每笔交易只冒固定的小百分比风险，按结构设止损，以 R 思考，限制每日亏损，永远不要给亏损仓位加仓。加密货币还会带来几种额外的危险，所以要相应调整。</p>
 
-<h3>1. Size by volatility</h3>
-<p>Crypto assets differ enormously in how far they move. Use the <b>ATR</b> (average true range) to set stops, then let your risk rule set the size. A coin with a 10% average daily range needs a wider stop and therefore a smaller position than one with a 3% range, if you want the same risk in euros.</p>
+<h3>1. 按波动率确定仓位</h3>
+<p>加密资产的波动幅度差别极大。用 <b>ATR</b>（平均真实波幅）来设定止损，然后让你的风险规则决定仓位。如果想承担相同的欧元风险，日均波幅 10% 的币需要更宽的止损，因此仓位要比波幅 3% 的币更小。</p>
 
-<h3>2. Correlation: the diversification illusion</h3>
-<p>In sell-offs, almost everything falls together: altcoins often drop faster than Bitcoin. Holding ten long positions in ten altcoins is effectively one big long position. Limit your <b>total open risk</b> (for example 3 to 5% across all trades) and consider the whole portfolio, not each trade.</p>
+<h3>2. 相关性：分散投资的幻觉</h3>
+<p>在抛售中，几乎一切都会一起下跌：山寨币往往比比特币跌得更快。持有十个山寨币的十个多头仓位，实际上就是一个大的多头仓位。限制你的<b>总未平仓风险</b>（例如所有交易合计 3% 到 5%），并考虑整个组合，而不是单笔交易。</p>
 
-<h3>3. Counterparty and platform risk</h3>
+<h3>3. 交易对手与平台风险</h3>
 <ul>
-<li><b>Exchange risk</b>: exchanges can be hacked, restrict withdrawals or collapse (FTX, 2022). Do not keep all funds on one platform. Keep only trading capital on exchanges, withdraw profits.</li>
-<li><b>Stablecoin risk</b>: a "stable" coin can lose its peg (UST in 2022; USDC briefly in 2023). Diversify across issuers and prefer reputable ones.</li>
-<li><b>Smart-contract risk</b>: DeFi protocols can be hacked.</li>
-<li><b>API key safety</b>: when using bots, create keys with trading permission only (withdrawals disabled), restrict by IP address, and never share them.</li>
+<li><b>交易所风险</b>：交易所可能被黑、限制提现或倒闭（2022 年的 FTX）。不要把所有资金放在一个平台。只在交易所保留交易资金，把利润提走。</li>
+<li><b>稳定币风险</b>：“稳定”币可能脱锚（2022 年的 UST；2023 年 USDC 曾短暂脱锚）。分散到不同发行方，并优先选择信誉良好者。</li>
+<li><b>智能合约风险</b>：DeFi 协议可能被黑。</li>
+<li><b>API 密钥安全</b>：使用机器人时，创建仅有交易权限的密钥（禁用提现），按 IP 地址限制，且永不分享。</li>
 </ul>
 
-<h3>4. Execution risks</h3>
+<h3>4. 执行风险</h3>
 <ul>
-<li><b>Wicks and stop hunts</b>: price sometimes spikes through obvious levels and snaps back. Place stops beyond the level plus a volatility buffer.</li>
-<li><b>Slippage in thin markets</b>: small coins and weekends can fill your order far from the price shown. Use limit orders and smaller sizes.</li>
-<li><b>Exchange downtime</b>: platforms may freeze during volatility. Have a plan B, and avoid over-reliance on a single venue.</li>
+<li><b>影线与扫止损</b>：价格有时会冲过明显的关键位后迅速折返。把止损设在关键位之外再加一个波动缓冲。</li>
+<li><b>薄市场中的滑点</b>：小币和周末可能让你的订单在远离显示价格处成交。使用限价单和较小仓位。</li>
+<li><b>交易所宕机</b>：平台在剧烈波动时可能卡死。准备备用方案，避免过度依赖单一场所。</li>
 </ul>
 
-<h3>5. Funding and fee drag</h3>
-<p>Holding leveraged perpetual positions for days can accumulate funding costs. Always include funding and fees when calculating expected profit, especially for strategies with small targets.</p>
+<h3>5. 资金费率与费用的拖累</h3>
+<p>把杠杆永续仓位持有数日可能累积资金费用。计算预期利润时始终要把资金费率和手续费算进去，尤其是目标较小的策略。</p>
 
-<h3>6. Withdraw profits</h3>
-<p>Profits left on screen are not real. Adopt a rule such as "withdraw 30% of monthly profits to a safe wallet or bank account". It protects against exchange problems, reduces the urge to over-risk, and makes success tangible.</p>
+<h3>6. 提走利润</h3>
+<p>留在屏幕上的利润不是真实的。采用类似“把每月利润的 30% 提到安全钱包或银行账户”的规则。它能防范交易所问题，降低过度冒险的冲动，并让成功变得实实在在。</p>
 
-<h3>7. Take weekends and sleep seriously</h3>
-<p>If you hold positions overnight or over the weekend, make sure they have stops, reduced size and no high leverage. Many liquidations happen while the trader is asleep.</p>
+<h3>7. 认真对待周末与睡眠</h3>
+<p>如果你过夜或周末持仓，请确保设有止损、缩小仓位并避免高杠杆。许多爆仓发生在交易者睡觉时。</p>
 
-${B.ex('<p>Elena has €10,000 on one exchange and holds five altcoin longs, each risking 1%, so she thinks she has 5% total risk. A market-wide drop hits all five stops within hours: she loses 5% in one morning, not "1% five different times". She also had her entire balance on that platform. After this, she limits total open risk to 3%, keeps only half her capital on the exchange, and withdraws weekly profits.</p>')}
+${B.ex('<p>小娜在一家交易所有 10,000 €，持有五个山寨币多头，每个风险 1%，所以她以为总风险是 5%。全市场下跌在数小时内触发了全部五个止损：她一个上午损失 5%，而不是“五次各自的 1%”。她还把全部余额放在了那个平台上。此后，她把总未平仓风险限制在 3%，只在交易所保留一半资本，并每周提走利润。</p>')}
 
-${B.w('checklist', { key: 'd5', title: 'Pre-trade checklist for crypto traders', accent: 'ct', items: 'The daily and 4-hour trends support my direction|My stop is placed by structure plus a volatility buffer|My size follows my fixed risk percent, not the leverage number|Total open risk across all trades stays within my limit|I checked funding rate, open interest and any upcoming events or unlocks|I am using isolated margin and my stop is far inside the liquidation price|I do not hold more capital on the exchange than I need|I am calm, rested and not chasing a move' })}
+${B.w('checklist', { key: 'd5', title: '加密货币交易者开仓前清单', accent: 'ct', items: '日线和 4 小时趋势支持我的方向|我的止损按结构加波动缓冲设置|我的仓位遵循固定风险百分比，而不是杠杆数字|所有交易的总未平仓风险在我的限额内|我查看了资金费率、未平仓合约以及即将到来的事件或解锁|我使用逐仓保证金，且止损远在爆仓价之内|我在交易所的资金不超过所需|我冷静、休息充分，没有在追逐行情' })}
 
-${B.take(['Size by volatility: wider stops mean smaller positions.', 'Altcoins are highly correlated, so total open risk is what matters.', 'Reduce platform risk: spread funds, restrict API keys and withdraw profits.', 'Remember funding, slippage, weekends and exchange outages in your calculations.'])}`,
+${B.take(['按波动率确定仓位：止损越宽，仓位越小。', '山寨币高度相关，所以重要的是总未平仓风险。', '降低平台风险：分散资金，限制 API 密钥，并提走利润。', '在计算中考虑资金费率、滑点、周末和交易所宕机。'])}`,
       q: [
-        ['Why is holding many altcoin positions not true diversification in a crash?', ['They all fall to zero', 'They tend to fall together, often more than Bitcoin', 'They are regulated', 'They pay funding'], 1, 'High correlation in sell-offs means your positions act like one large bet.'],
-        ['Which API key setup is safest for a trading bot?', ['Withdrawal permission enabled, no IP limit', 'Trading permission only, withdrawals disabled, IP restricted', 'Full access for convenience', 'Share the key with a friend for backup'], 1, 'If keys leak, an attacker cannot withdraw funds.'],
-        ['Why withdraw profits regularly?', ['It increases leverage', 'It protects gains from exchange failures and makes profits real', 'It avoids fees', 'It is required by law'], 1, 'Profits sitting on a platform are exposed to counterparty risk.']
+        ['为什么在崩盘中持有许多山寨币仓位不是真正的分散？', ['它们都会归零', '它们往往一起下跌，常常比比特币跌得更多', '它们受监管', '它们要付资金费率'], 1, '抛售中的高相关性让你的仓位表现得像一个大赌注。'],
+        ['对交易机器人来说，哪种 API 密钥设置最安全？', ['启用提现权限，不限制 IP', '仅交易权限，禁用提现，限制 IP', '为方便授予完全权限', '把密钥分享给朋友作备份'], 1, '即使密钥泄露，攻击者也无法提走资金。'],
+        ['为什么要定期提走利润？', ['它会提高杠杆', '它能保护收益免受交易所故障影响，让利润变得真实', '它能避免手续费', '这是法律要求'], 1, '留在平台上的利润暴露在交易对手风险之下。']
       ]
     },
     {
-      id: 'd6', m: 14, t: 'Bots and automation: what they can and cannot do',
-      hook: 'Bots can execute rules tirelessly. They cannot create an edge from nothing. Learn to use them and to spot the scams.',
+      id: 'd6', m: 14, t: '机器人与自动化：能做什么，不能做什么',
+      hook: '机器人能不知疲倦地执行规则，却不能凭空创造优势。学会使用它们，也学会识别骗局。',
       body: `
-<p>Crypto's 24/7 nature makes automation attractive. A <b>trading bot</b> is software that places orders for you according to rules. Used well, it brings discipline and speed. Used badly, it automates losses at lightning speed.</p>
+<p>加密货币的 24/7 特性让自动化很有吸引力。<b>交易机器人</b>是按规则替你下单的软件。用得好，它带来纪律和速度；用得糟，它会以闪电般的速度自动化亏损。</p>
 
-<h3>What bots actually do</h3>
+<h3>机器人实际做什么</h3>
 <ul>
-<li><b>DCA bots</b>: buy a fixed amount on a schedule. Simple and low risk.</li>
-<li><b>Grid bots</b>: place buy and sell orders at set intervals inside a price range, harvesting small swings. Works in sideways markets; loses in strong trends and if price leaves the range.</li>
-<li><b>Trend-following / signal bots</b>: enter and exit based on indicators or conditions (moving-average crossovers, breakouts).</li>
-<li><b>Arbitrage bots</b>: exploit price differences between venues. Needs speed, capital and infrastructure; margins are thin.</li>
-<li><b>Market-making bots</b>: quote both buy and sell prices to earn the spread. Professional territory.</li>
-<li><b>Copy trading</b>: automatically mirror another trader's positions. You inherit their risk and their fees, and past results are not a promise.</li>
+<li><b>定投机器人</b>：按计划买入固定金额。简单、低风险。</li>
+<li><b>网格机器人</b>：在价格区间内按固定间隔布置买卖订单，赚取小幅波动。在横盘市场奏效；在强趋势中以及价格离开区间时亏损。</li>
+<li><b>趋势跟随 / 信号机器人</b>：根据指标或条件（均线交叉、突破）进出场。</li>
+<li><b>套利机器人</b>：利用不同场所之间的价差。需要速度、资金和基础设施；利润率很薄。</li>
+<li><b>做市机器人</b>：同时报出买价和卖价以赚取价差。属于职业领域。</li>
+<li><b>跟单交易</b>：自动复制另一位交易者的仓位。你承接他的风险和费用，过往业绩不是承诺。</li>
 </ul>
 
-<h3>What a bot gives you</h3>
+<h3>机器人能给你什么</h3>
 <ol>
-<li><b>Discipline</b>: no fear, no FOMO, no revenge trades. It follows the rules.</li>
-<li><b>Coverage</b>: works while you sleep.</li>
-<li><b>Speed and consistency</b>: precise execution and logging of every trade.</li>
-<li><b>Testability</b>: rules written in code can be backtested against history.</li>
+<li><b>纪律</b>：没有恐惧、没有 FOMO、没有报复性交易。它遵守规则。</li>
+<li><b>全时覆盖</b>：你睡觉时它在工作。</li>
+<li><b>速度与一致性</b>：精确执行并记录每一笔交易。</li>
+<li><b>可测试性</b>：用代码写成的规则可以用历史数据回测。</li>
 </ol>
 
-<h3>What a bot cannot do</h3>
+<h3>机器人不能做什么</h3>
 <ul>
-<li><b>It does not create an edge.</b> A bad strategy runs perfectly... straight into losses.</li>
-<li><b>It does not remove risk.</b> Markets can change regime, exchanges can fail, bugs can occur.</li>
-<li><b>It cannot predict the future.</b> Past performance on a backtest is not a promise.</li>
-<li><b>It does not replace your responsibility</b> for monitoring risk limits.</li>
+<li><b>它不创造优势。</b>糟糕的策略会完美运行……直奔亏损。</li>
+<li><b>它不消除风险。</b>市场可能改变状态，交易所可能故障，可能出现程序错误。</li>
+<li><b>它不能预测未来。</b>回测中的过往表现不是承诺。</li>
+<li><b>它不能替代你的责任</b>，你仍需监控风险限额。</li>
 </ul>
 
-<h3>How to evaluate a bot (or a strategy sold with one)</h3>
-${B.tbl(['Question', 'Good sign', 'Warning sign'], [
-        ['Are the rules explained?', 'Clear logic you understand', 'A "secret algorithm" with no explanation'],
-        ['Is there evidence?', 'Backtests with costs + forward/live results, drawdowns shown', 'Screenshots, cherry-picked months, "100% win rate"'],
-        ['What are the claims?', 'Honest about risk and losing periods', '"Guaranteed profits", "passive income", pressure to act now'],
-        ['Money handling', 'Funds stay on your exchange account; trade-only API keys', 'Asks you to deposit into their wallet or platform'],
-        ['Control', 'You can pause, set limits and see every trade', 'No stop controls or transparency']
+<h3>如何评估一个机器人（或与之捆绑销售的策略）</h3>
+${B.tbl(['问题', '好迹象', '警示信号'], [
+        ['规则有说明吗？', '你能理解的清晰逻辑', '没有任何解释的“秘密算法”'],
+        ['有证据吗？', '含成本的回测 + 前向/实盘结果，展示回撤', '截图、挑选的月份、“100% 胜率”'],
+        ['声称什么？', '坦诚说明风险和亏损期', '“保证盈利”“被动收入”，催促你马上行动'],
+        ['资金处理', '资金留在你自己的交易所账户；仅交易权限的 API 密钥', '要求你存入他们的钱包或平台'],
+        ['控制权', '你可以暂停、设定限额并查看每笔交易', '没有停止控制，也不透明']
       ])}
 
-<h3>Backtesting traps (again, because they matter)</h3>
+<h3>回测陷阱（再强调一次，因为很重要）</h3>
 <ul>
-<li><b>Overfitting</b>: tuning parameters until the past looks perfect.</li>
-<li><b>Ignoring costs</b>: fees, funding and slippage can turn a profitable-looking backtest into a loser.</li>
-<li><b>Look-ahead bias</b>: accidentally using information from the future in the rules.</li>
-<li><b>Survivorship bias</b>: testing only coins that still exist.</li>
-<li><b>Regime change</b>: a rule that worked in 2021 may fail in a quiet market.</li>
+<li><b>过拟合</b>：不断调参数直到过去看起来完美。</li>
+<li><b>忽略成本</b>：手续费、资金费率和滑点可能把看似盈利的回测变成亏损。</li>
+<li><b>前视偏差</b>：无意中在规则中使用了来自未来的信息。</li>
+<li><b>幸存者偏差</b>：只测试仍然存在的币。</li>
+<li><b>市场状态变化</b>：2021 年有效的规则在平静市场可能失效。</li>
 </ul>
-<p>Use <b>walk-forward testing</b> (design on one period, test on the next), then paper trade, then go live with tiny size and a kill switch (a maximum drawdown that automatically stops the bot).</p>
+<p>使用<b>滚动前向测试</b>（在一个时期设计，在下一个时期测试），然后模拟交易，再以极小仓位和<b>熔断开关</b>（达到最大回撤时自动停止机器人）上线。</p>
 
-${B.ex('<p>A grid bot is set between 90 and 110 on a coin trading at 100 and earns small profits in a quiet market for weeks. Then bad news hits, price slides to 70 and stays there. The bot has been buying all the way down and now holds a big loss, with no stop. A human with a plan would have defined a maximum loss and exited. The bot did exactly what it was told. This is why automation needs risk limits built in.</p>')}
+${B.ex('<p>一个网格机器人设在 90 到 110 之间，对应价格为 100 的币，在平静的市场中连续几周赚取小额利润。然后坏消息出现，价格滑到 70 并停在那里。机器人一路下跌一路买入，现在持有巨额亏损，且没有止损。一个有计划的人本会设定最大亏损并离场。机器人完全按指令行事。这就是自动化需要内置风险限额的原因。</p>')}
 
-${B.warn('<p>The "trading bot" market is full of scams: bots that promise 2% daily returns, require deposits into the seller\'s platform or pay you for recruiting others. If a return is guaranteed, it is not trading. It is a trap.</p>')}
+${B.warn('<p>“交易机器人”市场充满骗局：承诺日收益 2% 的机器人、要求你存入卖家平台的机器人，或拉人头才给你报酬的机器人。如果回报是保证的，那就不是交易，而是陷阱。</p>')}
 
-<h3>Optional: a structured programme with a bot</h3>
-<p>The creator of this course also offers <b>Trading Lab</b>, an optional paid programme that includes a trading bot designed to help traders apply rules more consistently. It is just one possible tool, not a requirement or a guarantee of results. Details are on the <a href="#lab">Trading Lab page</a>. Whatever you use, apply this lesson's checklist: understand the rules, test with small size, keep trade-only API permissions and set a maximum loss.</p>
+<h3>可选：带机器人的结构化课程</h3>
+<p>本课程的创作者还提供 <b>Trading Lab</b>，这是一个可选的付费课程，包含一个旨在帮助交易者更一致地执行规则的交易机器人。它只是一种可能的工具，不是必需品，也不保证结果。详情见 <a href="#lab">Trading Lab 页面</a>。无论你使用什么，都请应用本课的清单：理解规则，小仓位测试，保持仅交易权限的 API，并设定最大亏损。</p>
 
-${B.take(['Bots execute rules; they do not create an edge or remove risk.', 'Beware of guaranteed-profit claims, secret algorithms and requests to deposit into someone else\'s platform.', 'Backtest with costs, avoid overfitting, forward test, then start tiny with a kill switch.', 'Use trade-only, IP-restricted API keys and keep control of your funds.'])}`,
+${B.take(['机器人执行规则；它们不创造优势，也不消除风险。', '警惕保证盈利的说法、秘密算法，以及要求你存入别人平台的要求。', '带成本回测，避免过拟合，前向测试，然后以极小仓位和熔断开关起步。', '使用仅交易权限、限制 IP 的 API 密钥，并掌控好自己的资金。'])}`,
       q: [
-        ['What can a trading bot reliably provide?', ['Guaranteed profits', 'Discipline and consistent execution of your rules', 'Insider information', 'Zero risk'], 1, 'Bots remove emotion and work continuously, but they are only as good as the rules.'],
-        ['A seller promises 2% daily returns from their bot and asks you to deposit into their platform. This is…', ['A great opportunity', 'A classic scam pattern', 'Standard industry practice', 'A tax-free product'], 1, 'Guaranteed high returns and deposits into the seller\'s platform are major red flags.'],
-        ['Which step comes right after backtesting a strategy responsibly?', ['Going live with maximum leverage', 'Forward testing or paper trading, then very small live size', 'Selling it', 'Ignoring costs'], 1, 'Out-of-sample and live testing at tiny size reveal problems backtests hide.']
+        ['交易机器人能可靠地提供什么？', ['保证盈利', '纪律以及对你的规则的一致执行', '内幕消息', '零风险'], 1, '机器人消除了情绪并持续工作，但它只和规则一样好。'],
+        ['一位卖家承诺其机器人日收益 2%，并要求你存入他的平台。这是……', ['绝佳机会', '典型的骗局模式', '行业通行做法', '免税产品'], 1, '保证的高回报和存入卖家平台是重大的警示信号。'],
+        ['负责任地回测一个策略之后，紧接着是哪一步？', ['以最大杠杆上线', '前向测试或模拟交易，然后极小的实盘仓位', '把它卖掉', '忽略成本'], 1, '样本外和极小仓位的实盘测试会暴露回测隐藏的问题。']
       ]
     },
     {
-      id: 'd7', m: 11, t: 'Psychology for 24/7 markets',
-      hook: 'When the market never sleeps, neither do FOMO and anxiety. Build rules so that you do not burn out or blow up.',
+      id: 'd7', m: 11, t: '24/7 市场的交易心理',
+      hook: '当市场永不入睡，FOMO 和焦虑也不会。建立规则，避免身心耗竭或爆仓。',
       body: `
-<p>Crypto has all the usual trading emotions, plus a few special ones created by constant availability, extreme moves and social media hype.</p>
+<p>加密货币具有所有常见的交易情绪，再加上由持续可交易、极端行情和社交媒体炒作造成的一些特殊情绪。</p>
 
-<h3>Crypto-specific psychological traps</h3>
+<h3>加密货币特有的心理陷阱</h3>
 <ul>
-<li><b>FOMO on pumps</b>: a coin rises 40% in a day and everyone talks about it. Entering late usually means buying the top.</li>
-<li><b>"Number go up" euphoria</b>: after a rally, feeling invincible leads to bigger size and looser rules.</li>
-<li><b>Capitulation</b>: selling everything at the bottom after weeks of pain.</li>
-<li><b>Revenge and over-leverage</b>: trying to recover a loss with a larger, leveraged bet.</li>
-<li><b>Screen addiction and burnout</b>: checking charts at 3 a.m., constant alerts, poor sleep.</li>
-<li><b>Social-media herd</b>: groups and chat rooms amplify emotions and spread bad information.</li>
-<li><b>Gambler's mindset</b>: treating trades like casino spins. The thrill of wins can become the point, rather than the process.</li>
+<li><b>对暴拉的 FOMO</b>：一个币一天涨 40%，人人都在谈论。晚入场通常意味着买在顶部。</li>
+<li><b>“数字只会涨”的狂热</b>：一轮上涨之后觉得自己无敌，导致仓位更大、规则更松。</li>
+<li><b>投降式抛售</b>：痛苦数周后在底部清仓。</li>
+<li><b>报复与过度杠杆</b>：试图用更大的杠杆赌注挽回亏损。</li>
+<li><b>屏幕成瘾与倦怠</b>：凌晨 3 点看图表，不断的提醒，睡眠糟糕。</li>
+<li><b>社交媒体羊群</b>：群组和聊天室放大情绪，传播错误信息。</li>
+<li><b>赌徒心态</b>：把交易当作赌场转盘。赢钱的刺激可能取代了过程本身成为目的。</li>
 </ul>
 
-<h3>Rules for a sustainable routine</h3>
+<h3>可持续日常的规则</h3>
 <ol>
-<li><b>Define trading hours.</b> Pick windows when you analyse and trade, and switch off outside them.</li>
-<li><b>Use alerts instead of staring.</b> Set price alerts at your levels and let the phone watch.</li>
-<li><b>Limit trades per day</b> and stop after hitting your daily loss limit.</li>
-<li><b>No leveraged overnight positions</b> unless they have stops and small size.</li>
-<li><b>Three-strikes rule</b>: three losses in a row means a break of at least an hour (or the rest of the day).</li>
-<li><b>Weekend rule</b>: reduce size or stay flat if thin liquidity makes you nervous.</li>
-<li><b>Mute the noise.</b> Unfollow hype accounts. Information diet matters.</li>
-<li><b>Protect your sleep, exercise, social life.</b> A tired trader trades like an impulsive one.</li>
-<li><b>Separate trading money from life money.</b> The less you need the result, the better your decisions.</li>
+<li><b>设定交易时间。</b>选定分析和交易的时间窗口，窗口之外就关掉。</li>
+<li><b>用提醒代替盯盘。</b>在你的关键位设置价格提醒，让手机替你看着。</li>
+<li><b>限制每日交易次数</b>，达到每日亏损限额就停手。</li>
+<li><b>不过夜持有杠杆仓位</b>，除非设有止损且仓位较小。</li>
+<li><b>三振规则</b>：连续三次亏损意味着至少休息一小时（或当天余下的时间）。</li>
+<li><b>周末规则</b>：如果流动性薄让你紧张，就缩小仓位或空仓。</li>
+<li><b>屏蔽噪音。</b>取消关注炒作账号。信息摄入很重要。</li>
+<li><b>保护睡眠、运动和社交生活。</b>疲惫的交易者像冲动的人一样交易。</li>
+<li><b>把交易资金与生活资金分开。</b>你越不依赖结果，决策就越好。</li>
 </ol>
 
-<h3>The journal as a mirror</h3>
-<p>Log each trade with your emotional state. After 30 to 50 trades, look at which feelings correlate with losses (FOMO? boredom? late-night trades?). Many traders discover that a few specific behaviours cause most of their losses, and fixing those is the quickest improvement available.</p>
+<h3>交易日志是一面镜子</h3>
+<p>在记录每笔交易时同时记下你的情绪状态。30 到 50 笔交易之后，看看哪些感受与亏损相关（FOMO？无聊？深夜交易？）。许多交易者发现，少数几种具体行为造成了大部分亏损，纠正它们是最快的提升途径。</p>
 ${B.w('journal')}
 
-${B.ex('<p>Noah noticed from his journal that trades after midnight had an average of -0.8R while trades during his planned morning window averaged +0.3R. He stopped trading after 10 p.m. and his results turned from negative to positive without changing his strategy at all.</p>')}
+${B.ex('<p>小诺从日志里发现，午夜之后的交易平均为 −0.8R，而他计划好的早晨时段的交易平均为 +0.3R。他不再在晚上 10 点之后交易，结果由负转正，策略却丝毫没变。</p>')}
 
-${B.tip('<p>When you feel a strong urge to enter a trade, wait 10 minutes and write down the reason. If it is "I am scared it will go without me", skip it. There is always another setup tomorrow.</p>')}
+${B.tip('<p>当你有强烈冲动想入场时，等 10 分钟并写下理由。如果理由是“我怕它没我就跑了”，就放弃。明天总会有另一个机会。</p>')}
 
-<h3>When to take a break</h3>
-<p>If trading is affecting your sleep, relationships or work, you are betting rent money, or you feel unable to stop, take a break and talk to someone you trust. Problem gambling support services exist in most countries, and trading with the wrong mindset can behave like gambling.</p>
+<h3>何时该休息</h3>
+<p>如果交易正影响你的睡眠、人际关系或工作，你在拿房租钱下注，或者觉得自己停不下来，请休息一下并与你信任的人谈谈。大多数国家都有针对问题赌博的支持服务，心态不对的交易可能表现得像赌博。</p>
 
-${B.take(['Crypto adds FOMO on pumps, screen addiction and 24/7 temptation.', 'Define trading hours, use alerts, limit trades and respect loss limits.', 'Your journal reveals which emotions and habits cost you money.', 'If trading harms your health or finances, step back and seek help.'])}`,
+${B.take(['加密货币增加了对暴拉的 FOMO、屏幕成瘾和 24/7 的诱惑。', '设定交易时间，使用提醒，限制交易次数，尊重亏损限额。', '你的日志揭示了哪些情绪和习惯让你亏钱。', '如果交易损害了你的健康或财务，请退一步并寻求帮助。'])}`,
       q: [
-        ['What is a good response to a sudden 40% pump of a coin you do not own?', ['Buy immediately with leverage', 'Do not chase; wait for a setup that fits your rules', 'Borrow money to buy', 'Ask a stranger'], 1, 'Chasing late is a common way to buy tops.'],
-        ['Why use price alerts?', ['To watch the screen all night', 'To let your phone watch your levels so you do not need to stare at charts', 'To increase leverage', 'To follow influencers'], 1, 'Alerts reduce screen time and emotional trading.'],
-        ['What does the three-strikes rule mean?', ['Three trades per day only', 'After three consecutive losses, take a break', 'Three times leverage', 'Quit trading after three days'], 1, 'A pause stops a streak of emotional decisions.']
+        ['面对你没有持有的币突然暴拉 40%，什么是好的反应？', ['立刻加杠杆买入', '不追高；等待符合你规则的机会', '借钱买入', '问陌生人'], 1, '晚追是买在顶部的常见方式。'],
+        ['为什么要使用价格提醒？', ['为了整夜盯着屏幕', '让手机替你盯着关键位，这样你就不用一直看图表', '为了提高杠杆', '为了跟随网红'], 1, '提醒能减少盯盘时间和情绪化交易。'],
+        ['三振规则是什么意思？', ['每天只能交易三次', '连续三次亏损后休息一下', '杠杆三倍', '三天后就放弃交易'], 1, '暂停可以打断一连串情绪化的决定。']
       ]
     },
     {
-      id: 'd8', m: 12, t: 'Your crypto trading plan and graduation checklist',
-      hook: 'Put it all together: a plan, a milestone ladder and the rule that keeps you alive. Then unlock your certificate.',
+      id: 'd8', m: 12, t: '你的加密货币交易计划与毕业清单',
+      hook: '把一切整合起来：一份计划、一条里程碑阶梯，以及让你活下去的规则。然后解锁你的证书。',
       body: `
-<p>You have covered markets, leverage, signals, strategies, risk, bots and psychology. The last step is a written plan and a path from practice to (maybe) real trading, with milestones you must earn, not assume.</p>
+<p>你已经学完了市场、杠杆、信号、策略、风险、机器人和心理。最后一步是一份书面计划，以及一条从练习走向（也许）真实交易的路径，其中的里程碑需要你去赢得，而不是想当然。</p>
 
-<h3>Your crypto trading plan template</h3>
-${B.tbl(['Section', 'What to write'], [
-        ['Purpose and capital', 'Why I trade; the amount of risk capital (money I can lose). Maximum percent of my net worth.'],
-        ['Markets and products', 'Which coins and pairs; spot only or also futures; maximum leverage (for example 3x)'],
-        ['Timeframes and hours', 'Charts I use; trading windows; no-trade times'],
-        ['Setups', 'Two or three setups with exact entry, stop and exit rules'],
-        ['Risk rules', 'Risk per trade (0.5 to 1%), maximum open risk, daily and weekly loss limits, isolated margin only'],
-        ['Platform safety', 'Funds split across venues; 2FA; trade-only API keys; profit withdrawals schedule'],
-        ['Routine', 'Pre-trade checklist, journal after every trade, weekly review'],
-        ['Psychology rules', 'Three-strikes, no revenge trades, sleep and break rules'],
-        ['Pause rule', 'At a drawdown of for example 10 to 15%, stop trading and review for at least a week'],
-        ['Taxes and records', 'Export all trades, keep proof of costs, understand local rules']
+<h3>你的加密货币交易计划模板</h3>
+${B.tbl(['部分', '写什么'], [
+        ['目的与资金', '我为什么交易；风险资金金额（我能亏掉的钱）。占我净资产的最大百分比。'],
+        ['市场与产品', '哪些币和交易对；仅现货还是也做期货；最大杠杆（例如 3 倍）'],
+        ['周期与时间', '我使用的图表；交易时间窗口；不交易的时段'],
+        ['交易形态', '两到三种形态，附带精确的入场、止损和出场规则'],
+        ['风险规则', '每笔风险（0.5% 到 1%），最大未平仓风险，日亏损与周亏损限额，仅逐仓保证金'],
+        ['平台安全', '资金分散在不同场所；双重验证；仅交易权限的 API 密钥；利润提现计划'],
+        ['日常流程', '开仓前清单，每笔交易后写日志，每周复盘'],
+        ['心理规则', '三振规则，不做报复性交易，睡眠与休息规则'],
+        ['暂停规则', '回撤达到例如 10% 到 15% 时，停止交易并至少复盘一周'],
+        ['税务与记录', '导出所有交易，保留成本凭证，了解当地规则']
       ])}
 
-<h3>The milestone ladder</h3>
+<h3>里程碑阶梯</h3>
 <ol>
-<li><b>Level 1: Study</b>. Complete this path, understand risk and psychology.</li>
-<li><b>Level 2: Paper</b>. At least 100 simulated trades with fixed rules and a journal. Positive expectancy and 90% plan adherence.</li>
-<li><b>Level 3: Micro live</b>. Trade at about 10% of intended size for another 100 trades. Spot first.</li>
-<li><b>Level 4: Consistent</b>. 200+ real trades, positive results after fees, drawdown under control, rules followed.</li>
-<li><b>Level 5: Scale carefully</b>. Increase size in small steps, scale back after drawdowns, withdraw profits regularly.</li>
+<li><b>第 1 级：学习</b>。完成本路径，理解风险与心理。</li>
+<li><b>第 2 级：纸面</b>。至少 100 笔模拟交易，规则固定并写日志。正期望，且计划执行率达 90%。</li>
+<li><b>第 3 级：微型实盘</b>。以预定规模的约 10% 再交易 100 笔。先做现货。</li>
+<li><b>第 4 级：稳定</b>。200 笔以上真实交易，扣除费用后结果为正，回撤受控，遵守规则。</li>
+<li><b>第 5 级：谨慎扩大</b>。小步增加规模，回撤后缩减，定期提走利润。</li>
 </ol>
-${B.ex('<p>Kai completes Level 2 and finds his paper results were positive, but he broke his stop rule in 25% of trades. Instead of going live, he repeats paper trading until plan adherence is above 90%. Three weeks later he starts Level 3 with €500 and a hard rule: pause for a week at -€50. Slow is smooth, smooth is fast.</p>')}
+${B.ex('<p>小凯完成了第 2 级，发现纸面结果为正，但有 25% 的交易违反了止损规则。他没有转入实盘，而是重复模拟交易，直到计划执行率超过 90%。三周后，他以 500 € 开始第 3 级，并定下一条硬规则：亏损 50 € 就暂停一周。慢就是稳，稳就是快。</p>')}
 
-<h3>When to stop</h3>
-<p>Trading is not for everyone, and quitting after an honest attempt is a success of discipline, not a failure. Consider stopping or switching to long-term investing if you have hit your pause rule repeatedly, cannot follow your rules after months of effort, or trading is hurting your life. Plenty of people find that a boring, diversified investing plan serves them far better.</p>
+<h3>何时停下</h3>
+<p>交易不适合每个人，认真尝试后退出是纪律的胜利，而不是失败。如果你多次触发暂停规则，数月努力仍无法遵守规则，或者交易正在伤害你的生活，请考虑停止或转向长期投资。很多人发现，一份无聊而分散的投资计划对他们好得多。</p>
 
-${B.w('checklist', { key: 'd8', title: 'Graduation checklist', accent: 'ct', items: 'I wrote my full trading plan including risk rules and a pause rule|I completed at least 100 paper trades with a journal|My paper results show positive expectancy and 90% plan adherence|I use isolated margin and keep leverage low|My exchange accounts have 2FA, whitelists and trade-only API keys|I know how to export my trade history for taxes|I only trade money I can afford to lose' })}
+${B.w('checklist', { key: 'd8', title: '毕业清单', accent: 'ct', items: '我写好了完整的交易计划，包括风险规则和暂停规则|我完成了至少 100 笔带日志的模拟交易|我的模拟结果显示正期望，计划执行率达 90%|我使用逐仓保证金并保持低杠杆|我的交易所账户启用了双重验证、白名单和仅交易权限的 API 密钥|我知道如何导出交易记录用于报税|我只交易我亏得起的钱' })}
 
-<h3>Go deeper (optional)</h3>
-<p>If you want a structured programme with a trading bot built to help apply rules consistently, the creator of this course offers <b>Trading Lab</b> on Gumroad (an optional paid product). This free course already teaches the fundamentals, so use Trading Lab only if you want extra structure, and always keep the risk rules from this path. No programme or bot guarantees profits. See the <a href="#lab">Trading Lab page</a>.</p>
+<h3>深入了解（可选）</h3>
+<p>如果你想要一个带有交易机器人的结构化课程（旨在帮助更一致地执行规则），本课程的创作者在 Gumroad 上提供 <b>Trading Lab</b>（一个可选的付费产品）。这门免费课程已经教授了基础知识，所以只有在你想要额外结构时才使用 Trading Lab，并始终保留本路径中的风险规则。没有任何课程或机器人能保证盈利。请见 <a href="#lab">Trading Lab 页面</a>。</p>
 
-${B.key('<p><b>You finished the Crypto Trader path.</b> The goal was never to make you a gambler with better charts. It was to make you a careful professional-in-training who respects risk first. Now check your progress and get your certificate.</p><p><a class="btn sm" href="#cert">View my certificate</a></p>')}
+${B.key('<p><b>你完成了加密货币交易者路径。</b>我们的目标从来不是把你变成图表更好的赌徒，而是把你培养成一个谨慎的、把风险放在首位的准职业人士。现在查看你的进度并领取证书。</p><p><a class="btn sm" href="#cert">查看我的证书</a></p>')}
 
-${B.take(['Write a full plan: capital, products, setups, risk rules, platform safety, routine and pause rule.', 'Climb the ladder: study, paper, micro live, consistent, then scale carefully.', 'Quitting after an honest try is a legitimate, disciplined decision.', 'No programme or bot guarantees profit; your risk rules protect you.'])}`,
+${B.take(['写一份完整的计划：资金、产品、形态、风险规则、平台安全、日常流程和暂停规则。', '沿阶梯向上：学习、纸面、微型实盘、稳定，再谨慎扩大。', '认真尝试后退出是合理而有纪律的决定。', '没有任何课程或机器人能保证盈利；你的风险规则才保护你。'])}`,
       q: [
-        ['What should a pause rule trigger?', ['More leverage', 'A stop to trading and a review after a set drawdown', 'Deleting the journal', 'Higher risk per trade'], 1, 'It protects you from tilt and forces you to learn.'],
-        ['Which comes first on the milestone ladder?', ['Scaling position size', 'Studying and paper trading', 'Using 50x leverage', 'Copy trading strangers'], 1, 'You earn each step with evidence.'],
-        ['Which statement about paid programmes and bots is most accurate?', ['They can guarantee profits', 'They may provide structure but cannot remove risk or guarantee results', 'They replace risk management', 'They are legally required'], 1, 'Any tool is only as good as the rules, testing and discipline you apply.']
+        ['暂停规则应该触发什么？', ['更多杠杆', '在设定的回撤后停止交易并复盘', '删除日志', '提高每笔风险'], 1, '它保护你免于失控，并迫使你学习。'],
+        ['在里程碑阶梯上，什么在先？', ['扩大仓位规模', '学习和模拟交易', '使用 50 倍杠杆', '跟单陌生人'], 1, '每一步都要靠证据去赢得。'],
+        ['关于付费课程和机器人，哪种说法最准确？', ['它们可以保证盈利', '它们可能提供结构，但不能消除风险或保证结果', '它们取代风险管理', '它们是法律要求的'], 1, '任何工具都只和你所运用的规则、测试与纪律一样好。']
       ]
     }
   ]);

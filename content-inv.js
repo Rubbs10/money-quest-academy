@@ -1,351 +1,351 @@
-/* Everyday Investor path: 8 lessons */
+/* 日常投资者路径：8 节课 */
 (function () {
   'use strict';
   const MQ = window.MQ, B = MQ.B;
 
   MQ.addLessons('inv', [
     {
-      id: 'a1', m: 10, t: 'Set your goals and pick your accounts',
-      hook: 'Before choosing what to buy, decide what the money is for and where it will live.',
+      id: 'a1', m: 10, t: '设定目标，选好账户',
+      hook: '在决定买什么之前，先想清楚这笔钱是做什么用的，要放在哪里。',
       body: `
-<p>Great investors do not start with "what should I buy?" They start with "what is this money for, and when do I need it?" The answer decides almost everything else.</p>
+<p>优秀的投资者不会从“我该买什么？”开始，而是从“这笔钱是干什么的？我什么时候要用？”开始。这个答案几乎决定了后面的一切。</p>
 
-<h3>Use three buckets</h3>
+<h3>用三个“钱罐”</h3>
 <ul>
-<li><b>Safety bucket (0 to 2 years)</b>: emergency fund and money for upcoming expenses. Savings account. Zero market risk.</li>
-<li><b>Goals bucket (2 to 10 years)</b>: a car, a deposit for a home, a master's degree. Mostly calm assets with a smaller share of stocks.</li>
-<li><b>Growth bucket (10+ years)</b>: retirement and long-term wealth. This is where a high share of global stocks makes sense, because time smooths out the bumps.</li>
+<li><b>安全罐（0 到 2 年）</b>：应急资金和近期开销。放在储蓄账户，没有市场风险。</li>
+<li><b>目标罐（2 到 10 年）</b>：买车、房子首付、读硕士。以平稳资产为主，股票占比较小。</li>
+<li><b>成长罐（10 年以上）</b>：养老和长期财富。这里适合配置较高比例的全球股票，因为时间会抹平波动。</li>
 </ul>
 
-<h3>Make goals specific</h3>
-<p>"I want to be rich" is not a goal. "I want €30,000 for a home deposit in 6 years" is. Specific goals tell you how much to save and how much risk is appropriate. If the target is €30,000 in 6 years and you can invest €350 a month, you can test whether the plan works before you start.</p>
+<h3>把目标写具体</h3>
+<p>“我想变有钱”不是目标。“我想在 6 年内攒出 30,000 € 的房子首付”才是。具体的目标会告诉你要存多少、能承受多大风险。如果目标是 6 年 30,000 €，每月能投入 350 €，开始之前你就可以先验证这个计划行不行。</p>
 
-<h3>Types of accounts</h3>
-<p>Most countries offer special <b>tax-advantaged accounts</b> for investing or retirement. Examples: 401(k) and Roth IRA in the US, Stocks and Shares ISA and SIPP in the UK, TFSA and RRSP in Canada, retirement savings plans (PPR) in Portugal, and various pension products elsewhere. They can legally reduce the tax you pay, sometimes by a lot. Check what exists in <b>your</b> country, including the rules about when you can withdraw.</p>
-<p>A standard <b>brokerage account</b> is the flexible option: you can invest and withdraw any time, but you pay taxes according to local rules.</p>
+<h3>账户类型</h3>
+<p>大多数国家都提供专门的<b>税收优惠账户</b>用于投资或养老。例如：美国的 401(k) 和 Roth IRA，英国的 Stocks and Shares ISA 和 SIPP，加拿大的 TFSA 和 RRSP，葡萄牙的退休储蓄计划（PPR），其他地方还有各种养老金产品（中国有个人养老金账户等）。它们可以合法地减少你要交的税，有时差别很大。请了解<b>你所在国家</b>有什么，包括何时可以取款的规定。</p>
+<p>普通的<b>券商账户</b>是灵活的选择：你可以随时投资和取出，但要按当地规则缴税。</p>
 
-<h3>How to choose a broker</h3>
-${B.tbl(['Check', 'Why it matters'], [
-        ['Regulated in your region', 'Gives you legal protections and rules the broker must follow'],
-        ['Low fees', 'Commissions, currency conversion, custody and inactivity fees quietly eat returns'],
-        ['Access to broad ETFs', 'You want simple, diversified products available at low cost'],
-        ['Asset protection', 'Your securities should be held separately from the broker\'s own money; check the compensation scheme'],
-        ['Simple, reliable app', 'You will use it for decades; a clear interface prevents mistakes'],
-        ['Does not push risky products', 'Be wary of platforms that promote leverage, CFDs or constant trading to beginners']
+<h3>如何选择券商</h3>
+${B.tbl(['检查项', '为什么重要'], [
+        ['在你所在地区受监管', '让你获得法律保护，券商也必须遵守规则'],
+        ['费用低', '佣金、汇兑、托管和闲置费会悄悄吃掉收益'],
+        ['能买到宽基 ETF', '你需要低成本、简单、分散的产品'],
+        ['资产保护', '你的证券应与券商自有资金分开保管；了解赔偿制度'],
+        ['App 简单可靠', '你会用几十年，清晰的界面能减少失误'],
+        ['不推销高风险产品', '对向新手推广杠杆、差价合约（CFD）或频繁交易的平台要警惕']
       ])}
 
-<h3>Opening an account: what to expect</h3>
+<h3>开户时会遇到什么</h3>
 <ol>
-<li>Create the account and confirm your identity (ID document and sometimes a selfie, plus proof of address).</li>
-<li>Link your bank account and make a small first deposit to test the process.</li>
-<li>Turn on two-factor authentication using an authenticator app.</li>
-<li>Read the fee schedule. Look specifically at trading fees, currency conversion fees and anything charged just for holding the account.</li>
+<li>创建账户并验证身份（证件，有时还要自拍，以及地址证明）。</li>
+<li>绑定银行账户，先小额存入一笔，测试流程。</li>
+<li>用验证器 App 开启双重验证。</li>
+<li>阅读费用表。重点看交易费、汇兑费，以及仅仅持有账户就要收的费用。</li>
 </ol>
-${B.warn('<p>Never share your login with anyone. Do not use "account management" services from strangers who promise returns. Legitimate advisers are licensed and never ask for your password.</p>')}
+${B.warn('<p>永远不要把登录信息告诉任何人。不要使用陌生人提供的、承诺收益的“代客理财”服务。正规顾问有牌照，也绝不会向你要密码。</p>')}
 
-${B.w('checklist', { key: 'a1', title: 'Before your first investment', accent: 'inv', items: 'I wrote down my goal, amount and deadline|My emergency fund is in place|I checked tax-advantaged accounts available in my country|I picked a regulated broker and read its fee table|I turned on two-factor authentication with an authenticator app|I decided how much I will invest each month and set a reminder or automatic transfer' })}
+${B.w('checklist', { key: 'a1', title: '第一次投资之前', accent: 'inv', items: '我写下了目标、金额和期限|我的应急资金已经备好|我查了所在国家可用的税收优惠账户|我选了受监管的券商并读了它的费用表|我用验证器 App 开启了双重验证|我决定了每月投入多少，并设置了提醒或自动转账' })}
 
-${B.take(['Start with the purpose and deadline of the money, then pick the assets.', 'Use three buckets: safety, goals and growth.', 'Check tax-advantaged accounts in your own country.', 'Choose a regulated, low-cost broker that does not push risky products.'])}`,
+${B.take(['先想钱的用途和期限，再选资产。', '用三个钱罐：安全、目标、成长。', '了解你所在国家的税收优惠账户。', '选择受监管、低成本、不推销高风险产品的券商。'])}`,
       q: [
-        ['Money you will need for a home deposit in 3 years belongs mostly in…', ['100% high-risk stocks', 'Calm assets with limited risk', 'A new meme coin', 'Leveraged trades'], 1, 'With a short horizon, a crash right before you need the money would be damaging.'],
-        ['What should you check first when picking a broker?', ['That it has flashy ads', 'That it is regulated in your region and has low, transparent fees', 'That it offers 100x leverage', 'That friends use it'], 1, 'Regulation and costs matter much more than marketing.'],
-        ['What is the main advantage of tax-advantaged accounts?', ['Guaranteed returns', 'They can legally reduce the taxes you pay on gains', 'No risk', 'Higher interest rates on stocks'], 1, 'They do not change market risk, but lower taxes mean more of the return stays with you.']
+        ['3 年后要用的房子首付，主要应放在…', ['100% 高风险股票', '风险有限的平稳资产', '一种新的 meme 币', '杠杆交易'], 1, '期限很短，如果在需要用钱之前遇上暴跌，损失会很大。'],
+        ['选券商时首先应该检查什么？', ['广告是否醒目', '是否在你所在地区受监管，费用是否低且透明', '是否提供 100 倍杠杆', '朋友是否在用'], 1, '监管和成本远比营销重要。'],
+        ['税收优惠账户的主要好处是什么？', ['保证收益', '可以合法减少你在收益上缴的税', '没有风险', '股票利率更高'], 1, '它们不会改变市场风险，但少交税意味着更多收益留在你手里。']
       ]
     },
     {
-      id: 'a2', m: 11, t: 'ETFs and index funds: the basket of snacks',
-      hook: 'The simplest, cheapest way to own hundreds or thousands of companies at once.',
+      id: 'a2', m: 11, t: 'ETF 与指数基金：零食篮子',
+      hook: '一次性持有成百上千家公司，最简单、最便宜的方法。',
       body: `
-<p>Imagine you want to taste every snack in a huge supermarket. You could buy one packet of every type, which is slow and expensive. Or you could buy a ready-made <b>basket</b> with a bit of everything. An <b>ETF</b> (exchange-traded fund) is that basket for investments. You buy one share of the ETF and you own a small slice of hundreds or thousands of companies.</p>
+<p>想象你想把一个大超市里的每种零食都尝一遍。你可以每种买一包，又慢又贵。或者你可以买一个现成的<b>篮子</b>，里面每样都有一点。<b>ETF</b>（交易所交易基金）就是投资世界里的这个篮子。你买一份 ETF，就拥有了成百上千家公司的一小块。</p>
 
-<h3>Index funds explained</h3>
-<p>An <b>index</b> is a list of companies chosen by rules, such as "the 500 largest US companies" (S&amp;P 500) or "about 1,400 large and mid-sized companies from developed countries" (MSCI World). An <b>index fund</b> or <b>index ETF</b> simply copies that list automatically. No fund manager guesses which stocks to pick, so costs are very low.</p>
+<h3>指数基金是什么</h3>
+<p><b>指数</b>是按规则挑选出来的一份公司名单，比如“美国最大的 500 家公司”（标普 500）或“发达国家约 1,400 家大中型公司”（MSCI 世界指数）。<b>指数基金</b>或<b>指数 ETF</b>只是自动复制这份名单。没有基金经理去猜该选哪些股票，所以成本很低。</p>
 
-<h3>Why indexing works for most people</h3>
-<p>Beating the market consistently is extremely hard. Year after year, reports comparing active funds with their benchmark find that the majority of active funds underperform over 10 to 15 years, often by roughly the amount of their higher fees. Index funds guarantee you get the market return minus a tiny fee, which beats most professionals after costs.</p>
-${B.ex('<p>Imagine you and 99 friends all try to pick stocks. After costs, the average result is below the market, because for every winner there is a loser on the other side of the trade, and everyone pays fees. If you simply own the whole market through an index fund, you capture the average without paying the active tax.</p>')}
+<h3>为什么指数化适合大多数人</h3>
+<p>长期持续战胜市场极其困难。年复一年，将主动基金与基准对比的报告都发现，多数主动基金在 10 到 15 年里跑输基准，差距往往大致等于它们更高的费用。指数基金保证你拿到市场收益减去一点点费用，扣除成本后这比大多数专业人士还好。</p>
+${B.ex('<p>想象你和 99 个朋友都去选股。扣除成本后，平均结果低于市场，因为每有一个赢家，交易另一端就有一个输家，而且人人都要付费。如果你通过指数基金直接持有整个市场，你就拿到了平均水平，却不用付主动管理的“税”。</p>')}
 
-<h3>Popular index types</h3>
-${B.tbl(['Index', 'What it covers', 'Notes'], [
-        ['S&amp;P 500', '500 large US companies', 'Heavily weighted to US tech and big names'],
-        ['MSCI World', 'About 1,400 large and mid-cap companies in developed countries', 'Around 70% US'],
-        ['FTSE All-World / MSCI ACWI', 'Developed and emerging markets, thousands of companies', 'Closest to "the whole world" in one fund'],
-        ['Bond aggregate', 'Many government and corporate bonds', 'Calmer part of a portfolio']
+<h3>常见指数</h3>
+${B.tbl(['指数', '覆盖范围', '说明'], [
+        ['标普 500', '500 家美国大公司', '明显偏重美国科技和知名大公司'],
+        ['MSCI 世界', '发达国家约 1,400 家大中型公司', '约 70% 是美国'],
+        ['FTSE 全球 / MSCI ACWI', '发达和新兴市场，数千家公司', '一只基金里最接近“整个世界”'],
+        ['债券综合指数', '大量政府和企业债券', '投资组合里较平稳的部分']
       ])}
 
-<h3>How to compare ETFs</h3>
+<h3>如何比较 ETF</h3>
 <ul>
-<li><b>Index tracked</b>: what is inside? Broad and global is simple and robust.</li>
-<li><b>TER (total expense ratio)</b>: the yearly fee. Broad index ETFs often cost about 0.05 to 0.25% a year. Active funds can cost 1 to 2%.</li>
-<li><b>Fund size</b>: very small ETFs may close down. Larger, established funds are safer.</li>
-<li><b>Accumulating vs. distributing</b>: accumulating ETFs reinvest dividends automatically (simple, good for compounding); distributing ETFs pay them out to you.</li>
-<li><b>Domicile and UCITS</b>: in Europe, look for UCITS-compliant ETFs, many domiciled in Ireland or Luxembourg, which are designed for retail investors and often have favourable tax treatment on foreign dividends.</li>
-<li><b>Replication</b>: physical (holds the stocks) is easiest to understand. Synthetic uses swaps and adds complexity.</li>
-<li><b>Currency</b>: an ETF may be priced in euros while holding dollar assets. Currency movements add to returns or subtract from them.</li>
+<li><b>跟踪的指数</b>：里面有什么？宽基且全球化，简单又稳健。</li>
+<li><b>TER（总费用率）</b>：每年的费用。宽基指数 ETF 通常每年约 0.05% 到 0.25%。主动基金可能要 1% 到 2%。</li>
+<li><b>基金规模</b>：太小的 ETF 可能会清盘。更大、更成熟的基金更安全。</li>
+<li><b>累积型与分红型</b>：累积型 ETF 自动把股息再投资（简单，利于复利）；分红型则把股息付给你。</li>
+<li><b>注册地与 UCITS</b>：在欧洲，要找符合 UCITS 的 ETF，许多注册在爱尔兰或卢森堡，专为散户设计，对外国股息的税务处理往往更有利。</li>
+<li><b>复制方式</b>：实物复制（持有股票）最容易理解。合成复制使用互换，更复杂。</li>
+<li><b>币种</b>：ETF 可能以欧元计价，却持有美元资产。汇率波动会增加或减少收益。</li>
 </ul>
 
-${B.warn('<p>An ETF is only as safe as what it holds. A leveraged ETF, a single-sector ETF or a "crypto stocks" ETF can be extremely volatile. Never buy an ETF only because "ETFs are safe".</p>')}
+${B.warn('<p>ETF 的安全程度取决于它持有什么。杠杆 ETF、单一行业 ETF 或“加密股票”ETF 可能波动极大。千万不要仅仅因为“ETF 很安全”就买。</p>')}
 
-${B.tip('<p>Beginners can do very well with one global stock ETF plus (optionally) a bond ETF. Simple is not lazy: it is effective.</p>')}
+${B.tip('<p>新手只用一只全球股票 ETF，再（可选）加一只债券 ETF，就可以做得很好。简单不是偷懒，而是有效。</p>')}
 
-${B.take(['An ETF is a basket that gives instant diversification with one purchase.', 'Index funds copy a market list automatically and cost very little.', 'Most active funds underperform their benchmark after fees over long periods.', 'Compare index, TER, size, accumulating or distributing, domicile and replication.'])}`,
+${B.take(['ETF 是一个篮子，一次购买就能获得即时分散。', '指数基金自动复制市场名单，成本极低。', '长期来看，大多数主动基金扣费后跑输基准。', '比较指数、TER、规模、累积或分红、注册地和复制方式。'])}`,
       q: [
-        ['What does an index ETF do?', ['Tries to beat the market by stock picking', 'Copies a market index automatically at low cost', 'Guarantees profit', 'Lends money to governments only'], 1, 'Index funds track a list of companies using fixed rules, so fees stay low.'],
-        ['Which yearly fee (TER) is typical for a broad, low-cost index ETF?', ['0.1% to 0.25%', '3% to 5%', '10%', 'There is no fee ever'], 0, 'Fees under about 0.25% are common for broad index ETFs.'],
-        ['What does an accumulating ETF do with dividends?', ['Pays them to you in cash', 'Reinvests them automatically inside the fund', 'Burns them', 'Charges you extra'], 1, 'Accumulating ETFs reinvest dividends, which is convenient for compounding.']
+        ['指数 ETF 做什么？', ['通过选股试图战胜市场', '以低成本自动复制一个市场指数', '保证盈利', '只借钱给政府'], 1, '指数基金按固定规则跟踪一份公司名单，所以费用保持很低。'],
+        ['宽基、低成本指数 ETF 的典型年费（TER）是？', ['0.1% 到 0.25%', '3% 到 5%', '10%', '永远没有费用'], 0, '宽基指数 ETF 的费用低于约 0.25% 很常见。'],
+        ['累积型 ETF 如何处理股息？', ['以现金付给你', '在基金内自动再投资', '销毁', '向你额外收费'], 1, '累积型 ETF 把股息再投资，便于复利。']
       ]
     },
     {
-      id: 'a3', m: 12, t: 'Diversification and asset allocation',
-      hook: 'How to spread your money so no single disaster can wreck you, and a game that lets you stress-test your own mix.',
+      id: 'a3', m: 12, t: '分散投资与资产配置',
+      hook: '如何分散你的钱，让任何单一灾难都无法击垮你，还有一个游戏让你对自己的组合做压力测试。',
       body: `
-<p>The old advice "do not put all your eggs in one basket" is the heart of investing. <b>Asset allocation</b> (how you split your money between stocks, bonds, cash and other assets) is the biggest driver of how bumpy your ride will be. Research on portfolios suggests that allocation explains far more of a portfolio's behaviour than picking specific investments.</p>
+<p>“不要把所有鸡蛋放在一个篮子里”这句老话是投资的核心。<b>资产配置</b>（如何把钱分配到股票、债券、现金和其他资产）是决定旅程颠簸程度的最大因素。对投资组合的研究表明，配置对组合表现的解释力远大于挑选具体投资。</p>
 
-<h3>Three levels of diversification</h3>
+<h3>分散的三个层次</h3>
 <ol>
-<li><b>Across asset classes</b>: stocks, bonds, cash, maybe some gold or real estate. They react differently to events.</li>
-<li><b>Across countries and currencies</b>: do not rely only on your home market. Global funds do this for you.</li>
-<li><b>Across companies and sectors</b>: hundreds or thousands of companies, so one failure barely matters.</li>
+<li><b>跨资产类别</b>：股票、债券、现金，也许再加一些黄金或房地产。它们对事件的反应不同。</li>
+<li><b>跨国家和货币</b>：不要只依赖本国市场。全球基金会替你做到。</li>
+<li><b>跨公司和行业</b>：成百上千家公司，这样一家出问题几乎无关紧要。</li>
 </ol>
 
-<h3>Correlation: why mixing helps</h3>
-<p>Two assets that do not move together are said to have low <b>correlation</b>. In a bad year for stocks, high-quality bonds or gold sometimes hold up. That does not always happen (in 2022 both stocks and bonds fell), but across history a mix has produced smaller bumps than any single piece.</p>
+<h3>相关性：为什么混合有帮助</h3>
+<p>两种不同步变动的资产，称为低<b>相关性</b>。股票表现糟糕的年份，高质量债券或黄金有时能撑住。这并非总是如此（2022 年股票和债券一起下跌），但纵观历史，混合组合的波动比任何单一部分都小。</p>
 
-<h3>Some example starting mixes</h3>
-${B.tbl(['Style', 'Stocks', 'Bonds', 'Cash / other', 'Fits'], [
-        ['Careful', '30%', '50%', '20%', 'Short horizon, low tolerance for drops'],
-        ['Balanced', '60%', '30%', '10%', 'Medium horizon (7 to 15 years)'],
-        ['Growth', '80 to 90%', '10 to 20%', '0 to 5%', 'Long horizon (15+ years), high tolerance']
+<h3>几个起步组合示例</h3>
+${B.tbl(['风格', '股票', '债券', '现金 / 其他', '适合'], [
+        ['谨慎', '30%', '50%', '20%', '期限短，对下跌承受力低'],
+        ['平衡', '60%', '30%', '10%', '中等期限（7 到 15 年）'],
+        ['成长', '80 到 90%', '10 到 20%', '0 到 5%', '期限长（15 年以上），承受力高']
       ])}
-<p>A very rough rule of thumb some people use is "110 or 120 minus your age" as the percentage in stocks. It is only a starting point: your goals, income stability and nerves matter more than a formula.</p>
+<p>有人用一个非常粗略的经验法则：“110 或 120 减去你的年龄”作为股票占比。这只是起点：你的目标、收入稳定性和心理承受力比任何公式都重要。</p>
 
-<h3>Core and satellite</h3>
-<p>A popular structure: put 80 to 95% in a low-cost global "core" (a world ETF), and keep a small "satellite" (5 to 20%) for ideas you believe in, like individual stocks or themes. If a satellite fails, the core protects you.</p>
+<h3>核心与卫星</h3>
+<p>一个流行的结构：把 80% 到 95% 放在低成本的全球“核心”（一只全球 ETF），再留一小块“卫星”（5% 到 20%）给你看好的想法，比如个股或主题。卫星失败了，核心会保护你。</p>
 
-<h3>Now stress-test your portfolio</h3>
-<p>Build a mix, then run it through four stylised eight-year scenarios. Try an all-stock portfolio, a careful one, and a "100% crypto" one. Watch both the final value and the worst drop on the way. Which one could you actually live with?</p>
+<h3>现在给你的组合做压力测试</h3>
+<p>搭一个组合，让它跑过四个程式化的八年情景。试试全股票组合、谨慎组合，以及“100% 加密货币”。同时看期末价值和途中最糟的回撤。哪一个是你真正能承受的？</p>
 ${B.w('alloc')}
 
-${B.key('<p><b>The real question is not "what gives the highest return?"</b> It is "what is the highest-risk mix I can hold through a crash without selling?" A great plan you abandon in panic is worse than a good plan you keep.</p>')}
+${B.key('<p><b>真正的问题不是“什么回报最高？”</b>而是“在暴跌中我能不卖出而持有的最高风险组合是什么？”一个你在恐慌中放弃的绝佳计划，不如一个你能坚持的不错计划。</p>')}
 
-${B.warn('<p>Owning ten stocks in the same industry, or five funds that all hold the same big tech companies, is not real diversification. Look through what the funds actually hold.</p>')}
+${B.warn('<p>持有同一行业的十只股票，或者五只都持有相同大型科技公司的基金，并不是真正的分散。请看清基金实际持有什么。</p>')}
 
-${B.take(['Asset allocation drives most of your portfolio\'s risk and behaviour.', 'Diversify across asset classes, countries and companies.', 'Pick the mix you can hold through a 30% fall, not the one with the best chart.', 'Core-and-satellite keeps risky ideas to a small, affordable slice.'])}`,
+${B.take(['资产配置决定了你投资组合的大部分风险和行为。', '跨资产类别、国家和公司分散。', '选你能扛过 30% 下跌的组合，而不是曲线最好看的那个。', '核心加卫星把高风险想法限制在一小块可承受的份额里。'])}`,
       q: [
-        ['What is the main purpose of diversification?', ['Maximise short-term profit', 'Reduce the damage any single failure can cause', 'Avoid taxes', 'Guarantee returns'], 1, 'Spreading risk means no single company or asset can wreck your whole portfolio.'],
-        ['In a core-and-satellite approach, the core usually is…', ['A single hot stock', 'A broad, low-cost global fund', 'A leveraged position', 'Cash only'], 1, 'The core is the stable, diversified base; satellites are small bets.'],
-        ['Which choice best reflects the right question when choosing a mix?', ['Which assets went up most last year?', 'What is the riskiest mix I can hold through a crash without selling?', 'What does a famous influencer own?', 'Which mix would triple fastest?'], 1, 'Behaviour in downturns determines whether you actually earn the long-term returns.']
+        ['分散投资的主要目的是什么？', ['最大化短期利润', '降低任何单一失败可能造成的损害', '避税', '保证收益'], 1, '分散风险意味着没有哪家公司或资产能毁掉你的整个组合。'],
+        ['在核心加卫星的做法中，核心通常是…', ['一只热门个股', '宽基、低成本的全球基金', '杠杆头寸', '只有现金'], 1, '核心是稳定、分散的基础；卫星是小额押注。'],
+        ['选择组合时，哪个选项最符合正确的问题？', ['去年哪些资产涨得最多？', '在暴跌中我能不卖出而持有的最高风险组合是什么？', '某个著名网红持有什么？', '哪个组合翻三倍最快？'], 1, '你在下跌中的行为，决定了你能否真正拿到长期回报。']
       ]
     },
     {
-      id: 'a4', m: 9, t: 'Dollar-cost averaging and automating your wealth',
-      hook: 'Invest the same amount on a schedule and remove the hardest decision in investing: when.',
+      id: 'a4', m: 9, t: '定投与财富自动化',
+      hook: '按计划投入相同金额，去掉投资中最难的决定：什么时候买。',
       body: `
-<p>Nobody can reliably predict the perfect day to buy. <b>Dollar-cost averaging (DCA)</b> solves this by investing a fixed amount at regular intervals, such as €100 on the first of every month, no matter what the market is doing. When prices are low you automatically buy more units; when prices are high you buy fewer.</p>
+<p>没人能可靠地预测最佳买入日。<b>定期定额投资（DCA，成本平均法）</b>解决了这个问题：不管市场如何，按固定间隔投入固定金额，比如每月 1 号投 100 €。价格低时你自动买到更多份额，价格高时买到更少。</p>
 
-${B.ex('<p>Over 4 months you invest €100 each month. The fund price is €10, €8, €5 and €10. You buy 10, 12.5, 20 and 10 units: 52.5 units for €400, an average cost of about €7.62 per unit, even though the price ended where it began at €10. Your average price is lower than the simple average of prices because you bought more when it was cheap.</p>')}
+${B.ex('<p>4 个月里你每月投 100 €。基金价格分别是 10 €、8 €、5 € 和 10 €。你买到 10、12.5、20 和 10 份：400 € 买到 52.5 份，平均成本约 7.62 € 每份，尽管价格最后回到了起点 10 €。你的平均价格低于价格的简单平均，因为便宜时你买得更多。</p>')}
 
-<h3>DCA vs. lump sum</h3>
-<p>If you already have a large sum, statistics show that investing it all at once beats spreading it out in roughly two thirds of historical cases, simply because markets rise more often than they fall. But DCA reduces the chance of putting everything in right before a crash, and it is easier on nerves. Most people do not have a lump sum anyway: they invest from salary, which is automatically DCA.</p>
+<h3>定投与一次性投入</h3>
+<p>如果你已经有一大笔钱，统计显示一次性投入在历史上约三分之二的情况下优于分批，仅仅因为市场上涨比下跌更常见。但 DCA 降低了恰好在暴跌前全部投入的可能性，对心态也更友好。况且大多数人并没有一笔整钱：他们从工资里投资，这本身就是自动的 DCA。</p>
 ${B.w('dca')}
 
-<h3>Make it automatic</h3>
+<h3>让它自动化</h3>
 <ol>
-<li>Pick an amount you can keep even in a bad month.</li>
-<li>Set a standing order or automatic investment for the day after payday.</li>
-<li>Choose the same broad fund each time.</li>
-<li>Increase the amount when your income rises ("raise it with every raise").</li>
-<li>Do not stop in a crash. Falling prices mean your fixed amount buys more.</li>
+<li>选一个即使在糟糕的月份也能坚持的金额。</li>
+<li>设置发薪日后一天的定期转账或自动投资。</li>
+<li>每次都选同一只宽基基金。</li>
+<li>收入增加时提高金额（“每次加薪就跟着加”）。</li>
+<li>暴跌时不要停。价格下跌意味着你的固定金额买得更多。</li>
 </ol>
 
-<h3>What to do with windfalls</h3>
-<p>Bonuses, gifts or a tax refund: a sensible rule is to split them. For example, 50% to your plan (invest or emergency fund), 30% for goals and 20% to enjoy. You do not need to be a monk, only consistent.</p>
+<h3>意外之财怎么处理</h3>
+<p>奖金、礼金或退税：一个合理的规则是分开用。比如 50% 进你的计划（投资或应急资金），30% 用于目标，20% 用来享受。你不必像苦行僧，只需要坚持。</p>
 
-${B.warn('<p>DCA does not protect you from a falling market or guarantee a profit. It also does not rescue a bad asset. Combine it with diversified, sensible investments.</p>')}
+${B.warn('<p>DCA 不能保护你免受下跌市场的影响，也不能保证盈利，更救不了一个糟糕的资产。要把它与分散、合理的投资结合起来。</p>')}
 
-${B.take(['DCA means investing a fixed amount on a regular schedule.', 'It removes market-timing decisions and builds the habit.', 'A lump sum often wins statistically, but DCA reduces regret and risk of bad timing.', 'Automate it and keep going during crashes.'])}`,
+${B.take(['DCA 就是按固定计划定期投入固定金额。', '它省去了择时决定，并养成习惯。', '一次性投入统计上常常占优，但 DCA 减少后悔和择时不佳的风险。', '把它自动化，暴跌时继续。'])}`,
       q: [
-        ['What is dollar-cost averaging?', ['Waiting for the cheapest day', 'Investing a fixed amount at regular intervals regardless of price', 'Selling when prices fall', 'Borrowing to invest'], 1, 'The schedule, not the price, decides when you buy.'],
-        ['When the price falls, a fixed monthly investment…', ['Buys fewer units', 'Buys more units', 'Buys the same number of units', 'Stops automatically'], 1, 'The same euro amount buys more units at lower prices.'],
-        ['What is the best reaction to a market crash if you invest monthly through a plan?', ['Stop everything and sell', 'Keep investing your planned amount', 'Double your leverage', 'Switch to a random hot coin'], 1, 'Staying the course lets you buy cheaper while your long-term plan is unchanged.']
+        ['什么是定期定额投资？', ['等最便宜的一天', '不论价格，按固定间隔投入固定金额', '价格下跌时卖出', '借钱投资'], 1, '决定何时买入的是计划，而不是价格。'],
+        ['价格下跌时，固定的每月投资会…', ['买到更少的份额', '买到更多的份额', '买到相同份额', '自动停止'], 1, '同样的欧元金额在价格更低时能买到更多份额。'],
+        ['如果你按计划每月投资，面对市场暴跌最好的反应是什么？', ['全部停止并卖出', '继续投入你计划的金额', '把杠杆翻倍', '换成随机的热门币'], 1, '坚持方针，让你在长期计划不变的同时买得更便宜。']
       ]
     },
     {
-      id: 'a5', m: 10, t: 'Costs, fees and taxes: the silent wealth killers',
-      hook: 'A fee that sounds tiny can eat a third of your final result. Learn to spot every cost.',
+      id: 'a5', m: 10, t: '成本、费用与税：悄悄吞噬财富的杀手',
+      hook: '听起来很小的费用，可能吃掉你最终结果的三分之一。学会识别每一项成本。',
       body: `
-<p>You cannot control the market, but you can control what you pay to take part in it. Costs compound just like returns, only in the wrong direction.</p>
+<p>你无法控制市场，但可以控制参与市场要付出的代价。成本和收益一样会复利，只是方向相反。</p>
 
-<h3>The costs to know</h3>
+<h3>需要了解的成本</h3>
 <ul>
-<li><b>Fund fees (TER)</b>: charged yearly inside the fund.</li>
-<li><b>Trading commissions</b>: a fixed fee or percentage each time you buy or sell.</li>
-<li><b>Spread</b>: the small gap between the buy price (ask) and sell price (bid). A hidden cost on every trade.</li>
-<li><b>Currency conversion fees</b>: often 0.25% to 1% or more if the broker adds a margin.</li>
-<li><b>Custody and inactivity fees</b>: charged by some brokers just for holding your assets.</li>
-<li><b>Performance fees</b>: a share of profits taken by some funds.</li>
-<li><b>Taxes</b>: on dividends, interest and capital gains, depending on where you live.</li>
+<li><b>基金费用（TER）</b>：每年在基金内部扣除。</li>
+<li><b>交易佣金</b>：每次买卖收取的固定费用或百分比。</li>
+<li><b>买卖价差</b>：买入价（卖价）与卖出价（买价）之间的小差距。每笔交易都有的隐性成本。</li>
+<li><b>汇兑费</b>：如果券商加价，常见 0.25% 到 1% 甚至更多。</li>
+<li><b>托管费和闲置费</b>：有些券商仅仅因为你持有资产就收费。</li>
+<li><b>业绩提成</b>：有些基金会抽取一部分利润。</li>
+<li><b>税</b>：对股息、利息和资本利得征收，取决于你住在哪里。</li>
 </ul>
 
-<h3>See the damage</h3>
-<p>Compare a cheap ETF with an expensive fund. Same market, same contributions, only the fee differs.</p>
+<h3>看看损害有多大</h3>
+<p>比较一只便宜的 ETF 和一只昂贵的基金。同样的市场，同样的投入，只有费用不同。</p>
 ${B.w('fees')}
 
-<h3>Taxes: the basics</h3>
-<p>Rules vary by country, but the common ideas are:</p>
+<h3>税：基础知识</h3>
+<p>各国规则不同，但常见的概念有：</p>
 <ul>
-<li><b>Capital gains tax</b> is paid on the profit when you sell. Buy-and-hold investors trigger it rarely, which lets more of their money keep compounding. Frequent traders trigger it often.</li>
-<li><b>Dividend tax</b> applies when companies pay out profits. Accumulating funds may have different treatment from distributing ones.</li>
-<li><b>Withholding tax</b> may be taken at source on foreign dividends.</li>
-<li><b>Losses</b> can sometimes be used to offset gains. Keep records.</li>
+<li><b>资本利得税</b>在你卖出时对利润征收。买入持有的投资者很少触发，因此更多的钱可以继续复利。频繁交易者经常触发。</li>
+<li><b>股息税</b>在公司派发利润时适用。累积型基金与分红型基金的待遇可能不同。</li>
+<li><b>预扣税</b>可能在源头对外国股息扣除。</li>
+<li><b>亏损</b>有时可以用来抵扣收益。请保留记录。</li>
 </ul>
-${B.warn('<p>This course gives general ideas, not tax advice. Read your tax authority\'s guidance or talk to a qualified adviser. Tax rules change.</p>')}
+${B.warn('<p>本课程提供的是一般性概念，不是税务建议。请阅读你所在地税务机关的指引，或咨询合格的顾问。税收规则会变化。</p>')}
 
-${B.ex('<p>Two friends each invest €10,000 and add €200 a month for 30 years in the same market (7% before costs). One pays 0.2% a year and ends with about €297,000. The other pays 1.8% and ends with about €215,000. That is roughly €82,000 less, just from fees, for the exact same market.</p>')}
+${B.ex('<p>两个朋友各投入 10,000 €，并在同一个市场里 30 年每月追加 200 €（扣费前 7%）。一人每年付 0.2%，最终约 297,000 €。另一人付 1.8%，最终约 215,000 €。仅仅因为费用就少了约 82,000 €，而市场完全相同。</p>')}
 
-${B.tip('<p>Before buying any product ask: "What is the total yearly cost, in percent, including every fee?" If the seller cannot answer clearly, walk away.</p>')}
+${B.tip('<p>买任何产品之前都问：“包含所有费用在内，每年的总成本是多少个百分点？”如果卖方回答不清楚，就走开。</p>')}
 
-${B.take(['Costs compound against you, and a 1% fee is not small over decades.', 'Look at TER, trading fees, spreads, currency conversion and custody fees together.', 'Buy-and-hold reduces trading costs and taxable events.', 'Learn your country\'s tax rules or ask a professional.'])}`,
+${B.take(['成本会复利地对你不利，1% 的费用在几十年里一点也不小。', '把 TER、交易费、价差、汇兑和托管费放在一起看。', '买入持有可以减少交易成本和应税事件。', '了解你所在国家的税收规则，或咨询专业人士。'])}`,
       q: [
-        ['Why are fees especially harmful over long periods?', ['They are charged only once', 'They are charged every year and also remove the future growth that money would have earned', 'They only apply in bull markets', 'They are refunded at the end'], 1, 'The effect compounds, so small yearly percentages become large totals.'],
-        ['What is the spread?', ['A tax on dividends', 'The gap between the buy price and the sell price', 'A type of ETF', 'Your annual fee'], 1, 'You buy at the higher ask and sell at the lower bid, so every round trip costs the spread.'],
-        ['Which investor probably pays less tax drag?', ['One who trades every day', 'One who buys and holds for years', 'It is always identical', 'One who sells every month'], 1, 'Fewer sales mean fewer taxable events, so more money stays invested.']
+        ['为什么费用在长期里特别有害？', ['只收一次', '每年都收，而且还夺走这笔钱本可赚取的未来增长', '只在牛市适用', '最后会退还'], 1, '这种效应会复利，所以每年很小的百分比会变成很大的总额。'],
+        ['什么是买卖价差？', ['股息税', '买入价和卖出价之间的差距', '一种 ETF', '你的年费'], 1, '你以较高的卖价买入，以较低的买价卖出，所以每一个来回都要付出价差。'],
+        ['哪种投资者的税负拖累可能更小？', ['每天交易的人', '买入并持有多年的人', '总是一样', '每月卖出的人'], 1, '卖得少意味着应税事件少，更多的钱留在投资里。']
       ]
     },
     {
-      id: 'a6', m: 12, t: 'Stay the course: crashes, rebalancing and behaviour',
-      hook: 'Markets crash regularly. Your plan has to be ready before it happens. Play the crash game and see how you react.',
+      id: 'a6', m: 12, t: '坚持到底：暴跌、再平衡与行为',
+      hook: '市场会定期崩盘。你的计划要在它发生之前就准备好。玩玩暴跌游戏，看看你会怎么反应。',
       body: `
-<p>If you invest for 40 years, you will live through several crashes. This is not a rare disaster. It is part of the price of long-term returns. What happens next to your wealth depends mostly on what you do during the fall.</p>
+<p>如果你投资 40 年，会经历好几次暴跌。这不是罕见的灾难，而是长期回报价格的一部分。之后你的财富会怎样，主要取决于你在下跌期间的所作所为。</p>
 
-<h3>Crashes in history</h3>
+<h3>历史上的暴跌</h3>
 <ul>
-<li><b>2000 to 2002</b>: the dot-com bubble. The US S&amp;P 500 fell about 49%.</li>
-<li><b>2007 to 2009</b>: the global financial crisis. Roughly -57% from peak to bottom.</li>
-<li><b>February to March 2020</b>: the pandemic crash. About -34% in just 33 days, followed by one of the fastest recoveries ever.</li>
-<li><b>2022</b>: inflation and rising rates. Around -25% for US stocks, with bonds also falling.</li>
+<li><b>2000 到 2002 年</b>：互联网泡沫。美国标普 500 下跌约 49%。</li>
+<li><b>2007 到 2009 年</b>：全球金融危机。从顶部到底部约下跌 57%。</li>
+<li><b>2020 年 2 月到 3 月</b>：疫情暴跌。仅 33 天约下跌 34%，随后是史上最快的恢复之一。</li>
+<li><b>2022 年</b>：通胀与加息。美国股票约下跌 25%，债券也在下跌。</li>
 </ul>
-<p>In each of these cases, patient investors in broad US stock indices eventually recovered and reached new highs, though it took from a few months to roughly five to seven years in price terms. This does not guarantee that every market recovers (Japan took over 30 years to regain its 1989 peak), which is one reason to diversify globally.</p>
+<p>在这些情形里，持有美国宽基股票指数的耐心投资者最终都恢复并创出新高，按价格计算从几个月到大约五至七年不等。这并不保证每个市场都会恢复（日本花了 30 多年才回到 1989 年的高点），这正是要全球分散的原因之一。</p>
 
-<h3>The cost of panic</h3>
-<p>Selling after a 30% drop locks the loss in. And then you must decide when to get back in. Many sell near the bottom and re-enter after prices have already rebounded. Studies show the best market days often occur right next to the worst days, so missing just a handful of them can dramatically reduce long-term returns.</p>
+<h3>恐慌的代价</h3>
+<p>在下跌 30% 之后卖出，会把亏损锁定。然后你还得决定何时重新进场。许多人在接近底部时卖出，在价格已经反弹后才回来。研究表明，最好的交易日往往紧挨着最糟的交易日，所以仅仅错过少数几天，就会大幅降低长期回报。</p>
 
-<h3>Play: Market crash survival game</h3>
-<p>You hold €10,000. Headlines get worse. At each step you decide: hold, sell, buy back or add money. No answer is perfect, but your pattern says a lot about your nerves.</p>
+<h3>游戏：市场暴跌生存</h3>
+<p>你持有 10,000 €。新闻越来越糟。每一步你要决定：持有、卖出、买回或追加资金。没有哪个答案是完美的，但你的模式能说明你的心理承受力。</p>
 ${B.w('panic')}
 
-<h3>Rebalancing: the discipline of buying low</h3>
-<p>Say your plan is 70% stocks and 30% bonds. After a stock boom you might be at 80% stocks, more risk than you chose. <b>Rebalancing</b> means bringing the mix back to target by selling some of what rose and buying what lagged. Two simple methods:</p>
+<h3>再平衡：低买的纪律</h3>
+<p>假设你的计划是 70% 股票、30% 债券。股市繁荣之后，你可能到了 80% 股票，风险比你选择的更大。<b>再平衡</b>是指通过卖出一部分上涨的、买入落后的，把组合调回目标。两种简单方法：</p>
 <ul>
-<li><b>Calendar</b>: once a year on a fixed date.</li>
-<li><b>Threshold</b>: whenever any slice drifts more than 5 percentage points from target.</li>
+<li><b>日历法</b>：每年在固定日期一次。</li>
+<li><b>阈值法</b>：任何一部分偏离目标超过 5 个百分点时。</li>
 </ul>
-<p>An even easier way: direct <i>new</i> contributions to the part that is below target, so you rebalance without selling (and without tax).</p>
+<p>还有更简单的办法：把<i>新增</i>投入导向低于目标的部分，这样不用卖出（也不用交税）就完成了再平衡。</p>
 
-<h3>Write your crash plan today</h3>
-${B.tryit('<p>Finish this sentence and keep it: "If my portfolio falls 30%, I will ______." For example: "continue my monthly investing, not check prices more than once a week, and talk to a friend before selling anything."</p>')}
+<h3>今天就写下你的暴跌计划</h3>
+${B.tryit('<p>完成这句话并保存下来：“如果我的投资组合下跌 30%，我会______。”例如：“继续我的每月投资，每周看价格不超过一次，卖出任何东西之前先和朋友聊聊。”</p>')}
 
-${B.take(['Crashes of 20 to 50% happen regularly; plan for them in advance.', 'Selling in a panic turns temporary losses into permanent ones.', 'Rebalance once a year or when a slice drifts by about 5 points.', 'Global diversification protects you if one market takes decades to recover.'])}`,
+${B.take(['20% 到 50% 的暴跌会定期发生；提前计划。', '恐慌卖出会把暂时的亏损变成永久的亏损。', '每年再平衡一次，或在某一部分偏离约 5 个点时再平衡。', '如果某个市场花几十年才恢复，全球分散能保护你。'])}`,
       q: [
-        ['Roughly how far did the S&P 500 fall in the 2020 crash?', ['About 5%', 'About 34%', 'About 80%', 'It did not fall'], 1, 'It dropped about a third in roughly a month before recovering strongly.'],
-        ['What does rebalancing do?', ['Restores your target mix by trimming winners and adding to laggards', 'Doubles your risk', 'Eliminates taxes', 'Predicts the next crash'], 0, 'It brings risk back to the level you chose and enforces a buy-low, sell-high discipline.'],
-        ['Why is panic-selling usually costly?', ['It makes the market rise', 'It locks in losses and leaves you deciding when to re-enter, often too late', 'It lowers fees', 'It increases dividends'], 1, 'The recovery often starts when sentiment is worst, so people who sold miss it.']
+        ['2020 年暴跌中，标普 500 大约下跌了多少？', ['约 5%', '约 34%', '约 80%', '没有下跌'], 1, '它在大约一个月内下跌了约三分之一，然后强劲恢复。'],
+        ['再平衡的作用是什么？', ['通过削减赢家、增加落后者来恢复目标组合', '让你的风险翻倍', '消除税', '预测下一次暴跌'], 0, '它把风险带回你选定的水平，并强制执行低买高卖的纪律。'],
+        ['为什么恐慌卖出通常代价高昂？', ['它让市场上涨', '它锁定亏损，还让你自己决定何时回场，往往太迟', '它降低费用', '它增加股息'], 1, '恢复往往始于情绪最糟的时候，所以卖出的人会错过。']
       ]
     },
     {
-      id: 'a7', m: 13, t: 'Picking individual stocks: a beginner\'s guide',
-      hook: 'Optional and risky, but fascinating. How to read a company without falling for stories.',
+      id: 'a7', m: 13, t: '挑选个股：新手指南',
+      hook: '可选，有风险，但很迷人。如何看懂一家公司而不被故事迷惑。',
       body: `
-<p>Most of your investing can (and probably should) be index funds. But many people want to learn how to analyse individual companies. If you do, treat it as a <b>satellite</b>: a small slice of your money (for example 5 to 15%), and a way to learn, not a way to get rich quick.</p>
+<p>你的大部分投资可以（也许应该）是指数基金。但很多人想学习如何分析个别公司。如果你要做，就把它当作<b>卫星</b>：只占你资金的一小部分（例如 5% 到 15%），是学习的方式，而不是快速致富的方式。</p>
 
-<h3>Step 1: Understand the business</h3>
-<p>Can you explain in two sentences how this company makes money and why customers choose it over competitors? If not, you are guessing. Peter Lynch, a famous fund manager, popularised the idea of investing in what you understand ("your circle of competence").</p>
+<h3>第 1 步：理解这门生意</h3>
+<p>你能用两句话说清这家公司怎么赚钱、客户为什么选它而不选竞争对手吗？如果不能，那你就是在猜。著名基金经理彼得·林奇（Peter Lynch）推广了投资自己懂的东西的理念（“你的能力圈”）。</p>
 
-<h3>Step 2: Read the key numbers</h3>
+<h3>第 2 步：读懂关键数字</h3>
 <ul>
-<li><b>Revenue growth</b>: are sales growing steadily?</li>
-<li><b>Profit margin</b>: profit divided by revenue. Higher margins often signal pricing power.</li>
-<li><b>Earnings per share (EPS)</b>: net profit divided by number of shares.</li>
-<li><b>Free cash flow</b>: real cash left after running the business and investing. Hard to fake.</li>
-<li><b>Debt</b>: too much debt makes a company fragile. Compare debt to earnings and cash flow.</li>
-<li><b>Return on equity (ROE)</b>: how efficiently the company turns shareholder money into profit.</li>
-<li><b>Competitive moat</b>: a durable advantage such as brand, network effects, patents or low costs.</li>
+<li><b>营收增长</b>：销售额是否稳定增长？</li>
+<li><b>利润率</b>：利润除以营收。较高的利润率往往意味着定价权。</li>
+<li><b>每股收益（EPS）</b>：净利润除以股数。</li>
+<li><b>自由现金流</b>：运营和投资之后剩下的真金白银。很难造假。</li>
+<li><b>债务</b>：债务过多会让公司脆弱。把债务与利润和现金流比较。</li>
+<li><b>净资产收益率（ROE）</b>：公司把股东的钱转化为利润的效率。</li>
+<li><b>护城河</b>：持久的优势，例如品牌、网络效应、专利或低成本。</li>
 </ul>
 
-<h3>Step 3: Valuation: what price is fair?</h3>
-<p>A wonderful company can still be a bad investment if you pay too much. The simplest tool is the <b>P/E ratio</b>: price divided by earnings per share.</p>
-${B.ex('<p><b>SnackCo</b> (fictional) has revenue of €600M, net profit of €60M (a 10% margin) and 20M shares. EPS = €60M ÷ 20M = <b>€3</b>. The share price is €60, so P/E = 60 ÷ 3 = <b>20</b>. That means you pay €20 for each €1 of yearly profit, an "earnings yield" of 5%. If similar snack companies trade at P/E 15 and SnackCo grows faster, 20 may be fair. If its growth is stalling, it may be expensive. It also pays a €1.20 dividend per share: a 2% yield and a 40% payout ratio, leaving room to grow.</p>')}
-<p>Other valuation tools: price-to-sales (P/S), price-to-free-cash-flow, and comparing with competitors and the company's own history.</p>
+<h3>第 3 步：估值：什么价格才合理？</h3>
+<p>一家很棒的公司，如果你付的价格太高，仍然可能是糟糕的投资。最简单的工具是<b>市盈率（P/E）</b>：价格除以每股收益。</p>
+${B.ex('<p><b>SnackCo</b>（虚构）营收 6 亿 €，净利润 6,000 万 €（利润率 10%），有 2,000 万股。EPS = 6,000 万 € ÷ 2,000 万 = <b>3 €</b>。股价是 60 €，所以市盈率 = 60 ÷ 3 = <b>20</b>。这意味着每 1 € 年利润你要付 20 €，即 5% 的“盈利收益率”。如果同类零食公司的市盈率是 15，而 SnackCo 增长更快，20 可能是合理的。如果它的增长停滞，就可能偏贵。它还每股派息 1.20 €：股息率 2%，派息率 40%，仍有增长空间。</p>')}
+<p>其他估值工具：市销率（P/S）、价格与自由现金流之比，以及与竞争对手和公司自身历史的比较。</p>
 
-<h3>Step 4: Think about risk</h3>
+<h3>第 4 步：思考风险</h3>
 <ul>
-<li>What could permanently damage this business (new technology, regulation, a key customer)?</li>
-<li>How much of your portfolio will it be? Limit any single stock to a small percentage.</li>
-<li>What would make you sell? Decide in advance (the thesis broke, not "the price fell").</li>
+<li>什么会永久性地伤害这门生意（新技术、监管、关键客户）？</li>
+<li>它会占你投资组合的多少？把任何单一个股限制在较小的比例。</li>
+<li>什么情况会让你卖出？事先决定（逻辑被打破，而不是“价格下跌了”）。</li>
 </ul>
 
-<h3>Traps to avoid</h3>
+<h3>要避开的陷阱</h3>
 <ul>
-<li><b>Story stocks</b>: great narrative, no profits, and a price that assumes perfection.</li>
-<li><b>Hot tips</b> from friends, forums and videos. Ask why they are telling you.</li>
-<li><b>Cheap is not always good</b>: a low P/E can mean the market expects profits to collapse.</li>
-<li><b>Overtrading</b>: constant buying and selling adds costs and mistakes.</li>
+<li><b>故事股</b>：叙事精彩，没有利润，价格还假定一切完美。</li>
+<li>来自朋友、论坛和视频的<b>热门消息</b>。问问他们为什么告诉你。</li>
+<li><b>便宜不一定好</b>：低市盈率可能意味着市场预期利润将崩溃。</li>
+<li><b>过度交易</b>：不停买卖会增加成本和失误。</li>
 </ul>
 
-${B.warn('<p>Even professional analysts with teams and databases fail to beat the market most of the time. If you pick stocks, keep your core in a diversified fund so that your learning is cheap.</p>')}
+${B.warn('<p>即使是拥有团队和数据库的专业分析师，也大多数时候无法战胜市场。如果你选股，请把核心放在分散的基金里，这样你的学习成本很低。</p>')}
 
-${B.take(['Treat stock picking as a small satellite, not your whole plan.', 'Understand the business first, then check growth, margins, debt and cash flow.', 'P/E = price ÷ earnings per share; compare it with peers and growth, never in isolation.', 'Decide in advance what would make you sell, and cap the size of each position.'])}`,
+${B.take(['把选股当作小的卫星，而不是你的全部计划。', '先理解生意，再检查增长、利润率、债务和现金流。', '市盈率 = 价格 ÷ 每股收益；与同行和增长比较，不要孤立地看。', '事先决定什么会让你卖出，并限制每个头寸的大小。'])}`,
       q: [
-        ['A company has a share price of €50 and EPS of €2.50. What is its P/E ratio?', ['5', '20', '50', '125'], 1, '50 ÷ 2.5 = 20.'],
-        ['Why is "free cash flow" valued by analysts?', ['It is easy to fake', 'It shows real cash left after running and investing in the business', 'It always equals profit', 'It only matters for banks'], 1, 'Cash is harder to manipulate than accounting profit.'],
-        ['What is a smart way to treat individual stock picking as a beginner?', ['Put 100% of savings in one stock', 'A small satellite alongside a diversified core', 'Borrow to buy more', 'Follow tips from strangers'], 1, 'A small slice keeps your learning affordable and your plan safe.']
+        ['一家公司股价为 50 €，EPS 为 2.50 €。它的市盈率是多少？', ['5', '20', '50', '125'], 1, '50 ÷ 2.5 = 20。'],
+        ['分析师为什么看重“自由现金流”？', ['容易造假', '它显示运营和投资之后剩下的真实现金', '总是等于利润', '只对银行重要'], 1, '现金比会计利润更难操纵。'],
+        ['新手对待个股挑选的明智方式是什么？', ['把 100% 储蓄投入一只股票', '作为小卫星，配合分散的核心', '借钱多买', '听陌生人的建议'], 1, '小比例让你的学习成本可承受，计划也保持安全。']
       ]
     },
     {
-      id: 'a8', m: 9, t: 'Your 12-month action plan',
-      hook: 'Turn everything you learned into one page and a calendar. Plans beat intentions.',
+      id: 'a8', m: 9, t: '你的 12 个月行动计划',
+      hook: '把学到的一切变成一页纸和一份日历。计划胜过意愿。',
       body: `
-<p>Congratulations. You now know more about investing than most adults. Knowledge only pays when it becomes action, so here is a simple 12-month roadmap.</p>
+<p>恭喜。你现在对投资的了解已经超过大多数成年人。知识只有变成行动才有回报，所以这里有一份简单的 12 个月路线图。</p>
 
-<h3>The roadmap</h3>
-${B.tbl(['When', 'Action'], [
-        ['Month 1', 'Build your budget. Open a savings account for your emergency fund and automate a transfer on payday.'],
-        ['Month 2', 'Pay off any high-interest debt. Research tax-advantaged accounts in your country.'],
-        ['Month 3', 'Choose a regulated broker, open the account, enable two-factor authentication and read the fee table.'],
-        ['Month 4', 'Write your one-page plan (below). Make your first small investment into a broad, low-cost ETF.'],
-        ['Months 5 to 9', 'Invest automatically every month. Do not watch prices daily. Reach 3 months of emergency savings.'],
-        ['Month 10', 'Review: are you following your plan? Check costs. Rebalance if a slice drifted over 5 points.'],
-        ['Month 12', 'Raise your monthly amount if income allows. Review goals. Teach someone else what you learned.']
+<h3>路线图</h3>
+${B.tbl(['时间', '行动'], [
+        ['第 1 个月', '做好预算。开一个储蓄账户存应急资金，并在发薪日设置自动转账。'],
+        ['第 2 个月', '还清高利息债务。研究你所在国家的税收优惠账户。'],
+        ['第 3 个月', '选择受监管的券商，开户，开启双重验证，阅读费用表。'],
+        ['第 4 个月', '写下你的一页计划（见下）。把第一笔小额投资投进宽基、低成本的 ETF。'],
+        ['第 5 到 9 个月', '每月自动投资。不要每天盯价格。攒够 3 个月的应急资金。'],
+        ['第 10 个月', '复盘：你在遵循计划吗？检查成本。如果某一部分偏离超过 5 个点，就再平衡。'],
+        ['第 12 个月', '如果收入允许，提高每月金额。复查目标。把学到的教给别人。']
       ])}
 
-<h3>Build your one-page plan</h3>
-<p>A professional investor writes an <b>Investment Policy Statement</b>. You can do a mini version in a minute. Try it: it takes your goal, time horizon and comfort with risk, and creates an example plan you can copy and refine.</p>
+<h3>制作你的一页计划</h3>
+<p>专业投资者会写一份<b>投资政策声明（IPS）</b>。你可以一分钟做出迷你版。试试看：它会根据你的目标、时间期限和风险承受度，生成一份可以复制并完善的示例计划。</p>
 ${B.w('ips')}
 
-<h3>What success looks like</h3>
+<h3>成功是什么样子</h3>
 <ul>
-<li><b>Year 1</b>: you built the habit and the safety net. The amount in your account matters less than the routine.</li>
-<li><b>Year 5</b>: you have lived through at least one bad market without breaking your plan. Your contributions have grown.</li>
-<li><b>Year 10+</b>: compounding becomes visible, with returns on your portfolio rivalling what you add each year.</li>
+<li><b>第 1 年</b>：你建立了习惯和安全网。账户里的金额不如这套例行做法重要。</li>
+<li><b>第 5 年</b>：你至少经历过一次糟糕的市场而没有打破计划。你的投入已经增长。</li>
+<li><b>第 10 年以上</b>：复利变得可见，组合的收益可以与你每年投入的金额相提并论。</li>
 </ul>
 
-<h3>Common mistakes to avoid one last time</h3>
+<h3>最后再提醒一次要避免的常见错误</h3>
 <ol>
-<li>Waiting for the "perfect time" instead of starting small.</li>
-<li>Investing money you will need soon.</li>
-<li>Chasing last year's winner or a friend's tip.</li>
-<li>Paying high fees without noticing.</li>
-<li>Selling in a panic.</li>
-<li>Letting excitement push you into leverage, derivatives or complex products.</li>
+<li>等“完美时机”，而不是小额起步。</li>
+<li>投入很快就要用的钱。</li>
+<li>追逐去年的赢家或朋友的消息。</li>
+<li>没留意就付了高额费用。</li>
+<li>恐慌卖出。</li>
+<li>被兴奋驱使去用杠杆、衍生品或复杂产品。</li>
 </ol>
 
-${B.key('<p>Wealth building is boring on purpose. If your plan feels exciting every day, something is wrong. The excitement should come later, when you check your balance after ten years and realise that consistent, patient, ordinary decisions did something extraordinary.</p>')}
+${B.key('<p>积累财富是故意很无聊的。如果你的计划每天都让人兴奋，那就有问题了。兴奋应该来得更晚：十年后你查看余额，才发现持续、耐心、平凡的决定创造了非凡的结果。</p>')}
 
-${B.take(['Follow the 12-month roadmap: base, broker, plan, automation, review.', 'Write a one-page plan so that decisions are made calmly in advance.', 'Boring and consistent beats exciting and erratic.', 'Next steps: explore the Pro Path, or the crypto and trading paths if they interest you.'])}`,
+${B.take(['遵循 12 个月路线图：基础、券商、计划、自动化、复盘。', '写一页计划，让决定提前在冷静中做出。', '无聊而持续，胜过刺激而无常。', '下一步：探索专业路径，或者如果你感兴趣，探索加密货币和交易路径。'])}`,
       q: [
-        ['What is the main purpose of an Investment Policy Statement?', ['To predict markets', 'To write down your rules so you act calmly and consistently', 'To avoid all risk', 'To impress friends'], 1, 'A written plan guards you against emotional decisions.'],
-        ['When should you rebalance, according to the simple rules in this course?', ['Every day', 'Once a year or when a slice drifts about 5 points from target', 'Never', 'Only after a crash'], 1, 'Both calendar and threshold approaches keep risk close to your target.'],
-        ['Which is a sign your plan is probably healthy?', ['It requires checking prices hourly', 'It is simple, automatic and you can keep following it in a crash', 'It uses leverage to speed things up', 'It depends on one hot tip'], 1, 'The best plan is the one you can stick to.']
+        ['投资政策声明的主要目的是什么？', ['预测市场', '写下你的规则，让你冷静且一致地行动', '避免一切风险', '给朋友留下印象'], 1, '书面计划能保护你免受情绪化决定的影响。'],
+        ['按本课程的简单规则，你应该在什么时候再平衡？', ['每天', '每年一次，或某一部分偏离目标约 5 个点时', '从不', '只在暴跌之后'], 1, '日历法和阈值法都能让风险接近你的目标。'],
+        ['哪一项是你的计划大概很健康的迹象？', ['它要求每小时查看价格', '它简单、自动，而且暴跌时你也能继续遵循', '它用杠杆来加速', '它依赖一个热门消息'], 1, '最好的计划是你能坚持的计划。']
       ]
     }
   ]);

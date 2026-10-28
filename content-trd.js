@@ -1,438 +1,438 @@
-/* Day Trader path: 8 lessons */
+/* 日内交易者路径：8 节课 */
 (function () {
   'use strict';
   const MQ = window.MQ, B = MQ.B;
 
   MQ.addLessons('trd', [
     {
-      id: 'b1', m: 11, t: 'Reality check: the truth about day trading',
-      hook: 'Before charts and strategies, an honest look at who wins, who loses and what it really takes.',
+      id: 'b1', m: 11, t: '现实检验：关于日内交易的真相',
+      hook: '在图表和策略之前，先诚实地看看谁赚钱、谁亏钱，以及真正需要什么。',
       body: `
-<p>Social media shows day trading as laptops on beaches and screenshots of huge profits. The reality is closer to a competitive profession where most newcomers lose money. This lesson is not here to scare you away. It is here so that if you continue, you do it with open eyes and a professional attitude.</p>
+<p>社交媒体把日内交易展示成海滩上的笔记本电脑和巨额盈利的截图。现实更像是一个竞争激烈的职业，大多数新手都会亏钱。这节课不是要吓退你，而是希望如果你继续，就睁大眼睛、以专业的态度去做。</p>
 
-<h3>What counts as day trading?</h3>
+<h3>什么算日内交易？</h3>
 <ul>
-<li><b>Scalping</b>: trades lasting seconds to minutes, aiming for tiny gains many times a day.</li>
-<li><b>Day trading</b>: positions opened and closed within the same day, none held overnight.</li>
-<li><b>Swing trading</b>: positions held from a few days to several weeks. Less screen time, fewer costs.</li>
-<li><b>Position trading</b>: weeks to months. This is closer to investing.</li>
+<li><b>剥头皮（Scalping）</b>：交易持续几秒到几分钟，一天多次追求微小的收益。</li>
+<li><b>日内交易</b>：仓位在同一天开仓并平仓，不过夜。</li>
+<li><b>波段交易</b>：持仓几天到几周。盯盘时间少，成本也少。</li>
+<li><b>仓位交易</b>：几周到几个月，更接近投资。</li>
 </ul>
 
-<h3>What the evidence says</h3>
+<h3>证据怎么说</h3>
 <ul>
-<li>A study of Taiwan's market (Barber, Lee, Liu and Odean) found that fewer than 1% of day traders predictably earned profits after costs year after year.</li>
-<li>A study of Brazilian futures day traders who kept going for more than 300 days found that roughly 97% of them lost money.</li>
-<li>European regulators require brokers to publish that typically <b>70 to 90% of retail leveraged CFD accounts lose money</b>.</li>
+<li>一项针对台湾市场的研究（Barber、Lee、Liu 和 Odean）发现，扣除成本后，年复一年可预期地盈利的日内交易者不到 1%。</li>
+<li>一项针对巴西期货日内交易者、持续超过 300 天的研究发现，其中大约 97% 亏了钱。</li>
+<li>欧洲监管机构要求经纪商披露，通常<b>70% 到 90% 的散户杠杆差价合约（CFD）账户亏钱</b>。</li>
 </ul>
 
-<h3>Why most people lose</h3>
+<h3>为什么大多数人会亏</h3>
 <ol>
-<li><b>Trading is a zero-sum game before costs and negative-sum after costs.</b> Every profit has a loser on the other side, and commissions, spreads and taxes come out of the total.</li>
-<li><b>You are competing with professionals and algorithms</b> with better data, faster execution and more capital.</li>
-<li><b>Leverage</b> magnifies mistakes faster than skill can develop.</li>
-<li><b>Psychology</b>: fear, greed, boredom and the urge to "win it back".</li>
-<li><b>No edge, no risk rules, no plan</b>: gambling with extra steps.</li>
+<li><b>交易在扣除成本前是零和游戏，扣除成本后是负和游戏。</b>每一笔盈利的另一边都有亏损者，而佣金、点差和税都从总额中扣除。</li>
+<li><b>你在与专业人士和算法竞争</b>，对方有更好的数据、更快的执行和更多的资金。</li>
+<li><b>杠杆</b>放大错误的速度，比技能成长的速度更快。</li>
+<li><b>心理</b>：恐惧、贪婪、无聊，以及“想把亏的赢回来”的冲动。</li>
+<li><b>没有优势、没有风险规则、没有计划</b>：只是多了几个步骤的赌博。</li>
 </ol>
-${B.warn('<p>If a course, influencer or robot promises "guaranteed" or "consistent daily profits", treat it as a red flag. No honest professional guarantees trading results. Any educational product, including optional ones mentioned later in this course, can help you learn and structure your work, but the risk of loss stays with you.</p>')}
+${B.warn('<p>如果某个课程、网红或机器人承诺“保证”或“稳定的每日盈利”，请把它当成危险信号。没有哪个诚实的专业人士会保证交易结果。任何教育产品，包括本课程后面提到的可选产品，都可以帮助你学习和组织自己的工作，但亏损的风险始终在你身上。</p>')}
 
-<h3>Trading is a business, not a hobby</h3>
-<p>Professionals treat trading like a small company: capital, rules, record-keeping, costs, taxes and a loss budget. They expect to be wrong often, and they earn because winners are larger than losers and because they never risk too much on one idea.</p>
+<h3>交易是一门生意，不是爱好</h3>
+<p>专业人士把交易当作一家小公司来经营：资本、规则、记录、成本、税和亏损预算。他们预期自己常常出错，而之所以盈利，是因为赢的时候比输的时候大，并且从不在一个想法上冒太大的风险。</p>
 
-<h3>What you realistically need</h3>
+<h3>你现实中需要什么</h3>
 <ul>
-<li><b>Risk capital</b>: money you can truly afford to lose. Not rent, not savings, not borrowed money.</li>
-<li><b>Time</b>: serious day trading is close to a full-time job during market hours, plus preparation and review.</li>
-<li><b>A tested edge</b>: a repeatable way to be right slightly more, or win more than you lose, after costs.</li>
-<li><b>Process</b>: written rules, a journal, a review routine.</li>
-<li><b>A stable base</b>: an income or investments outside trading, so pressure does not warp your decisions.</li>
+<li><b>风险资金</b>：你真正亏得起的钱。不是房租，不是储蓄，也不是借来的钱。</li>
+<li><b>时间</b>：认真的日内交易在市场时段内近乎全职工作，另外还有准备和复盘。</li>
+<li><b>经过检验的优势</b>：一种可重复的方式，扣除成本后略微更常判断正确，或者赢得比亏得多。</li>
+<li><b>流程</b>：书面规则、交易日志、复盘例行。</li>
+<li><b>稳定的基础</b>：交易之外有收入或投资，这样压力不会扭曲你的决策。</li>
 </ul>
 
-${B.ex('<p>Imagine two people each start with €5,000. Alex risks €250 (5%) on each trade chasing big wins and loses six trades in a row: down 26%. Sam risks €25 (0.5%) per trade and loses the same six: down 3%. Sam is still calm, still in the game and still learning. Alex is tilted and about to make it worse. Survival is the first skill.</p>')}
+${B.ex('<p>想象两个人各以 5,000 € 起步。Alex 每笔交易冒 250 €（5%）的风险去追求大赢，连输六笔：亏 26%。Sam 每笔冒 25 €（0.5%）的风险，同样连输六笔：只亏 3%。Sam 依然冷静、依然在场、依然在学习。Alex 已经上头，快要把事情搞得更糟。生存是第一项技能。</p>')}
 
-<h3>A sensible way forward</h3>
+<h3>一条合理的前进之路</h3>
 <ol>
-<li>Build your investing foundation first. Most people should invest, and trade only with a small slice (for example under 5 to 10% of their wealth).</li>
-<li>Learn the craft in this path.</li>
-<li>Practise on a simulator for at least 100 trades.</li>
-<li>Trade tiny real size. Prove you can follow your rules before you scale.</li>
+<li>先打好投资的基础。大多数人应该投资，只用一小部分钱做交易（例如不到财富的 5% 到 10%）。</li>
+<li>在这条路径中学好手艺。</li>
+<li>在模拟器上练习至少 100 笔交易。</li>
+<li>用极小的仓位做真实交易。在扩大之前证明你能遵守自己的规则。</li>
 </ol>
 
-${B.w('checklist', { key: 'b1', title: 'Am I ready to even start learning to trade?', accent: 'trd', items: 'I have an emergency fund and no high-interest debt|The money I trade is money I can afford to lose completely|I understand most beginners lose money and I accept it|I will paper trade for at least 100 trades before risking real money|I will write rules and keep a journal|I am not trying to solve a financial emergency with trading' })}
+${B.w('checklist', { key: 'b1', title: '我是否已经准备好开始学习交易？', accent: 'trd', items: '我有应急资金，没有高息债务|我用来交易的钱是我完全亏得起的钱|我明白大多数新手会亏钱，并接受这一点|在冒真钱的风险之前，我会先做至少 100 笔模拟交易|我会写下规则并记录交易日志|我不是想用交易来解决财务紧急情况' })}
 
-${B.take(['Most day traders lose money; costs and leverage make it harder.', 'Treat trading as a business with risk capital, rules and records.', 'Never trade money you need. Survive first, profit second.', 'Practise on a simulator, then trade tiny size before scaling.'])}`,
+${B.take(['大多数日内交易者亏钱；成本和杠杆让事情更难。', '把交易当作有风险资金、规则和记录的生意。', '永远不要拿你需要的钱去交易。先生存，后盈利。', '先在模拟器上练习，再用极小仓位交易，然后才扩大。'])}`,
       q: [
-        ['Why is trading described as "negative-sum" after costs?', ['Because markets always fall', 'Because every winner has a loser and costs are taken out of the total', 'Because brokers lend money', 'Because stocks do not move'], 1, 'Spreads, commissions and taxes reduce the total available to all traders.'],
-        ['Which money is appropriate for trading?', ['Next month\'s rent', 'Borrowed money', 'Risk capital you can afford to lose', 'Your emergency fund'], 2, 'Only money you can lose without hurting your life belongs in speculation.'],
-        ['What is a healthy first step after learning the basics of trading?', ['Use maximum leverage', 'Practise on a simulator for 100+ trades', 'Quit your job', 'Follow signal sellers'], 1, 'A simulator lets you learn from mistakes at zero cost.']
+        ['为什么交易在扣除成本后被称为“负和”？', ['因为市场总是下跌', '因为每个赢家都有输家，而成本从总额中扣除', '因为经纪商会借钱', '因为股票不会动'], 1, '点差、佣金和税减少了所有交易者可得的总额。'],
+        ['哪种钱适合用来交易？', ['下个月的房租', '借来的钱', '你亏得起的风险资金', '你的应急资金'], 2, '只有亏掉也不会伤害生活的钱，才属于投机。'],
+        ['学完交易基础后，健康的第一步是什么？', ['使用最大杠杆', '在模拟器上练习 100 笔以上', '辞掉工作', '跟随卖信号的人'], 1, '模拟器让你零成本地从错误中学习。']
       ]
     },
     {
-      id: 'b2', m: 14, t: 'How markets work: orders, spreads and leverage',
-      hook: 'What actually happens between your click on "buy" and the trade. Understand the plumbing so it does not surprise you.',
+      id: 'b2', m: 14, t: '市场如何运作：订单、点差与杠杆',
+      hook: '从你点“买入”到交易成交之间到底发生了什么。弄懂这套管道，它就不会让你意外。',
       body: `
-<p>A market is a place where buyers and sellers meet. Prices move because of the balance between those two groups. To trade well, you need to understand the mechanics that decide what price you actually get.</p>
+<p>市场是买家和卖家相遇的地方。价格因这两组人之间的平衡而移动。要想交易得好，你必须了解决定你实际成交价的机制。</p>
 
-<h3>Bid, ask and spread</h3>
-<p>Every instrument has two live prices: the <b>bid</b> (the highest price buyers will pay, which is what you receive when you sell) and the <b>ask</b> (the lowest price sellers want, which is what you pay when you buy). The difference is the <b>spread</b>.</p>
-${B.ex('<p>A stock shows bid €49.98 and ask €50.02. You buy 200 shares at €50.02 (€10,004). If you immediately sell, you get €49.98 (€9,996). You just lost €8 for doing nothing. That is the spread cost, on top of any commission. A scalper trading 20 times a day pays this 20 times, so the market has to move more than the cost just for you to break even.</p>')}
+<h3>买价、卖价与点差</h3>
+<p>每个品种都有两个实时价格：<b>买价（bid）</b>（买家愿意支付的最高价，也就是你卖出时拿到的价格）和<b>卖价（ask）</b>（卖家想要的最低价，也就是你买入时支付的价格）。两者之差就是<b>点差</b>。</p>
+${B.ex('<p>一只股票显示买价 49.98 €，卖价 50.02 €。你以 50.02 € 买入 200 股（10,004 €）。如果你马上卖出，只能拿到 49.98 €（9,996 €）。你什么都没做就亏了 8 €。这就是点差成本，还不包括佣金。一个每天交易 20 次的剥头皮者要付 20 次，所以市场必须波动超过成本，你才刚好保本。</p>')}
 
-<h3>Liquidity, volume and slippage</h3>
+<h3>流动性、成交量与滑点</h3>
 <ul>
-<li><b>Liquidity</b>: how easily you can buy or sell without moving the price. Big stocks and major currency pairs are very liquid; small stocks and obscure tokens are not.</li>
-<li><b>Volume</b>: how many units traded. Higher volume usually means tighter spreads and more reliable price moves.</li>
-<li><b>Slippage</b>: the difference between the price you expected and the price you got, especially in fast markets or with large orders.</li>
+<li><b>流动性</b>：你能多轻松地买入或卖出而不推动价格。大型股票和主要货币对流动性很好；小型股票和冷门代币则不然。</li>
+<li><b>成交量</b>：成交了多少单位。成交量越高，通常点差越窄，价格走势也越可靠。</li>
+<li><b>滑点</b>：你预期的价格与实际成交价之间的差，尤其在快速市场或大额订单时。</li>
 </ul>
 
-<h3>Order types</h3>
-${B.tbl(['Order', 'What it does', 'Watch out'], [
-        ['Market', 'Buy or sell immediately at the best available price', 'Price can slip in fast or thin markets'],
-        ['Limit', 'Buy or sell only at your price or better', 'It may never fill if price does not reach it'],
-        ['Stop (stop-loss)', 'Becomes a market order when price hits your stop level', 'Can fill worse than the stop in gaps'],
-        ['Stop-limit', 'Becomes a limit order at the stop level', 'May not fill at all in a fast move'],
-        ['Trailing stop', 'Stop that follows price at a set distance', 'Too tight and normal noise stops you out']
+<h3>订单类型</h3>
+${B.tbl(['订单', '作用', '注意'], [
+        ['市价单', '立即以最佳可得价格买入或卖出', '在快速或稀薄的市场中价格可能滑点'],
+        ['限价单', '只在你的价格或更好时买入或卖出', '如果价格没到，可能永远不会成交'],
+        ['止损单（Stop）', '价格触及你的止损位时变成市价单', '遇到跳空时成交价可能比止损位更差'],
+        ['止损限价单', '在止损位变成限价单', '快速行情中可能完全不成交'],
+        ['追踪止损', '以设定距离跟随价格的止损', '太近的话，正常波动就会把你洗出去']
       ])}
 
-<h3>Long, short and leverage</h3>
+<h3>做多、做空与杠杆</h3>
 <ul>
-<li><b>Going long</b>: you buy, hoping the price rises.</li>
-<li><b>Going short</b>: you sell something you borrowed, hoping to buy it back cheaper. Losses on a short are theoretically unlimited because price can keep rising.</li>
-<li><b>Margin and leverage</b>: the broker lets you control a position larger than your cash. With 10:1 leverage, €1,000 controls €10,000, so a 10% move against you wipes out your entire deposit.</li>
+<li><b>做多</b>：你买入，希望价格上涨。</li>
+<li><b>做空</b>：你卖出借来的东西，希望以更低价格买回。做空的亏损理论上是无限的，因为价格可以一直涨。</li>
+<li><b>保证金与杠杆</b>：经纪商让你控制比你现金更大的仓位。杠杆 10:1 时，1,000 € 控制 10,000 €，所以朝不利方向 10% 的波动就会抹掉你的全部本金。</li>
 </ul>
-<p>In the EU, regulators cap leverage for retail clients on leveraged products (CFDs): 30:1 for major currency pairs, 20:1 for other pairs, gold and major indices, 10:1 for other commodities and indices, 5:1 for individual shares and 2:1 for crypto-assets. Brokers must also close positions when margin falls to 50% and provide negative balance protection for retail clients. Other countries have different rules. In the US, accounts that day trade frequently have historically faced a minimum equity requirement, and these rules have been under revision, so always check current regulations with your broker.</p>
+<p>在欧盟，监管机构对散户客户的杠杆产品（CFD）设置了杠杆上限：主要货币对 30:1，其他货币对、黄金和主要指数 20:1，其他大宗商品和指数 10:1，个股 5:1，加密资产 2:1。经纪商还必须在保证金降至 50% 时平仓，并为散户客户提供负余额保护。其他国家规则不同。在美国，频繁做日内交易的账户历史上要满足最低净值要求，这些规则一直在修订，所以请随时向你的经纪商确认现行规定。</p>
 
-<h3>Instruments you can day trade</h3>
+<h3>你可以做日内交易的品种</h3>
 <ul>
-<li><b>Stocks and ETFs</b>: simple, transparent, often commission-based.</li>
-<li><b>Forex</b>: currency pairs, open 24 hours on weekdays, leveraged.</li>
-<li><b>Futures</b>: standardised contracts on indices, commodities and rates. Very liquid, very leveraged.</li>
-<li><b>Options</b>: contracts giving the right to buy or sell later. Complex, and not for beginners.</li>
-<li><b>CFDs</b>: contracts for difference. A leveraged agreement with a broker rather than ownership. Availability and rules differ by country and they carry high risk.</li>
+<li><b>股票和 ETF</b>：简单、透明，通常按佣金收费。</li>
+<li><b>外汇</b>：货币对，工作日 24 小时开放，带杠杆。</li>
+<li><b>期货</b>：针对指数、大宗商品和利率的标准化合约。流动性很高，杠杆很高。</li>
+<li><b>期权</b>：赋予日后买入或卖出权利的合约。复杂，不适合新手。</li>
+<li><b>差价合约（CFD）</b>：与经纪商签订的杠杆协议，而不是拥有资产。各国的可用性和规则不同，风险很高。</li>
 </ul>
 
-<h3>When markets are busy</h3>
-<p>Most day trading happens near the open and close of a market session, when volume and volatility are highest. The middle of the day is often quieter and choppier. Economic data releases (jobs, inflation, central bank decisions) cause sudden spikes and wider spreads, so many traders avoid or reduce size around them.</p>
+<h3>市场活跃的时候</h3>
+<p>大部分日内交易发生在交易时段开盘和收盘附近，那时成交量和波动性最高。中午往往更安静、更反复。经济数据发布（就业、通胀、央行决议）会引起突然的剧烈波动和更宽的点差，所以很多交易者会回避，或在这些时候缩小仓位。</p>
 
-${B.warn('<p>Leverage is the number one account killer. It does not make you smarter or the market kinder, it only speeds up whatever happens.</p>')}
+${B.warn('<p>杠杆是头号账户杀手。它不会让你更聪明，也不会让市场更友善，只会加速发生的一切。</p>')}
 
-${B.take(['You buy at the ask and sell at the bid; the spread is a real cost on every trade.', 'Liquidity and volume decide how easily and cheaply you can trade.', 'Learn order types: limit gives price control, stop-loss limits risk but can slip.', 'Leverage multiplies both gains and losses; regulators cap it for a reason.'])}`,
+${B.take(['你以卖价买入、以买价卖出；点差是每笔交易的真实成本。', '流动性和成交量决定了你交易有多轻松、多便宜。', '学会订单类型：限价单让你控制价格，止损单限制风险但可能滑点。', '杠杆同时放大收益和亏损；监管机构设置上限是有原因的。'])}`,
       q: [
-        ['You pay the ask and receive the bid. The difference between them is…', ['Commission', 'The spread', 'Slippage', 'Margin'], 1, 'The spread is a built-in cost every time you buy and sell.'],
-        ['With 20:1 leverage, a move of how much against you can wipe out your deposit (roughly)?', ['20%', '5%', '50%', '1%'], 1, '100% ÷ 20 = 5%, before fees and margin rules.'],
-        ['Which order lets you control the maximum price you pay?', ['Market order', 'Limit order', 'Stop-loss', 'Trailing stop'], 1, 'A limit order only executes at your price or better, but may not fill.']
+        ['你按卖价（ask）支付，按买价（bid）收款。两者之差是…', ['佣金', '点差', '滑点', '保证金'], 1, '点差是每次买入和卖出都内置的成本。'],
+        ['杠杆 20:1 时，朝不利方向波动多少大致会抹掉你的本金？', ['20%', '5%', '50%', '1%'], 1, '100% ÷ 20 = 5%，还没算费用和保证金规则。'],
+        ['哪种订单能让你控制所付的最高价格？', ['市价单', '限价单', '止损单', '追踪止损'], 1, '限价单只在你的价格或更好时成交，但可能不成交。']
       ]
     },
     {
-      id: 'b3', m: 13, t: 'Reading price charts: candlesticks, trends and levels',
-      hook: 'Learn the visual language of price and read the story each candle tells.',
+      id: 'b3', m: 13, t: '看懂价格图表：K 线、趋势与关键位',
+      hook: '学习价格的视觉语言，读懂每根 K 线讲述的故事。',
       body: `
-<p>A price chart is a record of the battle between buyers and sellers. The most popular type is the <b>candlestick chart</b>, invented by Japanese rice traders centuries ago. Each candle summarises one period (one minute, one hour, one day).</p>
+<p>价格图表是买家与卖家之间较量的记录。最流行的类型是<b>K 线图（蜡烛图）</b>，几个世纪前由日本的大米商人发明。每根 K 线概括一个时间段（一分钟、一小时、一天）。</p>
 
-<h3>Anatomy of a candle</h3>
+<h3>一根 K 线的结构</h3>
 <ul>
-<li><b>Open</b>: price at the start of the period.</li>
-<li><b>Close</b>: price at the end.</li>
-<li><b>High / Low</b>: the extremes, drawn as thin lines called wicks or shadows.</li>
-<li>The <b>body</b> is the box between open and close. Green (or hollow) means close above open; red means close below open.</li>
+<li><b>开盘价</b>：时段开始时的价格。</li>
+<li><b>收盘价</b>：时段结束时的价格。</li>
+<li><b>最高价 / 最低价</b>：极值，画成细线，称为影线。</li>
+<li><b>实体</b>是开盘价与收盘价之间的方框。绿色（或空心）表示收盘高于开盘；红色表示收盘低于开盘。</li>
 </ul>
-<p>Build one yourself and see how shapes change meaning:</p>
+<p>自己做一根，看看形状如何改变含义：</p>
 ${B.w('candles')}
 
-<h3>Trend: the market\'s direction</h3>
-<p>The simplest and most useful concept is <b>trend</b>.</p>
+<h3>趋势：市场的方向</h3>
+<p>最简单也最有用的概念就是<b>趋势</b>。</p>
 <ul>
-<li><b>Uptrend</b>: a staircase of higher highs and higher lows.</li>
-<li><b>Downtrend</b>: lower highs and lower lows.</li>
-<li><b>Range (sideways)</b>: price bouncing between a floor and a ceiling.</li>
+<li><b>上升趋势</b>：一级一级抬高的高点和抬高的低点。</li>
+<li><b>下降趋势</b>：越来越低的高点和越来越低的低点。</li>
+<li><b>区间（横盘）</b>：价格在底部和顶部之间来回弹跳。</li>
 </ul>
-${B.key('<p><b>"The trend is your friend."</b> Trading in the direction of the larger trend usually gives better odds than fighting it. Most beginners try to pick tops and bottoms, and get run over.</p>')}
+${B.key('<p><b>“趋势是你的朋友。”</b>顺着更大趋势的方向交易，通常比逆势搏斗胜率更高。大多数新手想抓顶和底，结果被碾压。</p>')}
 
-<h3>Support and resistance</h3>
-<p><b>Support</b> is a price area where buyers have repeatedly stepped in, like a floor. <b>Resistance</b> is where sellers repeatedly appeared, like a ceiling. These are zones, not exact lines. When price breaks through, old resistance often becomes new support (and vice versa). Because many traders watch the same obvious levels, they tend to matter.</p>
+<h3>支撑与阻力</h3>
+<p><b>支撑</b>是买家多次入场的价格区域，像地板。<b>阻力</b>是卖家多次出现的价格区域，像天花板。它们是区域，不是精确的线。当价格突破时，旧的阻力常常变成新的支撑（反之亦然）。因为很多交易者盯着同样明显的位置，所以这些位置往往有效。</p>
 
-<h3>Volume: the confirmation</h3>
-<p>A move on strong volume shows broad participation and is more trustworthy. A breakout on weak volume often fails. Look for volume rising in the direction of the trend and drying up in pullbacks.</p>
+<h3>成交量：确认</h3>
+<p>伴随强成交量的走势表明参与广泛，更可信。量能不足的突破常常失败。留意成交量在趋势方向上放大、在回调时萎缩。</p>
 
-<h3>Timeframes</h3>
-<p>Every chart can be viewed at different timeframes (1-minute, 5-minute, 1-hour, daily). Professionals use <b>multi-timeframe analysis</b>: check the daily chart for the trend and key levels, then use a smaller chart (like 5 or 15 minutes) to time entries. A pattern on a 1-minute chart is far less reliable than on a daily chart.</p>
+<h3>时间周期</h3>
+<p>每张图表都可以用不同时间周期查看（1 分钟、5 分钟、1 小时、日线）。专业人士使用<b>多周期分析</b>：看日线确定趋势和关键位，再用较小的图表（如 5 或 15 分钟）把握入场时机。1 分钟图上的形态远不如日线上的可靠。</p>
 
-<h3>Common candle signals (use with care)</h3>
+<h3>常见的 K 线信号（谨慎使用）</h3>
 <ul>
-<li><b>Doji</b>: open and close almost equal. Indecision.</li>
-<li><b>Hammer / pin bar</b>: long lower wick. Possible rejection of lower prices.</li>
-<li><b>Shooting star</b>: long upper wick. Possible rejection of higher prices.</li>
-<li><b>Engulfing</b>: a candle whose body fully covers the previous candle's body. Possible shift in control.</li>
+<li><b>十字星（Doji）</b>：开盘和收盘几乎相等。犹豫不决。</li>
+<li><b>锤子线 / Pin Bar</b>：长下影线。可能是对更低价格的拒绝。</li>
+<li><b>流星线</b>：长上影线。可能是对更高价格的拒绝。</li>
+<li><b>吞没形态</b>：一根 K 线的实体完全覆盖前一根的实体。控制权可能转移。</li>
 </ul>
-${B.warn('<p>No candle pattern works alone. Its meaning depends on <b>context</b>: where it appears (at a key level?), what trend it is in, and the volume behind it. A "hammer" in the middle of nowhere means almost nothing.</p>')}
+${B.warn('<p>没有任何 K 线形态能单独起作用。它的含义取决于<b>上下文</b>：出现在哪里（关键位？）、处于什么趋势、背后的成交量如何。凭空出现的“锤子线”几乎没有意义。</p>')}
 
-${B.ex('<p>A stock has risen in a clean staircase for two weeks. It pulls back to a previous resistance level that is now acting as support, forms a hammer candle there on higher-than-average volume, and the next candle closes up. That combination (trend + support + rejection candle + volume) is a far stronger story than any one piece alone.</p>')}
+${B.ex('<p>一只股票以整齐的阶梯连续上涨了两周。它回调到一个先前的阻力位，该位置现在起支撑作用，在那里形成一根锤子线，成交量高于平均，下一根 K 线收涨。这种组合（趋势 + 支撑 + 拒绝 K 线 + 成交量）比任何单一因素有说服力得多。</p>')}
 
-${B.take(['A candle shows open, high, low and close for one period.', 'Identify trend first (higher highs and lows, or lower), then levels.', 'Support and resistance are zones where price reacted before.', 'Volume confirms moves, and bigger timeframes carry more weight.', 'Candle patterns need context to mean anything.'])}`,
+${B.take(['一根 K 线显示一个时段的开盘、最高、最低和收盘。', '先判断趋势（高点和低点抬高，或降低），再看关键位。', '支撑和阻力是价格以前有过反应的区域。', '成交量确认走势，更大的时间周期权重更大。', 'K 线形态需要上下文才有意义。'])}`,
       q: [
-        ['A candle has a long lower wick and a small body near the top. This shape is called…', ['A hammer-like candle', 'A shooting star', 'A gap', 'A trend line'], 0, 'Long lower shadow plus small body is a hammer shape, suggesting rejection of lower prices.'],
-        ['What defines an uptrend?', ['Price above zero', 'Higher highs and higher lows', 'Lower highs and lower lows', 'Only green candles'], 1, 'The staircase of rising highs and lows is the basic definition.'],
-        ['Why use several timeframes?', ['To confuse yourself', 'Higher timeframes show the main trend and key levels; lower ones help time entries', 'Because brokers require it', 'They always give identical signals'], 1, 'Big-picture context improves entries and avoids trading against strong trends.']
+        ['一根 K 线有长下影线，实体小且靠近顶部。这种形状叫…', ['类似锤子线', '流星线', '跳空缺口', '趋势线'], 0, '长下影加小实体是锤子形态，暗示对更低价格的拒绝。'],
+        ['什么定义了上升趋势？', ['价格高于零', '高点抬高、低点抬高', '高点降低、低点降低', '只有绿色 K 线'], 1, '高点和低点逐级抬升的阶梯是基本定义。'],
+        ['为什么要使用多个时间周期？', ['为了让自己困惑', '较大周期显示主要趋势和关键位；较小周期帮助把握入场时机', '因为经纪商要求', '它们总是给出相同的信号'], 1, '大局观改善入场，避免逆着强趋势交易。']
       ]
     },
     {
-      id: 'b4', m: 12, t: 'Indicators and tools (and their limits)',
-      hook: 'Moving averages, RSI, MACD and friends: what they measure, how traders use them, and why more is not better.',
+      id: 'b4', m: 12, t: '指标与工具（及其局限）',
+      hook: '移动平均线、RSI、MACD 等：它们衡量什么、交易者怎么用，以及为什么多不等于好。',
       body: `
-<p>Indicators are mathematical formulas applied to price (and sometimes volume) to make patterns easier to see. They are tools for <b>describing</b> what has happened, not crystal balls. Because they use past data, they all lag price to some degree.</p>
+<p>指标是应用于价格（有时也包括成交量）的数学公式，让形态更容易被看见。它们是用来<b>描述</b>已经发生了什么的工具，不是水晶球。因为它们使用过去的数据，所以都在某种程度上滞后于价格。</p>
 
-<h3>The essential five</h3>
-${B.tbl(['Indicator', 'What it shows', 'Common use', 'Limits'], [
-        ['Moving average (SMA / EMA)', 'Average price over N periods. EMA reacts faster', 'Trend direction; dynamic support; crossovers (e.g. 50 vs 200)', 'Lags; whipsaws in ranges'],
-        ['RSI (14)', 'Momentum from 0 to 100', 'Above 70 "overbought", below 30 "oversold"; divergences', 'In strong trends RSI can stay "overbought" for long'],
-        ['MACD (12, 26, 9)', 'Difference between two EMAs and its signal line', 'Momentum shifts and trend strength', 'Lagging; noisy in ranges'],
-        ['Bollinger Bands (20, 2)', 'Moving average ± 2 standard deviations', 'Volatility squeezes and expansions', 'Touching a band is not an automatic reversal'],
-        ['VWAP', 'Volume-weighted average price for the day', 'Intraday "fair value"; institutions benchmark to it', 'Intraday only; resets each day'],
-        ['ATR (14)', 'Average true range: typical movement size', 'Setting stop distance and position size', 'Does not show direction']
+<h3>最重要的五个（外加一个）</h3>
+${B.tbl(['指标', '显示什么', '常见用法', '局限'], [
+        ['移动平均线（SMA / EMA）', 'N 个周期的平均价格。EMA 反应更快', '趋势方向；动态支撑；交叉（如 50 对 200）', '滞后；横盘时频繁假信号'],
+        ['RSI（14）', '0 到 100 的动量', '高于 70 “超买”，低于 30 “超卖”；背离', '强趋势中 RSI 可能长时间“超买”'],
+        ['MACD（12, 26, 9）', '两条 EMA 之差及其信号线', '动量变化与趋势强度', '滞后；横盘时噪音大'],
+        ['布林带（20, 2）', '移动平均线 ± 2 个标准差', '波动率收缩与扩张', '触及轨道并不自动意味着反转'],
+        ['VWAP', '当日成交量加权平均价', '日内“公允价值”；机构以其作为基准', '仅限日内；每天重置'],
+        ['ATR（14）', '平均真实波幅：典型波动幅度', '设定止损距离和仓位大小', '不显示方向']
       ])}
 
-<h3>Moving averages in practice</h3>
-<p>The slope of a moving average gives you a quick read on trend: price above a rising 20 or 50 EMA suggests an uptrend. In the paper trading lab later, you can switch on a 20-candle average to see how price tends to respect it. A "golden cross" (50-day average crossing above 200-day) and "death cross" (the reverse) are widely watched, but they come late. By the time they appear, much of the move has often happened.</p>
+<h3>移动平均线的实际运用</h3>
+<p>移动平均线的斜率能让你快速判断趋势：价格位于上升的 20 或 50 EMA 之上，暗示上升趋势。在后面的模拟交易实验室里，你可以打开 20 根 K 线的平均线，看看价格如何倾向于遵守它。“金叉”（50 日均线上穿 200 日均线）和“死叉”（相反）受到广泛关注，但出现得晚。等它们出现时，往往大部分行情已经发生了。</p>
 
-<h3>RSI done properly</h3>
-<p>Beginners see RSI over 70 and sell immediately. This is a classic trap: in strong uptrends RSI can stay above 70 for weeks. A better use is to look for <b>divergence</b>: price makes a higher high but RSI makes a lower high, signalling weakening momentum. Even then, wait for price to confirm.</p>
+<h3>正确使用 RSI</h3>
+<p>新手看到 RSI 超过 70 就立刻卖出。这是经典陷阱：在强劲的上升趋势中，RSI 可以连续数周保持在 70 以上。更好的用法是寻找<b>背离</b>：价格创出更高的高点，但 RSI 的高点更低，表明动量减弱。即便如此，也要等价格确认。</p>
 
-<h3>ATR for stops and size</h3>
-<p>If a stock's ATR is €1.50, normal movement is about €1.50 per period. Placing your stop €0.30 away means ordinary noise will hit it. A stop of 1 to 2 times ATR beyond a sensible structure point survives noise better. Wider stop means smaller position size, so the euro risk stays constant.</p>
+<h3>用 ATR 设止损和仓位</h3>
+<p>如果一只股票的 ATR 是 1.50 €，正常波动约为每个周期 1.50 €。把止损放在 0.30 € 远的地方，意味着普通噪音就会触发它。放在合理结构点之外 1 到 2 倍 ATR 的止损更能扛住噪音。更宽的止损意味着更小的仓位，这样以欧元计的风险保持不变。</p>
 
-<h3>Why more indicators make you worse</h3>
-<p>Many indicators are different views of the same price data. Stacking five momentum indicators does not give five independent confirmations. It gives the same signal five times, plus confusion when they disagree. Experienced traders usually use <b>price action plus two or three simple tools</b>.</p>
-${B.ex('<p>Chris has 9 indicators on his chart, and 3 are saying buy, 4 sell and 2 neutral. He waits and misses the move. Dana uses a 20 EMA for trend, volume, and key levels. When price pulls back to the 20 EMA in an uptrend on declining volume, she looks for entry. Simple, repeatable, easy to test.</p>')}
+<h3>为什么指标越多越糟</h3>
+<p>许多指标只是同一组价格数据的不同视角。叠加五个动量指标并不会给你五个独立的确认，而是同一个信号重复五遍，再加上它们意见不一致时的混乱。有经验的交易者通常使用<b>价格行为加上两三个简单工具</b>。</p>
+${B.ex('<p>Chris 的图表上有 9 个指标，3 个说买、4 个说卖、2 个中性。他等待，错过了行情。Dana 用 20 EMA 看趋势，再加成交量和关键位。当价格在上升趋势中缩量回调到 20 EMA 时，她寻找入场点。简单、可重复、容易测试。</p>')}
 
-${B.tip('<p>Before adding any indicator, write down the specific question it answers (trend? momentum? volatility?). If you cannot, remove it.</p>')}
+${B.tip('<p>在添加任何指标之前，写下它回答的具体问题（趋势？动量？波动率？）。写不出来，就删掉它。</p>')}
 
-${B.take(['Indicators summarise past price; none predict the future.', 'Know the job of each: trend (moving averages), momentum (RSI, MACD), volatility (ATR, Bollinger), fair value (VWAP).', 'RSI "overbought" is not a sell signal in a strong trend.', 'Use ATR to place stops outside normal noise and size positions properly.', 'Fewer, simpler tools beat cluttered charts.'])}`,
+${B.take(['指标总结过去的价格；没有一个能预测未来。', '知道每个指标的职责：趋势（移动平均线）、动量（RSI、MACD）、波动率（ATR、布林带）、公允价值（VWAP）。', '强趋势中 RSI “超买”不是卖出信号。', '用 ATR 把止损放在正常噪音之外，并正确确定仓位。', '更少、更简单的工具胜过杂乱的图表。'])}`,
       q: [
-        ['What does ATR help you do?', ['Predict direction', 'Measure typical price movement to set stops and position size', 'Guarantee profit', 'Find news'], 1, 'ATR measures volatility, which helps size stops sensibly.'],
-        ['Why can RSI above 70 be a poor automatic sell signal?', ['It never gets above 70', 'In strong uptrends it can remain high for a long time while price keeps rising', 'It is broken', 'Because 70 is always wrong'], 1, 'Overbought readings can persist in strong trends.'],
-        ['What is the problem with stacking many similar indicators?', ['They are too cheap', 'They give the same information repeatedly and create confusion when they disagree', 'They slow the computer only', 'There is no problem'], 1, 'They are derived from the same price data, so they are not independent confirmations.']
+        ['ATR 帮助你做什么？', ['预测方向', '衡量典型价格波动，以设置止损和仓位大小', '保证盈利', '寻找新闻'], 1, 'ATR 衡量波动率，有助于合理设定止损。'],
+        ['为什么 RSI 高于 70 可能是一个糟糕的自动卖出信号？', ['它从不超过 70', '在强劲上升趋势中它可以长时间保持高位，同时价格继续上涨', '它坏了', '因为 70 永远是错的'], 1, '超买读数可以在强趋势中持续。'],
+        ['叠加许多相似指标有什么问题？', ['它们太便宜', '它们重复给出相同的信息，在意见不一致时造成混乱', '只会拖慢电脑', '没有问题'], 1, '它们来自同样的价格数据，所以不是独立的确认。']
       ]
     },
     {
-      id: 'b5', m: 14, t: 'Trading strategies: find a style that fits you',
-      hook: 'Trend, pullback, breakout, range, opening-range: how each works, where it fails, and how to test it before risking a cent.',
+      id: 'b5', m: 14, t: '交易策略：找到适合你的风格',
+      hook: '趋势、回调、突破、区间、开盘区间：每一种如何运作、在哪里失效，以及如何在冒一分钱风险之前测试它。',
       body: `
-<p>A <b>strategy</b> is a complete set of rules: what you trade, when you enter, where you place your stop, where you take profit, and how big the position is. Trading without rules is guessing. Here are the classic styles.</p>
+<p><b>策略</b>是一整套规则：你交易什么、何时入场、止损放在哪里、在哪里止盈，以及仓位多大。没有规则的交易就是猜测。下面是经典的几种风格。</p>
 
-<h3>1. Trend following</h3>
-<p><b>Idea:</b> trends tend to continue. Buy strength in an uptrend, sell weakness in a downtrend.<br><b>Entry:</b> price breaks above a recent high with a rising moving average.<br><b>Stop:</b> below the latest higher low.<br><b>Fails when:</b> markets chop sideways. Expect many small losses and a few large winners, with a lower win rate.</p>
+<h3>1. 趋势跟踪</h3>
+<p><b>想法：</b>趋势倾向于延续。上升趋势中买强，下降趋势中卖弱。<br><b>入场：</b>价格在移动平均线上升的情况下突破近期高点。<br><b>止损：</b>放在最近一个抬高的低点之下。<br><b>失效于：</b>市场横盘震荡时。预期会有很多小亏损和少数大盈利，胜率较低。</p>
 
-<h3>2. Pullback (buying the dip in a trend)</h3>
-<p><b>Idea:</b> in a strong trend, short dips offer better entries.<br><b>Entry:</b> price pulls back to a moving average or support in an uptrend and shows a reversal candle.<br><b>Stop:</b> below the pullback low.<br><b>Fails when:</b> the pullback becomes a trend reversal.</p>
+<h3>2. 回调（在趋势中逢低买入）</h3>
+<p><b>想法：</b>在强趋势中，短暂回落提供更好的入场点。<br><b>入场：</b>价格在上升趋势中回调到移动平均线或支撑位，并出现反转 K 线。<br><b>止损：</b>放在回调低点之下。<br><b>失效于：</b>回调变成趋势反转。</p>
 
-<h3>3. Breakout</h3>
-<p><b>Idea:</b> after consolidation, price explodes out of its range.<br><b>Entry:</b> a close above resistance on high volume (or a retest of the broken level).<br><b>Stop:</b> back inside the range.<br><b>Fails when:</b> false breakouts (price pokes through and falls back). Wait for confirmation and volume.</p>
+<h3>3. 突破</h3>
+<p><b>想法：</b>经过盘整后，价格从区间中爆发而出。<br><b>入场：</b>放量收盘于阻力位之上（或对被突破位的回测）。<br><b>止损：</b>回到区间之内。<br><b>失效于：</b>假突破（价格刺穿后又回落）。等待确认和成交量。</p>
 
-<h3>4. Range trading / mean reversion</h3>
-<p><b>Idea:</b> when there is no trend, price returns to the middle. Sell near resistance, buy near support.<br><b>Stop:</b> just outside the range.<br><b>Fails when:</b> the range finally breaks and the trend begins, which is why a stop is mandatory.</p>
+<h3>4. 区间交易 / 均值回归</h3>
+<p><b>想法：</b>没有趋势时，价格会回到中间。在阻力附近卖出，在支撑附近买入。<br><b>止损：</b>紧贴区间之外。<br><b>失效于：</b>区间最终被打破、趋势开始，所以止损是必须的。</p>
 
-<h3>5. Opening-range breakout</h3>
-<p><b>Idea:</b> mark the high and low of the first 15 to 30 minutes after the market opens. A break of either side with volume can lead to a day-long move.<br><b>Stop:</b> the other side or the middle of the range.<br><b>Fails when:</b> the market is indecisive on a quiet news day.</p>
+<h3>5. 开盘区间突破</h3>
+<p><b>想法：</b>标出开盘后前 15 到 30 分钟的高点和低点。放量突破任一侧，可能带来持续一整天的行情。<br><b>止损：</b>另一侧或区间中点。<br><b>失效于：</b>消息清淡的日子里市场犹豫不决。</p>
 
-<h3>6. Scalping</h3>
-<p><b>Idea:</b> many tiny profits on very short moves. Requires tight spreads, fast execution, low fees and intense focus. Costs eat scalpers alive, and beginners are very unlikely to profit.</p>
+<h3>6. 剥头皮</h3>
+<p><b>想法：</b>在非常短的波动上赚取许多微小利润。需要窄点差、快速执行、低费用和高度专注。成本会吞噬剥头皮者，新手几乎不可能盈利。</p>
 
-<h3>News and earnings trades</h3>
-<p>Prices jump around releases, spreads widen and slippage rises. This is an advanced style. Most beginners should simply stay out of positions during major events.</p>
+<h3>新闻和财报交易</h3>
+<p>价格围绕数据发布跳动，点差扩大，滑点上升。这是高级风格。大多数新手在重大事件期间应当直接空仓。</p>
 
-<h3>Choosing a style</h3>
-${B.tbl(['Style', 'Win rate', 'Winner size', 'Screen time', 'Fits you if…'], [
-        ['Trend following', 'Lower (35 to 45%)', 'Large', 'Low to medium', 'You are patient and accept small losses'],
-        ['Pullback', 'Medium', 'Medium', 'Medium', 'You like waiting for a good price'],
-        ['Breakout', 'Medium to low', 'Medium to large', 'Medium', 'You can handle false breakouts'],
-        ['Range', 'Higher (50 to 65%)', 'Small', 'Medium', 'You prefer frequent small wins and strict stops'],
-        ['Scalping', 'Varies', 'Tiny', 'Very high', 'Almost never a beginner choice']
+<h3>选择风格</h3>
+${B.tbl(['风格', '胜率', '盈利大小', '盯盘时间', '适合你，如果…'], [
+        ['趋势跟踪', '较低（35% 到 45%）', '大', '低到中', '你有耐心，能接受小亏损'],
+        ['回调', '中等', '中等', '中等', '你喜欢等待好价格'],
+        ['突破', '中到低', '中到大', '中等', '你能应对假突破'],
+        ['区间', '较高（50% 到 65%）', '小', '中等', '你偏好频繁的小盈利和严格止损'],
+        ['剥头皮', '不定', '极小', '非常高', '几乎从不是新手的选择']
       ])}
 
-<h3>Write the rulebook (a trade setup template)</h3>
+<h3>写下规则手册（交易设置模板）</h3>
 <ol>
-<li><b>Market condition</b>: what must be true? (e.g. daily uptrend)</li>
-<li><b>Trigger</b>: exact event to enter (e.g. close above the previous candle's high after a pullback)</li>
-<li><b>Stop-loss</b>: exact price rule</li>
-<li><b>Target / exit</b>: fixed multiple of risk, trailing, or level</li>
-<li><b>Position size</b>: risk percent ÷ stop distance</li>
-<li><b>When NOT to trade</b>: major news, low volume, after hitting daily loss</li>
+<li><b>市场条件</b>：什么必须成立？（如日线上升趋势）</li>
+<li><b>触发条件</b>：入场的确切事件（如回调后收盘高于前一根 K 线的高点）</li>
+<li><b>止损</b>：精确的价格规则</li>
+<li><b>目标 / 出场</b>：风险的固定倍数、追踪或某个价位</li>
+<li><b>仓位大小</b>：风险百分比 ÷ 止损距离</li>
+<li><b>何时不交易</b>：重大新闻、低成交量、达到当日亏损上限之后</li>
 </ol>
 
-<h3>Backtesting basics</h3>
-<p><b>Backtesting</b> means applying your rules to past data to see how they would have performed. Done well it is very useful. Done badly it creates false confidence:</p>
+<h3>回测基础</h3>
+<p><b>回测</b>是把你的规则应用于历史数据，看它们过去会表现如何。做得好很有用，做得不好会制造虚假的信心：</p>
 <ul>
-<li>Include costs: spread, commissions and slippage.</li>
-<li>Use enough trades (100+). Ten trades prove nothing.</li>
-<li>Avoid <b>overfitting</b>: do not endlessly tweak parameters until the past looks perfect. Test on data you did not use to design the rules ("out-of-sample").</li>
-<li>Avoid <b>look-ahead bias</b>: do not use information that was not available at the time.</li>
-<li>Follow with forward testing (paper trading) before real money.</li>
+<li>包含成本：点差、佣金和滑点。</li>
+<li>使用足够多的交易（100 笔以上）。十笔交易什么也证明不了。</li>
+<li>避免<b>过拟合</b>：不要无休止地调整参数，直到过去看起来完美。要在设计规则时没用过的数据上测试（“样本外”）。</li>
+<li>避免<b>前视偏差</b>：不要使用当时还无法获得的信息。</li>
+<li>在用真钱之前，先做前向测试（模拟交易）。</li>
 </ul>
 
-${B.warn('<p>A strategy that worked in a bull market may fail in a range or a crash. Markets change regimes. Expect your edge to need maintenance.</p>')}
+${B.warn('<p>在牛市中有效的策略，在区间或崩盘中可能失效。市场会切换状态。要预料到你的优势需要维护。</p>')}
 
-${B.take(['A strategy is a full rulebook: market condition, trigger, stop, exit, size and when not to trade.', 'Trend and pullback strategies win less often but bigger; range strategies win more often but smaller.', 'Backtest with costs and enough trades, avoid overfitting, then paper trade.', 'Pick one simple style and master it rather than hopping between many.'])}`,
+${B.take(['策略是一整本规则手册：市场条件、触发、止损、出场、仓位，以及何时不交易。', '趋势和回调策略赢得较少但更大；区间策略赢得较多但较小。', '回测要包含成本和足够的交易数，避免过拟合，然后做模拟交易。', '选一种简单的风格并精通它，而不是在许多风格间跳来跳去。'])}`,
       q: [
-        ['A trend-following system typically has…', ['Very high win rate and tiny winners', 'A lower win rate but larger winners than losers', 'No stop-loss', 'Zero losing trades'], 1, 'It accepts many small losses to catch a few big moves.'],
-        ['What is overfitting in backtesting?', ['Using too few indicators', 'Tuning rules until they fit past data perfectly, but fail on new data', 'Trading too little', 'Using a demo account'], 1, 'The rules capture past noise rather than a real edge.'],
-        ['Which is a mandatory part of any breakout or range strategy?', ['A stop-loss', 'Guaranteed profit', 'A friend\'s tip', 'Maximum leverage'], 0, 'Every strategy can fail; the stop defines your maximum loss.']
+        ['趋势跟踪系统通常具有…', ['很高的胜率和微小的盈利', '较低的胜率，但盈利比亏损大', '没有止损', '零亏损交易'], 1, '它接受许多小亏损，以捕捉少数大行情。'],
+        ['回测中的过拟合是什么？', ['使用的指标太少', '调整规则直到完美拟合历史数据，却在新数据上失效', '交易太少', '使用模拟账户'], 1, '规则捕捉到的是过去的噪音，而不是真正的优势。'],
+        ['哪项是任何突破或区间策略的必备部分？', ['止损', '保证盈利', '朋友的消息', '最大杠杆'], 0, '任何策略都可能失败；止损定义了你的最大亏损。']
       ]
     },
     {
-      id: 'b6', m: 16, t: 'Risk management: the only edge you fully control',
-      hook: 'You cannot control the market, but you can control how much you lose when you are wrong. Two calculators will show you why that wins careers.',
+      id: 'b6', m: 16, t: '风险管理：你唯一完全掌控的优势',
+      hook: '你无法控制市场，但可以控制判断错误时亏多少。两个计算器会告诉你为什么这决定了职业生涯。',
       body: `
-<p>Ask professional traders what separates survivors from the rest and the answer is almost always the same: <b>risk management</b>. You can have a mediocre strategy and survive with good risk control. You cannot survive a great strategy with bad risk control.</p>
+<p>问职业交易者，是什么把幸存者和其他人区分开来，答案几乎总是一样：<b>风险管理</b>。你可以有一个平庸的策略，靠良好的风险控制活下来。你无法靠糟糕的风险控制，守住一个出色的策略。</p>
 
-<h3>Rule 1: Risk a small fixed percent per trade</h3>
-<p>The most common rule is to risk <b>0.5% to 1% of your account</b> on any single trade (2% at most). If you have €5,000 and risk 1%, the most you will lose on a trade is €50. That keeps losing streaks survivable.</p>
-${B.ex('<p>Seven losses in a row sounds extreme, but happens to every trader. If you risk 1% each, the account drops about 7%. If you risk 10% each, it drops about 52% and you need a 109% gain just to recover. Position size is how you stay in the game while you learn.</p>')}
+<h3>规则 1：每笔交易只冒一个固定的小比例风险</h3>
+<p>最常见的规则是在任何一笔交易上冒<b>账户的 0.5% 到 1%</b> 的风险（最多 2%）。如果你有 5,000 € 并冒 1% 的风险，一笔交易最多亏 50 €。这让连续亏损变得可承受。</p>
+${B.ex('<p>连亏七次听起来极端，但每个交易者都会遇到。如果每次冒 1% 风险，账户大约下降 7%。如果每次冒 10% 风险，账户大约下降 52%，你需要 109% 的涨幅才能回本。仓位大小是你在学习期间留在场内的方式。</p>')}
 
-<h3>Rule 2: The stop decides the size</h3>
-<p>You first decide where the trade is proven wrong (the stop), and <i>then</i> calculate how many units to buy so that hitting the stop costs only your chosen risk. The formula:</p>
-<p><b>Position size = (account × risk %) ÷ (entry price − stop price)</b></p>
+<h3>规则 2：由止损决定仓位</h3>
+<p>你先决定交易在哪里被证明是错的（止损位），<i>然后</i>计算买多少单位，使触及止损时只亏你选定的风险金额。公式：</p>
+<p><b>仓位大小 = (账户 × 风险百分比) ÷ (入场价 − 止损价)</b></p>
 ${B.w('possize')}
 
-<h3>Rule 3: Think in R</h3>
-<p>1R equals your initial risk on a trade. If you risk €50 and make €100, that is +2R. Measuring in R makes results comparable across trades and account sizes. It also lets you define reward-to-risk before entering: only take trades that pay at least 1.5 to 2R if right.</p>
+<h3>规则 3：用 R 来思考</h3>
+<p>1R 等于你在一笔交易上的初始风险。如果你冒 50 € 的风险赚了 100 €，就是 +2R。用 R 衡量让不同交易和不同账户规模的结果可以比较。它还让你在入场前就定义风险回报比：只做判断正确时至少回报 1.5 到 2R 的交易。</p>
 
-<h3>Rule 4: Know your expectancy</h3>
-<p><b>Expectancy</b> is the average result per trade in R. <b>Expectancy = (win rate × average win in R) − (loss rate × 1R)</b>. For example, 40% win rate with winners at 2R: 0.4×2 − 0.6×1 = +0.2R per trade. That is profitable even though you lose 60% of the time. If you win 60% but your winners are 0.5R: 0.6×0.5 − 0.4 = −0.1R. You win often yet lose money.</p>
+<h3>规则 4：了解你的期望值</h3>
+<p><b>期望值</b>是以 R 计的每笔交易平均结果。<b>期望值 = (胜率 × 平均盈利 R) − (败率 × 1R)</b>。例如胜率 40%，盈利为 2R：0.4×2 − 0.6×1 = 每笔 +0.2R。即使你有 60% 的时间在亏，也是盈利的。如果你胜率 60%，但盈利只有 0.5R：0.6×0.5 − 0.4 = −0.1R。你经常赢，却在亏钱。</p>
 ${B.w('expectancy')}
 
-<h3>Rule 5: Respect drawdown math</h3>
-<p>Losses hurt more than gains help, because you recover from a smaller base:</p>
-${B.tbl(['Account loss', 'Gain needed to get back to even'], [['-10%', '+11%'], ['-20%', '+25%'], ['-30%', '+43%'], ['-50%', '+100%'], ['-75%', '+300%'], ['-90%', '+900%']])}
+<h3>规则 5：尊重回撤的数学</h3>
+<p>亏损造成的伤害比盈利的帮助更大，因为你是从更小的基数上恢复：</p>
+${B.tbl(['账户亏损', '回到原点所需的涨幅'], [['-10%', '+11%'], ['-20%', '+25%'], ['-30%', '+43%'], ['-50%', '+100%'], ['-75%', '+300%'], ['-90%', '+900%']])}
 
-<h3>Rule 6: Daily and weekly limits</h3>
-<p>Set a maximum daily loss (for example 2 to 3% of the account). When you hit it, <b>stop trading for the day</b>. Many blown accounts happen on one tilted afternoon of revenge trades. Do the same for a weekly limit.</p>
+<h3>规则 6：每日和每周上限</h3>
+<p>设定每日最大亏损（例如账户的 2% 到 3%）。一旦触及，<b>当天就停止交易</b>。很多爆掉的账户都出于一个上头的下午和一连串报复性交易。每周上限也这样做。</p>
 
-<h3>Rule 7: Watch correlation and total exposure</h3>
-<p>Five trades in five tech stocks are really one big trade on tech. Limit the total open risk (for example no more than 3 to 5% across all positions) and avoid stacking identical bets.</p>
+<h3>规则 7：留意相关性和总敞口</h3>
+<p>在五只科技股上做五笔交易，其实是押在科技上的一笔大交易。限制总的未平仓风险（例如所有仓位合计不超过 3% 到 5%），并避免堆叠完全相同的押注。</p>
 
-<h3>Rule 8: Never move a stop further away</h3>
-<p>You may tighten a stop to protect profit. Moving it away from price to "give the trade room" turns a planned small loss into an unplanned big one. That habit is behind countless blown accounts.</p>
+<h3>规则 8：永远不要把止损移远</h3>
+<p>你可以收紧止损来保护利润。把它从价格移开以“给交易空间”，会把一次计划内的小亏损变成一次计划外的大亏损。这个习惯是无数爆仓账户背后的原因。</p>
 
-<h3>Stop-loss placement</h3>
+<h3>止损的放置</h3>
 <ul>
-<li>Place it at a level that proves the idea wrong (below the recent swing low), not at a random percentage.</li>
-<li>Give it breathing room based on volatility (ATR).</li>
-<li>Then let the stop determine your size, never the reverse.</li>
+<li>把它放在能证明想法错误的位置（最近的摆动低点之下），而不是随便一个百分比。</li>
+<li>根据波动率（ATR）给它留出呼吸空间。</li>
+<li>然后让止损决定你的仓位，绝不能反过来。</li>
 </ul>
 
-${B.warn('<p>"Averaging down" (buying more as a losing position falls) without a plan is how small losses become account-ending ones. Add to winners with rules, not to losers with hope.</p>')}
+${B.warn('<p>没有计划的“越跌越补”（亏损仓位下跌时继续买入）是小亏损变成终结账户的大亏损的方式。要按规则给盈利的仓位加仓，而不是怀着希望给亏损的仓位加仓。</p>')}
 
-${B.take(['Risk 0.5 to 1% of your account per trade; cap daily and weekly losses.', 'Place the stop first, then calculate position size from it.', 'Measure trades in R and demand a positive expectancy.', 'A 50% loss needs a 100% gain: avoiding big drawdowns is the main job.', 'Never widen a stop-loss or add to losers without rules.'])}`,
+${B.take(['每笔交易冒账户 0.5% 到 1% 的风险；给每日和每周亏损设上限。', '先设止损，再据此计算仓位大小。', '用 R 衡量交易，并要求正的期望值。', '亏 50% 需要涨 100%：避免大幅回撤是首要工作。', '永远不要放宽止损，也不要无规则地给亏损仓位加仓。'])}`,
       q: [
-        ['You have €10,000 and risk 1% on a trade with an entry of €20 and stop at €19. What is your position size?', ['50 shares', '100 shares', '500 shares', '10,000 shares'], 1, 'Risk = €100; distance = €1; size = 100 shares.'],
-        ['A system wins 40% of trades with an average win of 2R and loses 1R otherwise. Expectancy per trade?', ['-0.2R', '0R', '+0.2R', '+1R'], 2, '0.4 × 2 − 0.6 × 1 = +0.2R.'],
-        ['After losing 50% of an account, what gain do you need to break even?', ['50%', '75%', '100%', '200%'], 2, 'Going from 50 back to 100 requires a 100% gain.']
+        ['你有 10,000 €，在一笔入场价 20 €、止损 19 € 的交易上冒 1% 的风险。仓位大小是多少？', ['50 股', '100 股', '500 股', '10,000 股'], 1, '风险 = 100 €；距离 = 1 €；仓位 = 100 股。'],
+        ['某系统 40% 的交易盈利，平均盈利 2R，其余亏 1R。每笔交易的期望值？', ['-0.2R', '0R', '+0.2R', '+1R'], 2, '0.4 × 2 − 0.6 × 1 = +0.2R。'],
+        ['账户亏损 50% 之后，需要多少涨幅才能回本？', ['50%', '75%', '100%', '200%'], 2, '从 50 回到 100 需要 100% 的涨幅。']
       ]
     },
     {
-      id: 'b7', m: 13, t: 'Trading psychology and the journal',
-      hook: 'Strategies fail in the mind long before they fail on the chart. Build habits that keep you steady, and track them.',
+      id: 'b7', m: 13, t: '交易心理与交易日志',
+      hook: '策略在头脑里失败，远早于在图表上失败。建立让你保持稳定的习惯，并记录下来。',
       body: `
-<p>Most traders who fail knew what to do. They simply did not do it. They moved stops, jumped into trades out of boredom, doubled up after losses. <b>Psychology</b> is not soft stuff: it is where the money is made or lost.</p>
+<p>大多数失败的交易者知道该怎么做，只是没有去做。他们移动止损、因无聊而冲进交易、亏损后加倍下注。<b>心理</b>不是软话题：钱就是在这里赚到或亏掉的。</p>
 
-<h3>The usual suspects</h3>
+<h3>常见的“嫌疑犯”</h3>
 <ul>
-<li><b>FOMO</b>: chasing a move that has already happened. You buy near the top because "it is going to the moon".</li>
-<li><b>Revenge trading</b>: after a loss, taking an impulsive bigger trade to "win it back".</li>
-<li><b>Overtrading</b>: trading out of boredom or the need for action. More trades means more costs and more mistakes.</li>
-<li><b>Hope</b>: refusing to take a stop-loss because the trade "might come back".</li>
-<li><b>Greed after wins</b>: sizing up after a lucky streak and giving it all back.</li>
-<li><b>Fear</b>: cutting winners early and hesitating on valid setups after a few losses.</li>
-<li><b>Tilt</b>: a state of emotional frustration where you stop following rules at all.</li>
+<li><b>FOMO（害怕错过）</b>：追逐已经发生的行情。你在接近顶部时买入，因为“它要上月球了”。</li>
+<li><b>报复性交易</b>：亏损之后，冲动地下一笔更大的交易，想“赢回来”。</li>
+<li><b>过度交易</b>：因无聊或渴望行动而交易。交易越多，成本和失误越多。</li>
+<li><b>心存希望</b>：因为交易“可能会回来”而拒绝止损。</li>
+<li><b>盈利后的贪婪</b>：一连串好运后加大仓位，然后全部吐回去。</li>
+<li><b>恐惧</b>：过早平掉盈利仓位，几次亏损之后对有效的设置犹豫不决。</li>
+<li><b>上头（Tilt）</b>：一种情绪受挫的状态，你完全不再遵守规则。</li>
 </ul>
 
-<h3>Habits that protect you</h3>
+<h3>保护你的习惯</h3>
 <ol>
-<li><b>Pre-trade checklist</b>: if all boxes are not ticked, no trade.</li>
-<li><b>Fixed daily routine</b>: prepare before the market opens; stop at a defined time.</li>
-<li><b>Maximum trades per day</b> (for example 3 to 5).</li>
-<li><b>The three-strikes rule</b>: after three consecutive losses, step away for at least an hour.</li>
-<li><b>Daily loss limit</b>: when hit, close the platform.</li>
-<li><b>Sleep, food, exercise</b>: tired traders make worse decisions, and this is measurable.</li>
-<li><b>Write what you feel</b>: a short note before each trade about your state. Patterns appear quickly.</li>
+<li><b>交易前清单</b>：如果没有全部打勾，就不交易。</li>
+<li><b>固定的每日例行</b>：开盘前做准备；在设定的时间收手。</li>
+<li><b>每日最多交易笔数</b>（例如 3 到 5 笔）。</li>
+<li><b>三次出局规则</b>：连续三次亏损后，至少离开一小时。</li>
+<li><b>每日亏损上限</b>：触及时，关闭平台。</li>
+<li><b>睡眠、饮食、运动</b>：疲劳的交易者决策更差，这是可以测量的。</li>
+<li><b>写下你的感受</b>：每笔交易前写一句关于你状态的简短笔记。规律很快就会显现。</li>
 </ol>
 
-<h3>The trade journal: your private coach</h3>
-<p>A journal records each trade: date, market, setup, entry, stop, target, size, result in R, whether you followed your plan, your emotion and a screenshot. After 30 to 50 trades you can answer questions that change everything:</p>
+<h3>交易日志：你的私人教练</h3>
+<p>日志记录每笔交易：日期、市场、设置、入场、止损、目标、仓位、以 R 计的结果、你是否遵循了计划、你的情绪和一张截图。30 到 50 笔交易之后，你可以回答一些改变一切的问题：</p>
 <ul>
-<li>Which setup makes money and which loses?</li>
-<li>Do you lose more when you break your rules?</li>
-<li>Which emotions or times of day hurt you?</li>
+<li>哪种设置赚钱，哪种亏钱？</li>
+<li>你打破规则的时候亏得更多吗？</li>
+<li>哪些情绪或一天中的哪些时段对你不利？</li>
 </ul>
-<p>Try the journal below. It starts with example trades. Notice how "plan followed" and emotion tell a clear story. Then clear it and log your own practice trades.</p>
+<p>试试下面的日志。它以示例交易开始。注意“是否遵循计划”和情绪如何讲出一个清晰的故事。然后清空它，记录你自己的练习交易。</p>
 ${B.w('journal')}
 
-${B.w('checklist', { key: 'b7', title: 'Pre-trade checklist (copy and adapt)', accent: 'trd', items: 'The higher-timeframe trend agrees with my trade|The setup matches my written rules exactly|My stop-loss is placed where the idea is proven wrong|My position size risks no more than my fixed percent|Reward is at least 1.5 to 2 times my risk|No major news in the next 30 minutes|I am calm, rested and not trying to win back a loss' })}
+${B.w('checklist', { key: 'b7', title: '交易前清单（复制并修改）', accent: 'trd', items: '更大时间周期的趋势与我的交易一致|这个设置与我书面写下的规则完全吻合|我的止损放在能证明想法错误的位置|我的仓位大小冒的风险不超过我的固定百分比|回报至少是风险的 1.5 到 2 倍|接下来 30 分钟内没有重大新闻|我平静、休息充分，并且不是想赢回一笔亏损' })}
 
-${B.key('<p>Your job is not to predict the market. Your job is to follow your rules while the market does whatever it wants. Review how well you executed, not only whether the trade made money.</p>')}
+${B.key('<p>你的工作不是预测市场。你的工作是在市场为所欲为的同时遵守你的规则。评价你执行得如何，而不仅仅是这笔交易有没有赚钱。</p>')}
 
-${B.take(['Emotions like FOMO, revenge and hope destroy more accounts than bad strategies.', 'Use checklists, trade limits, daily loss limits and breaks to enforce discipline.', 'A journal turns experience into data; review it weekly.', 'Judge yourself on rule-following, not individual outcomes.'])}`,
+${B.take(['FOMO、报复和希望这类情绪毁掉的账户比糟糕的策略还多。', '用清单、交易笔数上限、每日亏损上限和休息来强制执行纪律。', '日志把经验变成数据；每周复盘。', '以是否遵守规则来评判自己，而不是单笔结果。'])}`,
       q: [
-        ['What is revenge trading?', ['Trading against a rival', 'Taking impulsive, oversized trades to win back a loss', 'Selling at a profit', 'Using a demo account'], 1, 'It is emotion-driven and usually multiplies the original loss.'],
-        ['What is the best use of a trading journal?', ['Bragging', 'Finding patterns in setups, emotions and rule-breaking from your data', 'Replacing a stop-loss', 'Predicting the market'], 1, 'The journal is a feedback tool for improving your process.'],
-        ['After hitting your daily loss limit you should…', ['Increase size to recover', 'Stop trading for the day', 'Switch to a new market immediately', 'Remove the limit'], 1, 'The limit exists to stop an emotional spiral.']
+        ['什么是报复性交易？', ['与对手对着干地交易', '为了赢回亏损而冲动地下过大的交易', '盈利卖出', '使用模拟账户'], 1, '它由情绪驱动，通常会把原来的亏损成倍放大。'],
+        ['交易日志的最佳用途是什么？', ['炫耀', '从你的数据中发现设置、情绪和违反规则的规律', '代替止损', '预测市场'], 1, '日志是改进你交易流程的反馈工具。'],
+        ['触及你的每日亏损上限后，你应该…', ['加大仓位来回本', '当天停止交易', '立刻换一个新市场', '取消这个上限'], 1, '设置上限就是为了制止情绪失控的螺旋。']
       ]
     },
     {
-      id: 'b8', m: 15, t: 'Paper trading lab and your trading plan',
-      hook: 'Time to trade 100 candles with pretend money. Then write the plan that decides whether you ever risk the real thing.',
+      id: 'b8', m: 15, t: '模拟交易实验室与你的交易计划',
+      hook: '是时候用虚拟资金交易 100 根 K 线了。然后写下那份决定你是否会冒真钱风险的计划。',
       body: `
-<p>Pilots do not fly passengers on day one: they use simulators. Traders should do the same. A <b>paper trading</b> account lets you practise execution, rules and emotions at zero financial risk.</p>
+<p>飞行员第一天不会载乘客飞行：他们先用模拟器。交易者也应如此。<b>模拟交易（纸面交易）</b>账户让你在零财务风险下练习执行、规则和情绪。</p>
 
-<h3>Play: the practice market</h3>
-<p>Below is a generated market (not a real one) that switches between uptrends, downtrends and ranges. You have €10,000 of pretend money. Press <b>Next candle</b> to move time forward, or <b>Auto-play</b>. Enter long or short, choose your risk, stop distance and profit target, and the lab calculates position size for you. After 100 candles, you get a debrief. Try these experiments:</p>
+<h3>玩一玩：练习市场</h3>
+<p>下面是一个生成的市场（不是真实的），会在上升趋势、下降趋势和区间之间切换。你有 10,000 € 虚拟资金。点击<b>下一根 K 线</b>推进时间，或点击<b>自动播放</b>。选择做多或做空，设定你的风险、止损距离和止盈目标，实验室会替你计算仓位大小。100 根 K 线之后，你会得到一份总结。试试这些实验：</p>
 <ul>
-<li>Turn on the 20-candle average and only trade in the direction it points.</li>
-<li>Trade with and without a profit target. Which gives smoother results?</li>
-<li>Try 2% risk per trade, then 0.5%. Compare your drawdown.</li>
-<li>Click <b>New market</b> and see if your result repeats.</li>
+<li>打开 20 根 K 线的平均线，只在它所指的方向上交易。</li>
+<li>有止盈目标和没有止盈目标各交易一次。哪个结果更平稳？</li>
+<li>试试每笔 2% 的风险，再试 0.5%。比较你的回撤。</li>
+<li>点击<b>新市场</b>，看看你的结果是否重现。</li>
 </ul>
 ${B.w('papertrade')}
 
-${B.warn('<p>Simulators are easier than real life: no real fear, perfect fills, no slippage. Treat paper results as a minimum test of your rules, not proof of future profit.</p>')}
+${B.warn('<p>模拟器比现实生活容易：没有真正的恐惧、完美的成交、没有滑点。把模拟结果当作对你规则的最低限度测试，而不是未来盈利的证明。</p>')}
 
-<h3>When have you "passed"?</h3>
+<h3>什么时候算“通过”？</h3>
 <ul>
-<li>At least <b>100 trades</b> logged in your journal using the same rules.</li>
-<li>Positive expectancy after costs.</li>
-<li>You followed your plan on at least 90% of trades.</li>
-<li>A maximum drawdown you could emotionally tolerate with real money.</li>
+<li>日志中至少记录了 <b>100 笔交易</b>，且使用相同的规则。</li>
+<li>扣除成本后期望值为正。</li>
+<li>至少 90% 的交易你遵循了计划。</li>
+<li>有一个你在真钱下情绪上能承受的最大回撤。</li>
 </ul>
 
-<h3>The transition to live</h3>
+<h3>向实盘过渡</h3>
 <ol>
-<li>Start with <b>10% of your intended size</b>. Real money changes behaviour even when it is small.</li>
-<li>Trade another 100 live trades at that tiny size.</li>
-<li>Scale up slowly (for example +25% after hitting performance and discipline targets), and scale down after drawdowns.</li>
-<li>Withdraw some profits regularly so the gains become real.</li>
+<li>从<b>计划仓位的 10%</b> 开始。真钱会改变行为，即使金额很小。</li>
+<li>以那个极小的仓位再做 100 笔实盘交易。</li>
+<li>缓慢放大（例如达到业绩和纪律目标后增加 25%），并在回撤后缩小。</li>
+<li>定期提取一部分利润，让收益变成真实的。</li>
 </ol>
 
-<h3>Your trading plan template</h3>
-<p>Copy this into a document and fill it in. A written plan is your constitution.</p>
-${B.tbl(['Section', 'What to write'], [
-        ['Goal', 'What are you aiming for in 12 months? (Skill, consistency, income)'],
-        ['Markets and times', 'Which instruments? Which hours? When do you not trade?'],
-        ['Strategy', 'Setups with exact entry, stop, target rules'],
-        ['Risk rules', 'Risk per trade, daily limit, weekly limit, max open risk'],
-        ['Routine', 'Pre-market prep, trade management, end-of-day review'],
-        ['Psychology rules', 'Max trades, three-strikes rule, breaks'],
-        ['Review schedule', 'Weekly journal review; monthly performance and rule changes'],
-        ['Quit / pause rule', 'At what drawdown (for example -10%) do you stop and review before continuing?']
+<h3>你的交易计划模板</h3>
+<p>把它复制到文档里填写。书面计划就是你的宪法。</p>
+${B.tbl(['部分', '写什么'], [
+        ['目标', '12 个月内你的目标是什么？（技能、稳定性、收入）'],
+        ['市场与时间', '哪些品种？哪些时段？什么时候不交易？'],
+        ['策略', '带有精确入场、止损和目标规则的设置'],
+        ['风险规则', '每笔风险、每日上限、每周上限、最大未平仓风险'],
+        ['例行程序', '盘前准备、交易管理、收盘复盘'],
+        ['心理规则', '最多交易笔数、三次出局规则、休息'],
+        ['复盘安排', '每周复盘日志；每月复盘业绩和规则变更'],
+        ['退出 / 暂停规则', '回撤到多少（例如 -10%）时，你停下来复盘后再继续？']
       ])}
 
-${B.ex('<p>Sara trades a plan with 0.5% risk per trade and a -8% pause rule. In her second month she hits -8%. She stops, reviews her journal and finds that 70% of her losses came from breaking her rule "no trades in the first 5 minutes". She fixes it, and resumes at half size. A pause rule turned a slump into a lesson.</p>')}
+${B.ex('<p>Sara 按每笔 0.5% 风险和 -8% 暂停规则的计划交易。第二个月，她触及 -8%。她停下来，复盘日志，发现 70% 的亏损来自违反“开盘前 5 分钟不交易”这条规则。她改正后，以一半仓位恢复交易。暂停规则把一段低谷变成了一堂课。</p>')}
 
-<h3>Going further</h3>
-<p>If you want guided structure, a ready-made programme and a trading bot to help you apply rules consistently, the creator of this course offers an optional paid product called <b>Trading Lab</b>. It is not required: this free path covers the essentials. See the <a href="#lab">Trading Lab page</a> for details and, as always, remember that no course or tool can remove market risk or guarantee profits.</p>
+<h3>更进一步</h3>
+<p>如果你想要有指导的结构、现成的课程，以及一个帮助你持续执行规则的交易机器人，本课程的作者提供一个可选的付费产品，叫做 <b>Trading Lab</b>。它不是必需的：这条免费路径已涵盖要点。详情请见 <a href="#lab">Trading Lab 页面</a>，并且一如既往，请记住没有任何课程或工具能消除市场风险或保证盈利。</p>
 
-${B.take(['Paper trade at least 100 trades with fixed rules before risking real money.', 'Start live at about 10% of your intended size and scale slowly.', 'Write a plan with risk rules, routines and a pause rule.', 'Simulators are kinder than reality; use them as a minimum test.'])}`,
+${B.take(['在冒真钱风险之前，用固定规则做至少 100 笔模拟交易。', '实盘从计划仓位的约 10% 开始，缓慢放大。', '写一份包含风险规则、例行程序和暂停规则的计划。', '模拟器比现实宽容；把它当作最低限度的测试。'])}`,
       q: [
-        ['How many trades should you aim for in paper trading before going live?', ['3', '10', '100 or more', 'It does not matter'], 2, 'A larger sample is needed to see whether your edge is real or just luck.'],
-        ['What is a sensible way to start live trading?', ['At full size immediately', 'With about 10% of your intended size', 'With borrowed money', 'With maximum leverage'], 1, 'Real money changes emotions, so start small to learn safely.'],
-        ['What does a "pause rule" do?', ['Forces you to trade more', 'Makes you stop and review when you reach a set drawdown', 'Removes stop-losses', 'Guarantees recovery'], 1, 'It protects capital and forces reflection before problems compound.']
+        ['在转入实盘之前，模拟交易应该争取做多少笔？', ['3', '10', '100 笔或更多', '无所谓'], 2, '需要更大的样本才能看出你的优势是真实的还是只是运气。'],
+        ['开始实盘交易的合理方式是什么？', ['立刻满仓位', '用计划仓位的约 10%', '用借来的钱', '用最大杠杆'], 1, '真钱会改变情绪，所以从小处开始，安全地学习。'],
+        ['“暂停规则”起什么作用？', ['迫使你多交易', '当你达到设定的回撤时，让你停下来复盘', '取消止损', '保证恢复'], 1, '它保护本金，并在问题恶化之前强制反思。']
       ]
     }
   ]);

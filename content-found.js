@@ -1,247 +1,247 @@
-/* Money Foundations: 6 lessons */
+/* 金钱基础：6 节课 */
 (function () {
   'use strict';
   const MQ = window.MQ, B = MQ.B;
 
   MQ.addLessons('found', [
     {
-      id: 'f1', m: 9, t: 'Money, inflation and why saving is not enough',
-      hook: 'Your money is quietly losing power right now. Here is how to measure it, and what to do about it.',
+      id: 'f1', m: 9, t: '金钱、通货膨胀，以及为什么光靠储蓄不够',
+      hook: '你的钱此刻正在悄悄贬值。这里教你如何衡量它，以及怎么应对。',
       body: `
-<p>Imagine a pizza costs <b>€10</b> today. If prices rise by 3% every year, the same pizza will cost about <b>€18</b> in 20 years. Nothing changed about the pizza. The money just buys less. That slow shrinking is called <b>inflation</b>, and it is the main reason that keeping all your money in a drawer (or a 0% account) is not a safe plan. It is a slow leak.</p>
+<p>想象今天一份披萨 <b>10 €</b>。如果物价每年上涨 3%，20 年后同样的披萨大约要 <b>18 €</b>。披萨没变，是钱能买到的变少了。这种缓慢的缩水叫<b>通货膨胀</b>，也是把所有钱放在抽屉里（或 0% 利息账户里）并不安全的主要原因。这是一个缓慢的漏洞。</p>
 
-<h3>What money actually does</h3>
-<p>Money does three jobs. It is a <b>medium of exchange</b> (you swap it for things), a <b>unit of account</b> (prices are written in it) and a <b>store of value</b> (you can keep it for later). Inflation attacks the third job. Over a few months you barely notice. Over 20 years it is huge.</p>
+<h3>钱到底有什么用</h3>
+<p>钱有三个作用。它是<b>交换媒介</b>（你用它换东西）、<b>计价单位</b>（价格用它标示）和<b>价值储存</b>（你可以把它留到以后）。通胀攻击的是第三个作用。几个月内你几乎察觉不到，但 20 年下来影响巨大。</p>
 
-<h3>How inflation works</h3>
-<p>When there is more money and demand in the economy than things to buy, or when production gets more expensive (energy, wages, shipping), prices rise. Central banks such as the European Central Bank or the US Federal Reserve aim for about <b>2% inflation a year</b>, which they consider healthy. Sometimes it jumps much higher, like in 2022, when many countries saw prices rise 8% or more in a single year.</p>
+<h3>通货膨胀如何产生</h3>
+<p>当经济中的货币和需求多于可买的东西，或者生产变贵（能源、工资、运输）时，物价就会上涨。欧洲央行、美联储等央行的目标是大约<b>每年 2% 的通胀</b>，他们认为这是健康的水平。有时它会飙升得高得多，比如 2022 年，许多国家一年之内物价上涨了 8% 甚至更多。</p>
 
-${B.key('<p><b>Nominal vs. real.</b> If your savings grow 2% but prices rise 3%, you did not get richer. Your <i>real</i> return is about -1%. Always ask: what can this money buy later, not just how many euros will I have?</p>')}
+${B.key('<p><b>名义 vs. 实际。</b>如果你的储蓄增长 2%，但物价上涨 3%，你并没有变富。你的<i>实际</i>回报大约是 -1%。永远要问：这笔钱以后能买到什么，而不只是我会有多少欧元？</p>')}
 
-<h3>Feel it yourself</h3>
-<p>Move the sliders below. Notice how brutal 6% inflation is over 30 years, and how much difference even a modest return makes.</p>
+<h3>亲自感受一下</h3>
+<p>拖动下面的滑块。看看 6% 的通胀在 30 年里有多残酷，以及哪怕是适中的回报也会带来多大差别。</p>
 ${B.w('inflation')}
 
-<h3>The rule of 72</h3>
-<p>A handy trick: divide 72 by the yearly percentage to estimate how many years it takes for something to double. At 3% inflation, prices double in about <b>24 years</b> (72 ÷ 3). At 7% investment growth, money doubles in about <b>10 years</b> (72 ÷ 7). We will use this again in the compound-interest lesson.</p>
+<h3>72 法则</h3>
+<p>一个好用的小技巧：用 72 除以年百分比，就能估算出某样东西翻倍需要多少年。通胀 3% 时，物价约 <b>24 年</b>翻倍（72 ÷ 3）。投资增长 7% 时，资金约 <b>10 年</b>翻倍（72 ÷ 7）。我们会在复利那一课再次用到它。</p>
 
-${B.ex('<p>Marta is 19 and keeps €5,000 from summer jobs in a drawer. At 3% inflation, in 10 years it is still €5,000 on paper but buys what about €3,700 buys today. Her friend Diogo puts the same €5,000 in a diversified fund. It will not rise in a straight line (it will have good and bad years), but historically such funds have beaten inflation over long periods. Neither choice is risk-free. Doing nothing is also a choice with a cost.</p>')}
+${B.ex('<p>玛尔塔 19 岁，把暑期打工攒下的 5000 € 放在抽屉里。通胀 3% 的话，10 年后账面上还是 5000 €，但购买力只相当于今天的约 3700 €。她的朋友迪奥戈把同样的 5000 € 放进一只分散投资的基金。它不会一条直线上涨（会有好年份和坏年份），但从历史上看，这类基金在长期里跑赢了通胀。两种选择都不是零风险。什么都不做也是一种选择，而且有代价。</p>')}
 
-<h3>Saving vs. investing: two different jobs</h3>
+<h3>储蓄 vs. 投资：两份不同的工作</h3>
 <ul>
-<li><b>Saving</b> is for short-term needs and safety: emergencies, next year's holiday, a laptop. You want the money to be there, stable and easy to reach.</li>
-<li><b>Investing</b> is for long-term goals (5 years or more): buying assets that can grow faster than inflation, accepting that the value will go up and down on the way.</li>
+<li><b>储蓄</b>用于短期需求和安全：应急、明年的假期、一台笔记本电脑。你希望钱稳定、随时可取。</li>
+<li><b>投资</b>用于长期目标（5 年或更久）：购买可能比通胀增长更快的资产，接受价值一路上上下下。</li>
 </ul>
-<p>You need both. Savings protect you from emergencies so that you never have to sell investments at a bad moment.</p>
+<p>两者你都需要。储蓄保护你应对突发状况，这样你永远不必在糟糕的时机卖掉投资。</p>
 
-${B.warn('<p>"Investing" is not a magic word for "making money". It means taking risk in exchange for the <i>chance</i> of higher returns. You can lose money. The rest of this course is about taking that risk wisely.</p>')}
+${B.warn('<p>“投资”不是“赚钱”的魔法词。它意味着承担风险，换取更高回报的<i>可能</i>。你可能会亏钱。本课程接下来的内容，都是关于如何明智地承担这种风险。</p>')}
 
-${B.take(['Inflation steadily reduces what your money can buy, usually around 2 to 3% a year.', 'Look at real returns (after inflation), not just nominal numbers.', 'Savings are for stability and emergencies; investing is for long-term growth.', 'The rule of 72 estimates doubling time: 72 divided by the yearly rate.'])}`,
+${B.take(['通胀不断削弱你的钱能买到的东西，通常每年约 2% 到 3%。', '看实际回报（扣除通胀后），而不只是名义数字。', '储蓄用于稳定和应急；投资用于长期增长。', '72 法则可估算翻倍时间：72 除以年利率。'])}`,
       q: [
-        ['If your savings account pays 1% and inflation is 3%, what happens to your purchasing power?', ['It grows by 1%', 'It falls by about 2% a year', 'It stays the same', 'It falls by 4%'], 1, 'Real return is roughly the interest rate minus inflation: 1% - 3% = about -2%.'],
-        ['Using the rule of 72, about how long do prices take to double at 4% inflation?', ['8 years', '12 years', '18 years', '36 years'], 2, '72 ÷ 4 = 18 years.'],
-        ['Which is the best use of a savings account?', ['Money you need in the next 1 to 2 years and emergencies', 'Your retirement money for the next 40 years', 'Getting rich quickly', 'Betting on the stock market'], 0, 'Savings are for short-term needs and safety. Long-term goals usually need investments.']
+        ['如果你的储蓄账户利息 1%，而通胀是 3%，你的购买力会怎样？', ['增长 1%', '每年下降约 2%', '保持不变', '下降 4%'], 1, '实际回报大致等于利率减通胀：1% - 3% = 约 -2%。'],
+        ['用 72 法则，通胀 4% 时物价大约多久翻倍？', ['8 年', '12 年', '18 年', '36 年'], 2, '72 ÷ 4 = 18 年。'],
+        ['储蓄账户最适合用来做什么？', ['未来 1 到 2 年内要用的钱和应急金', '未来 40 年的养老金', '快速致富', '押注股市'], 0, '储蓄用于短期需求和安全。长期目标通常需要投资。']
       ]
     },
     {
-      id: 'f2', m: 10, t: 'Your money foundation: budget, emergency fund and debt',
-      hook: 'Before you invest a single euro, build the base that stops life from knocking you over.',
+      id: 'f2', m: 10, t: '你的金钱根基：预算、应急基金和债务',
+      hook: '在投入第一欧元之前，先打好不让生活把你击倒的基础。',
       body: `
-<p>Most investing advice starts with "buy this fund". Smart investing starts <b>earlier</b>: with a budget, a safety cushion and a plan for debt. Skip this step and one broken phone or lost job could force you to sell investments at the worst time.</p>
+<p>大多数投资建议都以“买这只基金”开头。聪明的投资开始得<b>更早</b>：从预算、安全垫和债务计划开始。跳过这一步，一部坏掉的手机或一次失业，就可能逼你在最糟的时候卖掉投资。</p>
 
-<h3>Step 1: Know where your money goes</h3>
-<p>A popular starting rule is the <b>50/30/20 rule</b>: about 50% of income after tax goes to <b>needs</b> (rent, food, transport, bills), 30% to <b>wants</b> (fun, subscriptions, eating out) and 20% to <b>saving and investing</b>. It is a guide, not a law. If you are a student earning €400 a month, 20% is €80, and that is a perfectly good start. What matters is building the habit.</p>
+<h3>第 1 步：知道钱去了哪里</h3>
+<p>一个常用的起步规则是<b>50/30/20 法则</b>：税后收入约 50% 用于<b>必需品</b>（房租、食物、交通、账单），30% 用于<b>想要的东西</b>（娱乐、订阅、外出就餐），20% 用于<b>储蓄和投资</b>。它是指南，不是法律。如果你是每月赚 400 € 的学生，20% 就是 80 €，这是个很好的开始。重要的是养成习惯。</p>
 ${B.w('budget')}
 
-<h3>Step 2: Pay yourself first</h3>
-<p>Do not save "what is left". Set up an automatic transfer to your savings on payday, <i>before</i> you can spend it. Treat it like a bill you owe to your future self. Automation beats willpower.</p>
+<h3>第 2 步：先付给自己</h3>
+<p>不要把“剩下的”才存起来。在发薪日设置一笔自动转入储蓄的转账，要赶在你能花掉它<i>之前</i>。把它当作欠未来自己的一笔账单。自动化胜过意志力。</p>
 
-<h3>Step 3: The emergency fund</h3>
-<p>An <b>emergency fund</b> is money kept safe and easy to access for surprises: car repairs, medical costs, losing your job. The common target is <b>3 to 6 months of essential expenses</b> in a normal savings account (not in stocks or crypto). Students and young people with low costs can begin with one month and grow from there.</p>
-${B.ex('<p>Rui invests €2,000 in stocks but has no emergency fund. Three months later his laptop breaks and he needs €700 now. The market happens to be down 15%, so he sells at a loss and locks it in. Ana invested the same amount but kept €1,000 in savings first. She paid for the laptop from savings and her investments stayed untouched and recovered later. Same investments, very different outcome, because of the cushion.</p>')}
+<h3>第 3 步：应急基金</h3>
+<p><b>应急基金</b>是为应对意外而保管得安全、取用方便的钱：修车、医疗费、失业。常见目标是在普通储蓄账户中存够<b>3 到 6 个月的必要开支</b>（不放在股票或加密货币里）。学生和开销低的年轻人可以先从一个月开始，再慢慢增加。</p>
+${B.ex('<p>鲁伊把 2000 € 投入股票，但没有应急基金。三个月后他的笔记本电脑坏了，马上需要 700 €。刚好市场跌了 15%，他只好亏本卖出，把亏损变成了现实。安娜投入了同样的金额，但先留了 1000 € 的储蓄。她用储蓄付了电脑钱，投资原封不动，后来还涨了回来。同样的投资，结果大不相同，就因为有那块安全垫。</p>')}
 
-<h3>Step 4: Handle debt wisely</h3>
+<h3>第 4 步：明智地处理债务</h3>
 <ul>
-<li><b>High-interest debt</b> (credit cards, overdrafts, payday loans, often 15 to 25% a year or more) is like a guaranteed negative return. Paying it off beats almost any investment. Do this first.</li>
-<li><b>Low-interest debt</b> (for example some student or mortgage loans at low rates) is normal. You can keep paying it down while you start investing.</li>
-<li><b>Never</b> borrow to invest in risky assets. Losses are multiplied and you still owe the debt.</li>
+<li><b>高息债务</b>（信用卡、透支、发薪日贷款，常常年利率 15% 到 25% 或更高）就像一笔有保证的负回报。还清它胜过几乎所有投资。先做这件事。</li>
+<li><b>低息债务</b>（例如一些低利率的助学贷款或房贷）是正常的。你可以一边继续还款，一边开始投资。</li>
+<li><b>永远不要</b>借钱去投资高风险资产。亏损会被放大，而债务你仍然要还。</li>
 </ul>
 
-<h3>Step 5: Invest in your biggest asset: you</h3>
-<p>When you are young, the best "investment" is often skills: learning a trade, a language, coding, sales. Raising your income by €200 a month is worth more than a 10% return on €1,000. Investing skills and investing money work together.</p>
+<h3>第 5 步：投资你最大的资产：你自己</h3>
+<p>年轻的时候，最好的“投资”往往是技能：学一门手艺、一门语言、编程、销售。每月多赚 200 € 的收入，比 1000 € 上 10% 的回报更有价值。投资技能和投资金钱相辅相成。</p>
 
-${B.w('checklist', { key: 'f2', title: 'Your money foundation checklist', accent: 'found', items: 'I know roughly what I earn and spend each month|I have a separate savings account for emergencies|I set up an automatic monthly transfer to savings|I have at least 1 month of essential expenses saved (aiming for 3 to 6)|I have no high-interest debt, or I have a plan to pay it off|I understand I should only invest money I will not need for 5+ years' })}
+${B.w('checklist', { key: 'f2', title: '你的金钱根基清单', accent: 'found', items: '我大致知道自己每月的收入和支出|我有一个单独用于应急的储蓄账户|我设置了每月自动转入储蓄的转账|我至少存了 1 个月的必要开支（目标是 3 到 6 个月）|我没有高息债务，或者有还清它的计划|我明白只应该投资未来 5 年以上都用不到的钱' })}
 
-${B.take(['Build the base first: budget, emergency fund, no high-interest debt.', 'Use 50/30/20 as a starting guide and automate saving on payday.', 'Keep the emergency fund in a safe, accessible account, not in risky assets.', 'Paying off a 20% credit card is a guaranteed 20% return.'])}`,
+${B.take(['先打好基础：预算、应急基金、没有高息债务。', '以 50/30/20 作为起步指南，并在发薪日自动储蓄。', '应急基金放在安全、取用方便的账户里，而不是高风险资产。', '还清一张利率 20% 的信用卡，等于获得有保证的 20% 回报。'])}`,
       q: [
-        ['Which debt should you usually pay off BEFORE investing?', ['A 3% student loan', 'A credit card charging 20% a year', 'None, always invest first', 'Debt you owe a friend at 0%'], 1, 'High-interest debt is a guaranteed loss that beats typical investment returns.'],
-        ['Where is the best place for an emergency fund?', ['Stocks', 'Crypto', 'A safe, easy-access savings account', 'A single company\'s shares'], 2, 'The point is that the money is available and stable when you need it.'],
-        ['What does "pay yourself first" mean?', ['Spend on yourself before anything else', 'Automatically save when you get paid, before spending', 'Borrow to invest', 'Skip paying bills'], 1, 'Automatic saving on payday makes it a habit and removes the temptation to spend it.']
+        ['通常应该在投资之前先还清哪种债务？', ['利率 3% 的助学贷款', '年利率 20% 的信用卡', '都不用，永远先投资', '欠朋友的 0% 债务'], 1, '高息债务是有保证的亏损，超过了一般投资的回报。'],
+        ['应急基金最好放在哪里？', ['股票', '加密货币', '安全、取用方便的储蓄账户', '单一公司的股票'], 2, '关键是需要的时候钱既能取出来，又保持稳定。'],
+        ['“先付给自己”是什么意思？', ['先为自己花钱', '发薪时在花钱之前自动存钱', '借钱投资', '不付账单'], 1, '发薪日自动储蓄能养成习惯，也消除了花掉它的诱惑。']
       ]
     },
     {
-      id: 'f3', m: 10, t: 'Risk, return and time',
-      hook: 'Why higher returns always come with bumps, and how time changes the equation.',
+      id: 'f3', m: 10, t: '风险、回报与时间',
+      hook: '为什么更高的回报总是伴随颠簸，以及时间如何改变这个等式。',
       body: `
-<p>Here is the most important rule in finance: <b>higher potential return comes with higher risk</b>. If someone offers you a high return with no risk, either they are lying or you are the product.</p>
+<p>这是金融里最重要的规则：<b>更高的潜在回报伴随更高的风险</b>。如果有人向你提供没有风险的高回报，要么他在撒谎，要么你就是那个“产品”。</p>
 
-<h3>What risk really means</h3>
-<p>In everyday talk, risk means "I might lose money". Professionals look at two things:</p>
+<h3>风险到底是什么意思</h3>
+<p>日常说话时，风险是指“我可能会亏钱”。专业人士看两件事：</p>
 <ul>
-<li><b>Volatility</b>: how much the price jumps around. A stock fund can fall 30% in a bad year and recover later. That is volatility.</li>
-<li><b>Permanent loss</b>: the money is gone for good. A company that goes bankrupt, a scam, a coin that goes to zero.</li>
+<li><b>波动性</b>：价格上蹿下跳的幅度。一只股票基金可能在糟糕的一年跌 30%，之后再恢复。这就是波动性。</li>
+<li><b>永久性损失</b>：钱永远没了。破产的公司、骗局、归零的币。</li>
 </ul>
-<p>Volatility is the price you pay for higher returns. Permanent loss is what you try to avoid with diversification and good choices.</p>
+<p>波动性是你为更高回报付出的代价。永久性损失则是你要靠分散投资和明智选择去避免的。</p>
 
 ${B.w('ladder')}
 
-<h3>Time changes everything</h3>
-<p>Your <b>time horizon</b> is how long until you need the money. Stocks can swing wildly in one year, but over 15 to 20 years diversified stock markets have historically rewarded patient investors. Over 1 year, the outcome is close to a coin flip. Over 20 years, far less so (though never guaranteed).</p>
-${B.key('<p><b>The 5-year rule of thumb.</b> Money you need within about 5 years should not sit in volatile assets such as stocks or crypto. If a crash happens right before you need it, you will not have time to recover.</p>')}
+<h3>时间改变一切</h3>
+<p>你的<b>投资期限</b>是指距离你需要这笔钱还有多久。股票在一年内可能剧烈波动，但在 15 到 20 年里，分散化的股市在历史上回报了有耐心的投资者。一年的结果接近抛硬币。20 年则远非如此（不过也从来没有保证）。</p>
+${B.key('<p><b>5 年经验法则。</b>大约 5 年内要用的钱，不应该放在股票或加密货币这类波动大的资产里。如果在你需要用钱之前恰好发生崩盘，你就没有时间恢复了。</p>')}
 
-<h3>Risk tolerance vs. risk capacity</h3>
+<h3>风险承受意愿 vs. 风险承受能力</h3>
 <ul>
-<li><b>Risk capacity</b>: how much loss you can afford financially (stable income, no debt, long horizon = high capacity).</li>
-<li><b>Risk tolerance</b>: how much loss you can handle emotionally without panic-selling.</li>
+<li><b>风险承受能力</b>：你在财务上能承受多少亏损（收入稳定、没有债务、期限长 = 能力强）。</li>
+<li><b>风险承受意愿</b>：你在情感上能承受多少亏损而不恐慌抛售。</li>
 </ul>
-<p>Your real risk level is the <i>lower</i> of the two. A young person with a long horizon may have high capacity, but if a 30% drop would make them sell everything, their tolerance is low and the plan has to respect that.</p>
+<p>你真正的风险水平是两者中<i>较低</i>的那个。一个期限很长的年轻人也许承受能力很强，但如果 30% 的下跌会让他把一切都卖掉，那他的承受意愿就低，计划必须尊重这一点。</p>
 
-${B.ex('<p>Think of a roller coaster and a train to the same city. The roller coaster (stocks) is thrilling and bumpy, and over a long trip may take you farther. The train (bonds, savings) is smooth but slower. If you get sick on roller coasters and bail out halfway, you end up nowhere. Choose the ride you can finish.</p>')}
+${B.ex('<p>想象一下过山车和开往同一座城市的火车。过山车（股票）刺激又颠簸，长途下来也许能带你走得更远。火车（债券、储蓄）平稳但更慢。如果你晕过山车，半途跳下，那你哪儿也到不了。选一条你能走完的路。</p>')}
 
-<h3>Diversification: the only free lunch</h3>
-<p>Do not put all your eggs in one basket. Spreading money across many companies, countries and asset types means that one disaster cannot destroy you. Economists call diversification the closest thing to a free lunch in investing: it reduces risk without necessarily reducing expected return. You will practise it in the Investor path.</p>
+<h3>分散投资：唯一的免费午餐</h3>
+<p>不要把所有鸡蛋放在一个篮子里。把钱分散到许多公司、国家和资产类型，意味着一场灾难无法毁掉你。经济学家称分散投资是投资中最接近“免费午餐”的东西：它能降低风险，却不一定降低预期回报。你会在投资者路径中练习它。</p>
 
-${B.warn('<p>Past returns are not a promise. "It went up 300% last year" tells you almost nothing about next year, and chasing last year\'s winner is one of the most common beginner mistakes.</p>')}
+${B.warn('<p>过去的回报不是承诺。“去年涨了 300%”几乎说明不了明年的情况，追逐去年的赢家是新手最常犯的错误之一。</p>')}
 
-${B.take(['Higher expected return comes with higher risk. No exceptions.', 'Volatility is temporary ups and downs; permanent loss is the real enemy.', 'Money needed within about 5 years does not belong in volatile assets.', 'Your true risk level is the lower of your financial capacity and your emotional tolerance.', 'Diversification reduces risk without necessarily reducing expected returns.'])}`,
+${B.take(['更高的预期回报伴随更高的风险。没有例外。', '波动性是暂时的起伏；永久性损失才是真正的敌人。', '大约 5 年内要用的钱不应放在波动大的资产里。', '你真正的风险水平，是财务承受能力与情感承受意愿中较低的那个。', '分散投资降低风险，却不一定降低预期回报。'])}`,
       q: [
-        ['A friend promises "20% a year, guaranteed, no risk". The smartest reaction is…', ['Invest everything quickly', 'Be very suspicious: high returns with no risk do not exist', 'Ask for a discount', 'Borrow money to invest more'], 1, 'Return and risk travel together. Guaranteed high returns are a classic scam signal.'],
-        ['You need money for a house deposit in 2 years. Which fits best?', ['100% in a volatile crypto coin', 'Mostly safe, stable savings', '100% in one stock', 'A leveraged trade'], 1, 'Short horizons need stability, so a crash cannot ruin the plan right before you need the money.'],
-        ['What is the difference between risk capacity and risk tolerance?', ['They are the same thing', 'Capacity is what you can afford to lose; tolerance is what you can stomach emotionally', 'Capacity is emotional; tolerance is financial', 'Tolerance only matters for traders'], 1, 'Both matter. Your real limit is the lower of the two.']
+        ['一位朋友承诺“每年 20%，保证，没有风险”。最明智的反应是……', ['赶紧全部投进去', '高度怀疑：没有风险的高回报并不存在', '要求打折', '借钱投更多'], 1, '回报与风险相伴而行。保证的高回报是典型的骗局信号。'],
+        ['你 2 年后需要一笔买房首付。哪种最合适？', ['100% 投入波动大的加密货币', '主要是安全、稳定的储蓄', '100% 买一只股票', '一笔杠杆交易'], 1, '短期限需要稳定，这样崩盘就不会在你需要用钱之前毁掉计划。'],
+        ['风险承受能力与风险承受意愿有什么区别？', ['它们是一回事', '能力是你承受得起的亏损；意愿是你情感上能承受的', '能力是情感上的；意愿是财务上的', '意愿只对交易者重要'], 1, '两者都重要。你真正的极限是两者中较低的那个。']
       ]
     },
     {
-      id: 'f4', m: 11, t: 'The magic of compound interest',
-      hook: 'The snowball effect that turns small, regular amounts into serious money, and why starting early matters more than starting big.',
+      id: 'f4', m: 11, t: '复利的魔力',
+      hook: '雪球效应能把小额定期投入变成可观的财富，以及为什么早开始比大开始更重要。',
       body: `
-<p><b>Compound interest</b> means earning returns on your returns. Imagine rolling a small snowball down a long hill. At first it barely grows. Later, each roll adds more snow because there is already a lot of snow to stick to. That is compounding.</p>
+<p><b>复利</b>就是让你的回报再产生回报。想象你把一个小雪球从长长的山坡上滚下去。一开始它几乎不长。后来，每滚一圈都会粘上更多的雪，因为已经有很多雪可以粘。这就是复利。</p>
 
-<h3>Simple vs. compound</h3>
-<p>With simple interest, €1,000 at 10% earns €100 every year, forever: after 10 years you have €2,000. With compound interest, each year's 10% is calculated on the <i>new, bigger</i> amount: after 10 years you have about <b>€2,594</b>. After 30 years, simple interest gives €4,000 while compounding gives about <b>€17,450</b>. Same rate, same start, radically different outcome.</p>
+<h3>单利 vs. 复利</h3>
+<p>单利下，1000 € 按 10% 每年赚 100 €，永远如此：10 年后你有 2000 €。复利下，每年的 10% 都按<i>更大的新本金</i>计算：10 年后你大约有 <b>2594 €</b>。30 年后，单利是 4000 €，而复利约为 <b>17,450 €</b>。同样的利率，同样的起点，结果却天差地别。</p>
 
-<h3>Play with the machine</h3>
-<p>Try it: set a monthly amount, a return and a number of years. Then use the "wait" slider to see what happens if you start 10 years later.</p>
+<h3>玩一玩这台机器</h3>
+<p>试试看：设定每月金额、回报率和年数。然后用“等待”滑块看看如果你晚 10 年开始会怎样。</p>
 ${B.w('compound', { wait: 10 })}
 
-${B.ex('<p><b>Anna vs. Ben.</b> Anna starts investing €100 a month at age 20 and stops at 30 (10 years, €12,000 paid in) and never adds another cent. Ben waits until 30 and invests €100 a month until 60 (30 years, €36,000 paid in). At 7% a year, by age 60 Anna can end up with a similar amount, or even more, despite paying in a third as much. Why? Her money had 10 extra years of snowball. Time beats amount.</p>')}
+${B.ex('<p><b>安娜 vs. 本。</b>安娜 20 岁开始每月投资 100 €，30 岁停止（10 年，共投入 12,000 €），之后再也不添一分钱。本等到 30 岁才开始，每月投资 100 € 直到 60 岁（30 年，共投入 36,000 €）。按每年 7% 计算，到 60 岁时，安娜的总额可能与本相近，甚至更多，尽管她投入的只有三分之一。为什么？她的钱多了 10 年的雪球效应。时间胜过金额。</p>')}
 
-<h3>The three levers of compounding</h3>
+<h3>复利的三个杠杆</h3>
 <ol>
-<li><b>Time</b>: the most powerful lever, and the only one you cannot buy back. Start now, even small.</li>
-<li><b>Regular contributions</b>: adding money steadily keeps feeding the snowball.</li>
-<li><b>Return</b>: higher returns help, but they come with higher risk and fees. Do not chase them at the expense of the first two.</li>
+<li><b>时间</b>：最强大的杠杆，也是唯一你无法买回的。现在就开始，哪怕很少。</li>
+<li><b>定期投入</b>：稳定地加钱，持续为雪球提供养料。</li>
+<li><b>回报</b>：更高的回报有帮助，但伴随更高的风险和费用。不要为了追逐它而牺牲前两项。</li>
 </ol>
 
-<h3>Compounding works against you too</h3>
-<p>Credit-card debt at 20% compounds against you. And so do <b>fees</b>: a fund that costs 2% a year can eat a large part of your final result over decades (we will measure this in the Investor path).</p>
+<h3>复利也会对你不利</h3>
+<p>利率 20% 的信用卡债务会对你复利增长。<b>费用</b>也一样：每年收 2% 的基金，几十年下来可能吃掉你最终结果的一大部分（我们会在投资者路径中衡量这一点）。</p>
 
-${B.key('<p><b>The best time to start was yesterday. The second best time is today.</b> Your first €50 a month matters more for your future than a perfect strategy you start in five years.</p>')}
+${B.key('<p><b>开始的最佳时间是昨天。第二好的时间是今天。</b>你每月头 50 € 对未来的意义，比五年后才开始的完美策略更大。</p>')}
 
-${B.warn('<p>Real investments do not grow in a smooth line. A "7% average" can mean +25% one year and -15% the next. The curve in the widget is a smoothed illustration. Never rely on a promised return.</p>')}
+${B.warn('<p>真实的投资不会沿着平滑的线增长。“平均 7%”可能意味着一年 +25%，下一年 -15%。组件中的曲线是平滑后的示意图。永远不要依赖承诺的回报。</p>')}
 
-${B.take(['Compounding means earning returns on previous returns, so growth accelerates over time.', 'Starting early beats investing more later: time is the strongest lever.', 'Regular contributions plus patience build wealth; waiting for the "perfect moment" costs money.', 'Compounding also works against you in debt and high fees.'])}`,
+${B.take(['复利就是让之前的回报继续产生回报，所以增长会随时间加速。', '早开始胜过晚投更多：时间是最强的杠杆。', '定期投入加上耐心能积累财富；等待“完美时机”是要付出金钱代价的。', '复利在债务和高额费用上也会对你不利。'])}`,
       q: [
-        ['Roughly how long does money take to double at 8% a year (rule of 72)?', ['4 years', '9 years', '15 years', '20 years'], 1, '72 ÷ 8 = 9 years.'],
-        ['Which factor is MOST powerful in compounding?', ['Picking the hottest asset', 'Time', 'Checking prices daily', 'Large starting amount only'], 1, 'Time lets growth build on growth. You cannot buy back lost years.'],
-        ['Why can a 2% yearly fund fee be so damaging over decades?', ['It is charged only once', 'It compounds against you, reducing the base that grows each year', 'It is tax deductible', 'It only matters in bear markets'], 1, 'Fees are paid every year, so you lose both the fee and all the future growth that money would have earned.']
+        ['按每年 8%（72 法则），钱大约多久翻倍？', ['4 年', '9 年', '15 年', '20 年'], 1, '72 ÷ 8 = 9 年。'],
+        ['复利中哪个因素最强大？', ['挑选最热门的资产', '时间', '每天查看价格', '只靠较大的初始金额'], 1, '时间让增长建立在增长之上。失去的岁月无法买回。'],
+        ['为什么每年 2% 的基金费用在几十年里伤害这么大？', ['只收一次', '它对你复利，减少了每年增长的本金', '可以抵税', '只在熊市里有影响'], 1, '费用每年都要付，所以你既失去了费用本身，也失去了这笔钱本来能赚到的所有未来增长。']
       ]
     },
     {
-      id: 'f5', m: 13, t: 'The investing toolbox: stocks, bonds, funds, ETFs and more',
-      hook: 'A plain-English tour of everything you can invest in, how each one makes money and what can go wrong.',
+      id: 'f5', m: 13, t: '投资工具箱：股票、债券、基金、ETF 等',
+      hook: '用通俗的话带你过一遍你能投资的所有东西，它们各自怎么赚钱，以及可能出什么问题。',
       body: `
-<p>You will meet many names on your investing journey. Here is the full toolbox, explained simply.</p>
+<p>在你的投资旅程中会遇到很多名词。这里是完整的工具箱，用简单的话讲清楚。</p>
 
-<h3>The main asset classes</h3>
+<h3>主要的资产类别</h3>
 <ul>
-<li><b>Cash and savings</b>: stable, low return, protected by deposit guarantees up to a limit (in the EU, usually €100,000 per bank).</li>
-<li><b>Stocks (shares)</b>: you own a small piece of a company. You earn from the price rising and from dividends (a share of profits). High long-term potential, big ups and downs.</li>
-<li><b>Bonds</b>: you lend money to a government or company and receive regular interest plus your money back at the end. Usually calmer than stocks, but prices fall when interest rates rise and companies can fail to repay.</li>
-<li><b>Funds and ETFs</b>: baskets holding many stocks or bonds at once, so you diversify with one purchase.</li>
-<li><b>Real estate</b>: property or listed property companies (REITs). Rental income plus price changes. Large amounts, hard to sell quickly, often needs a loan.</li>
-<li><b>Commodities and gold</b>: raw materials. Gold is often held as a "safe haven" and produces no income.</li>
-<li><b>Crypto-assets</b>: digital assets on blockchains, like Bitcoin and Ethereum. Very volatile, with an additional set of security and scam risks. The crypto paths cover them in depth.</li>
-<li><b>Derivatives</b> (futures, options, CFDs): contracts whose value depends on another asset, often with leverage. Advanced, high risk, and a leading cause of beginner losses.</li>
+<li><b>现金和储蓄</b>：稳定、回报低，在一定额度内受存款保险保护（在欧盟，通常每家银行 100,000 €）。</li>
+<li><b>股票</b>：你拥有一家公司的一小部分。靠价格上涨和股息（利润分成）赚钱。长期潜力高，起伏大。</li>
+<li><b>债券</b>：你把钱借给政府或公司，定期收到利息，到期收回本金。通常比股票平稳，但利率上升时价格会下跌，公司也可能还不上钱。</li>
+<li><b>基金和 ETF</b>：一次装着许多股票或债券的篮子，一笔买入就实现分散。</li>
+<li><b>房地产</b>：房产或上市的房地产公司（REITs）。租金收入加价格变动。金额大，难以迅速变现，通常需要贷款。</li>
+<li><b>大宗商品和黄金</b>：原材料。黄金常被当作“避风港”持有，不产生收入。</li>
+<li><b>加密资产</b>：区块链上的数字资产，如比特币和以太坊。波动极大，还有额外的安全和诈骗风险。加密货币路径会深入讲解。</li>
+<li><b>衍生品</b>（期货、期权、差价合约）：价值取决于另一种资产的合约，常带杠杆。高级、高风险，是新手亏损的主要原因之一。</li>
 </ul>
 
-${B.tbl(['Asset', 'How it makes money', 'Main risk', 'Suits'], [
-        ['Savings', 'Interest', 'Inflation beats the interest', 'Emergencies, short-term goals'],
-        ['Stocks', 'Price growth + dividends', 'Big drops, company failure', 'Long-term growth (5+ years)'],
-        ['Bonds', 'Interest payments', 'Rising rates, default', 'Stability, medium horizon'],
-        ['ETFs / funds', 'Whatever they hold', 'Same as the assets inside, plus fees', 'Easy diversification'],
-        ['Real estate', 'Rent + price growth', 'Illiquid, debt, local market', 'Long horizon, bigger capital'],
-        ['Crypto', 'Price changes (mostly)', 'Extreme volatility, scams, hacks', 'Small satellite position only'],
-        ['Derivatives / CFDs', 'Leveraged price bets', 'Losing more than expected, fast', 'Experienced traders only']
+${B.tbl(['资产', '如何赚钱', '主要风险', '适合'], [
+        ['储蓄', '利息', '通胀超过利息', '应急、短期目标'],
+        ['股票', '价格增长 + 股息', '大幅下跌、公司倒闭', '长期增长（5 年以上）'],
+        ['债券', '利息支付', '利率上升、违约', '稳定、中期期限'],
+        ['ETF / 基金', '取决于其持有的资产', '与其中的资产相同，外加费用', '轻松实现分散'],
+        ['房地产', '租金 + 价格增长', '流动性差、债务、本地市场', '长期限、较大资金'],
+        ['加密货币', '价格变动（主要）', '极端波动、诈骗、被盗', '仅作小额卫星仓位'],
+        ['衍生品 / 差价合约', '杠杆化的价格押注', '迅速亏得比预期更多', '仅限有经验的交易者']
       ])}
 
-<h3>Bonds in 30 seconds</h3>
-<p>Imagine you lend €1,000 to a government for 10 years and it pays you 3% (€30) each year, then returns your €1,000. Simple. The catch: if new bonds start paying 5%, nobody wants your 3% bond at full price, so its market price falls. That is why bond prices and interest rates move in opposite directions.</p>
+<h3>30 秒读懂债券</h3>
+<p>假设你借给政府 1000 € 十年，它每年付你 3%（30 €），然后归还你的 1000 €。很简单。关键是：如果新债券开始付 5%，没人愿意以全价买你那张 3% 的债券，所以它的市场价格会下跌。这就是债券价格和利率反向变动的原因。</p>
 
-<h3>Stocks in 30 seconds</h3>
-<p>If a company has 1,000,000 shares and you own 1,000, you own 0.1% of it. If the company earns more profit over time, the shares tend to become more valuable. If it struggles, they can drop to nothing. That is why we rarely recommend buying just one.</p>
+<h3>30 秒读懂股票</h3>
+<p>如果一家公司有 1,000,000 股，而你持有 1,000 股，你就拥有它的 0.1%。如果公司随时间赚得更多，股票往往会更值钱。如果它陷入困境，股票可能跌到一文不值。这就是我们很少建议只买一只的原因。</p>
 
-<h3>Where do you buy these?</h3>
-<p>You need a <b>broker</b> (a company that executes your orders), a bank with investing services, or a crypto exchange. Choose one that is <b>regulated</b> in your region, charges low fees and keeps your assets separate from its own. Securities held at a broker are normally segregated and covered by an investor compensation scheme as a last resort (in the EU, often €20,000), but this is not a promise that you will not lose money from market falls.</p>
+<h3>去哪里买？</h3>
+<p>你需要一家<b>券商</b>（执行你订单的公司）、一家提供投资服务的银行，或一家加密货币交易所。选择在你所在地区<b>受监管</b>、费用低，并且把你的资产与自己的资产分开保管的机构。放在券商的证券通常是隔离保管的，最后还有投资者赔偿计划作保障（在欧盟，常为 20,000 €），但这并不保证你不会因市场下跌而亏钱。</p>
 
-${B.warn('<p>Complexity is not sophistication. Products with fancy names, "guaranteed" structures, high commissions or leverage usually make the seller richer, not you. If you cannot explain in one sentence how it makes money, do not buy it.</p>')}
+${B.warn('<p>复杂不等于高明。名字花哨、“保本”结构、高额佣金或带杠杆的产品，通常让卖家更富，而不是你。如果你无法用一句话解释它如何赚钱，就不要买。</p>')}
 
-${B.take(['Each asset class makes money differently and carries different risks.', 'Funds and ETFs bundle many assets so you diversify instantly.', 'Bond prices move opposite to interest rates.', 'Derivatives and CFDs are for experienced traders, not beginners.', 'Use a regulated broker or platform and understand what you buy.'])}`,
+${B.take(['每个资产类别赚钱的方式不同，风险也不同。', '基金和 ETF 把许多资产打包，让你立刻实现分散。', '债券价格与利率反向变动。', '衍生品和差价合约适合有经验的交易者，而非新手。', '使用受监管的券商或平台，并弄清楚你买的是什么。'])}`,
       q: [
-        ['What is an ETF?', ['A type of crypto coin', 'A basket of many assets you can buy as one product on an exchange', 'A savings account', 'A loan to a company'], 1, 'An exchange-traded fund holds many stocks or bonds, giving instant diversification.'],
-        ['Why do bond prices usually fall when interest rates rise?', ['Bonds stop paying interest', 'New bonds pay more, so older lower-paying bonds are worth less', 'Governments default', 'Inflation disappears'], 1, 'Investors prefer the new higher rates, so the older bond must be cheaper to compete.'],
-        ['Which product is MOST dangerous for a beginner?', ['A global stock index ETF', 'A savings account', 'A leveraged CFD', 'A government bond'], 2, 'Leveraged products can produce large losses very quickly.']
+        ['什么是 ETF？', ['一种加密货币', '一篮子资产，你可以在交易所像买单一产品那样买入', '一个储蓄账户', '给公司的贷款'], 1, '交易所交易基金持有许多股票或债券，提供即时分散。'],
+        ['为什么利率上升时债券价格通常会下跌？', ['债券停止付息', '新债券付得更多，所以较旧、付得较少的债券价值更低', '政府违约', '通胀消失'], 1, '投资者更喜欢新的较高利率，所以旧债券必须更便宜才有竞争力。'],
+        ['哪种产品对新手最危险？', ['全球股票指数 ETF', '储蓄账户', '杠杆差价合约', '政府债券'], 2, '杠杆产品可能非常迅速地造成巨额亏损。']
       ]
     },
     {
-      id: 'f6', m: 11, t: 'Your brain vs. your money: biases and discipline',
-      hook: 'The biggest threat to your returns is not the market. It is the person looking back at you in the mirror.',
+      id: 'f6', m: 11, t: '你的大脑 vs. 你的钱：偏见与纪律',
+      hook: '对你回报的最大威胁不是市场，而是镜子里望着你的那个人。',
       body: `
-<p>Two investors buy the same fund. One earns solid returns. The other loses money. The difference is usually behaviour: when they bought, when they panicked, what they chased. Understanding your own mind is the cheapest edge you will ever get.</p>
+<p>两位投资者买了同一只基金。一个获得了不错的回报，另一个却亏了钱。差别通常在于行为：什么时候买、什么时候恐慌、追逐了什么。了解自己的头脑，是你能得到的最便宜的优势。</p>
 
-<h3>The most common mental traps</h3>
+<h3>最常见的心理陷阱</h3>
 <ul>
-<li><b>Loss aversion</b>: losing €100 hurts roughly twice as much as gaining €100 feels good. This makes people sell winners too early and hold losers too long, hoping to "get back to even".</li>
-<li><b>FOMO (fear of missing out)</b>: you see a coin up 80% this week and buy at the top because everyone is talking about it.</li>
-<li><b>Herd behaviour</b>: doing what the crowd does feels safe, but crowds are often wrong at extremes (euphoria at tops, panic at bottoms).</li>
-<li><b>Overconfidence</b>: a few lucky wins make you feel like a genius. Markets are very good at humbling people.</li>
-<li><b>Recency bias</b>: believing the recent past will continue forever. "It always goes up" after a boom; "it will never recover" after a crash.</li>
-<li><b>Confirmation bias</b>: reading only the opinions that agree with what you already hold.</li>
-<li><b>Sunk-cost fallacy</b>: refusing to sell a losing position because "I have already lost so much".</li>
-<li><b>Anchoring</b>: fixating on the price you paid instead of what the asset looks like today.</li>
+<li><b>损失厌恶</b>：亏 100 € 带来的痛苦，大约是赚 100 € 带来快乐的两倍。这让人太早卖掉盈利的仓位，又把亏损的仓位拿得太久，希望能“回本”。</li>
+<li><b>FOMO（害怕错过）</b>：你看到一枚币本周涨了 80%，因为人人都在谈论它，就在最高点买入。</li>
+<li><b>羊群效应</b>：跟着大众走感觉安全，但大众在极端位置往往是错的（顶部狂热，底部恐慌）。</li>
+<li><b>过度自信</b>：几次走运的盈利让你觉得自己是天才。市场非常擅长让人谦卑。</li>
+<li><b>近因偏差</b>：相信最近的过去会永远持续。繁荣之后“它总是涨”；崩盘之后“它永远恢复不了”。</li>
+<li><b>确认偏差</b>：只读那些与你已持有的观点一致的意见。</li>
+<li><b>沉没成本谬误</b>：因为“我已经亏了这么多”而拒绝卖出亏损的仓位。</li>
+<li><b>锚定效应</b>：执着于你买入的价格，而不是资产今天的样子。</li>
 </ul>
 
-${B.ex('<p>Lena bought a coin at €10 after a friend said it would "go to €100". It falls to €5. Instead of asking "would I buy this today at €5?" she thinks "I must wait until it gets back to €10". Her price is anchored on her purchase. Months later it is at €1. The market does not know or care what she paid.</p>')}
+${B.ex('<p>莉娜听朋友说某枚币会“涨到 100 €”，于是以 10 € 买入。它跌到了 5 €。她没有问“如果今天以 5 € 我会买吗？”，而是想“我必须等它涨回 10 €”。她的价格锚定在了买入价上。几个月后，它跌到了 1 €。市场并不知道、也不在乎她付了多少钱。</p>')}
 
-<h3>Antidotes: rules beat feelings</h3>
+<h3>解药：规则胜过感觉</h3>
 <ol>
-<li><b>Write a plan before you invest.</b> What will you buy, how much, how often, and what you will do in a crash. Decisions made calmly beat decisions made in panic.</li>
-<li><b>Automate.</b> Automatic monthly investing removes timing decisions.</li>
-<li><b>The 24-hour rule.</b> Never buy something because of a hot tip within 24 hours of hearing about it.</li>
-<li><b>Check less.</b> Daily price watching increases stress and bad decisions. Long-term investors can look monthly or quarterly.</li>
-<li><b>Keep a journal.</b> Write why you bought and what you expected. Reviewing it later teaches you faster than any book.</li>
-<li><b>Limit "play money".</b> If you must speculate, cap it at a small slice (for example 5%) so mistakes do not hurt your goals.</li>
+<li><b>投资之前写下计划。</b>你会买什么、买多少、多久一次，以及崩盘时你会怎么做。冷静时的决定胜过恐慌中的决定。</li>
+<li><b>自动化。</b>每月自动投资，免去择时决定。</li>
+<li><b>24 小时规则。</b>听到热门消息后的 24 小时内，绝不要因此买入任何东西。</li>
+<li><b>少看。</b>每天盯盘会增加压力和糟糕的决定。长期投资者可以每月或每季度看一次。</li>
+<li><b>写日志。</b>写下你为什么买、你期待什么。之后回顾，比任何一本书教你的都快。</li>
+<li><b>限制“玩乐资金”。</b>如果你非要投机，就限定在很小的一部分（例如 5%），这样失误不会伤害你的目标。</li>
 </ol>
 
-<h3>Your information diet</h3>
-<p>Social media is full of "finfluencers" showing big profit screenshots. Remember survivorship bias: you only see the winners who post. Ask three questions of anyone giving tips: <b>How do they get paid? What are they selling? Can I see their full, verified record including losses?</b> Be especially careful with anyone who promises certainty.</p>
+<h3>你的信息饮食</h3>
+<p>社交媒体上满是晒大额盈利截图的“金融网红”。记住幸存者偏差：你只看到了发帖的赢家。对任何给你建议的人问三个问题：<b>他靠什么赚钱？他在卖什么？我能看到他完整且经过验证的记录，包括亏损吗？</b>对任何承诺确定性的人尤其要小心。</p>
 
-${B.tryit('<p>Write down in one sentence what you will do if your investments fall 30% next year. Save it somewhere you can find it. That sentence is your first investment policy.</p>')}
+${B.tryit('<p>用一句话写下：如果明年你的投资下跌 30%，你会怎么做。把它保存在你找得到的地方。这句话就是你的第一份投资政策。</p>')}
 
-${B.take(['Behaviour, not intelligence, decides most investing results.', 'Know the traps: loss aversion, FOMO, herd behaviour, overconfidence, anchoring.', 'Use written rules, automation and a cooling-off period to protect yourself from yourself.', 'Question every tip: how does this person get paid?'])}`,
+${B.take(['决定大多数投资结果的是行为，而不是智商。', '认清这些陷阱：损失厌恶、FOMO、羊群效应、过度自信、锚定。', '用书面规则、自动化和冷静期，保护自己不被自己伤害。', '质疑每一条建议：这个人怎么赚钱？'])}`,
       q: [
-        ['You keep holding a losing investment only because "I have already lost so much". This is…', ['Diversification', 'The sunk-cost fallacy', 'Compounding', 'Rebalancing'], 1, 'Past losses are gone either way. The only useful question is whether to hold the asset from today.'],
-        ['What is a good defence against FOMO?', ['Buy faster', 'A written plan and a 24-hour cooling-off rule', 'Follow more influencers', 'Check prices every hour'], 1, 'Rules decided calmly beat feelings decided in excitement.'],
-        ['Why should you be careful with profit screenshots on social media?', ['They are always fake', 'Survivorship bias: you do not see the losers or the full record', 'They are illegal', 'They prove the strategy works'], 1, 'People post wins and hide losses, and some are fabricated, so screenshots are not evidence.']
+        ['你仅仅因为“我已经亏了这么多”就继续持有一笔亏损的投资。这是……', ['分散投资', '沉没成本谬误', '复利', '再平衡'], 1, '过去的亏损无论如何都已经发生。唯一有用的问题是：从今天起是否该继续持有这项资产。'],
+        ['抵御 FOMO 的好办法是什么？', ['买得更快', '书面计划加 24 小时冷静期规则', '关注更多网红', '每小时查看价格'], 1, '冷静时定下的规则，胜过兴奋中产生的感觉。'],
+        ['为什么对社交媒体上的盈利截图要小心？', ['它们总是假的', '幸存者偏差：你看不到亏损者，也看不到完整记录', '它们是违法的', '它们证明这个策略有效'], 1, '人们晒盈利、藏亏损，有些截图还是伪造的，所以截图不是证据。']
       ]
     }
   ]);

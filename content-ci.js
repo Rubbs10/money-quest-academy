@@ -1,386 +1,386 @@
-/* Crypto Investor path: 8 lessons */
+/* 加密货币投资者路径：8 节课 */
 (function () {
   'use strict';
   const MQ = window.MQ, B = MQ.B;
 
   MQ.addLessons('ci', [
     {
-      id: 'c1', m: 12, t: 'What is crypto? Blockchain explained with a shared notebook',
-      hook: 'No jargon: how thousands of strangers keep one honest record, and why that created a new kind of money.',
+      id: 'c1', m: 12, t: '什么是加密货币？用共享账本讲清区块链',
+      hook: '不讲术语：成千上万的陌生人如何共同维护一本诚实的账本，以及这如何催生了一种新型货币。',
       body: `
-<p>Imagine a notebook that records who owns what. In a bank, the bank keeps the notebook and you trust it. Now imagine thousands of people each keep an identical copy of the notebook. Every new entry ("Ana pays Ben 1 coin") is announced to everyone, checked by the group, and only then added to all the copies. To cheat, you would need to secretly rewrite the majority of the notebooks at the same time. That, in simple terms, is a <b>blockchain</b>.</p>
+<p>想象一本记录“谁拥有什么”的账本。在银行，账本由银行保管，你信任银行。现在设想成千上万的人各持一份完全相同的账本。每一条新记录（“小安付给小本 1 个币”）都会通知所有人，由大家核对后才写入每一份副本。想作弊，你得同时偷偷改写大多数人的账本。简单说，这就是<b>区块链</b>。</p>
 
-<h3>Key ideas</h3>
+<h3>核心概念</h3>
 <ul>
-<li><b>Block</b>: a page of the notebook containing a batch of transactions.</li>
-<li><b>Chain</b>: each page includes a fingerprint (a <b>hash</b>) of the previous page. Change an old page and the fingerprints of every later page break, which makes tampering obvious.</li>
-<li><b>Nodes</b>: the computers that hold copies and check the rules.</li>
-<li><b>Consensus</b>: the method by which the network agrees on the next page. In <b>proof of work</b> (Bitcoin), miners spend energy to compete for the right to add a block. In <b>proof of stake</b> (Ethereum today), validators lock up coins as a guarantee of honesty.</li>
-<li><b>Decentralisation</b>: no single company or country controls the notebook.</li>
+<li><b>区块</b>：账本的一页，记录一批交易。</li>
+<li><b>链</b>：每一页都包含上一页的指纹（即<b>哈希</b>）。改动旧的一页，之后所有页的指纹都会失效，篡改一目了然。</li>
+<li><b>节点</b>：保存副本并检查规则的计算机。</li>
+<li><b>共识</b>：网络就下一页达成一致的方式。<b>工作量证明</b>（比特币）中，矿工消耗能源竞争添加区块的权利；<b>权益证明</b>（如今的以太坊）中，验证者锁定代币作为诚实的担保。</li>
+<li><b>去中心化</b>：没有任何单一公司或国家控制这本账本。</li>
 </ul>
 
-<h3>Try the tamper test</h3>
-<p>Edit the text in block 1 and watch what happens to the chain.</p>
+<h3>试试篡改测试</h3>
+<p>修改区块 1 中的文字，看看链会发生什么。</p>
 ${B.w('chain')}
 
-<h3>Bitcoin: the first one</h3>
-<p>In 2008 an anonymous person or group called Satoshi Nakamoto published the Bitcoin white paper, and the network started in January 2009. Bitcoin has a fixed maximum supply of <b>21 million coins</b>, and the rate at which new coins are created is cut in half roughly every four years (the "halving"; the most recent was in April 2024). Supporters call it "digital gold" for its scarcity and for being outside any government's control.</p>
+<h3>比特币：第一个</h3>
+<p>2008 年，一个化名中本聪的个人或团体发布了比特币白皮书，网络于 2009 年 1 月上线。比特币总量固定，上限为 <b>2100 万枚</b>，新币产出速度大约每四年减半一次（“减半”；最近一次在 2024 年 4 月）。支持者因其稀缺性且不受任何政府控制而称之为“数字黄金”。</p>
 
-<h3>Ethereum and smart contracts</h3>
-<p>Ethereum (launched in 2015) added <b>smart contracts</b>: small programs that run on the blockchain and execute automatically, like a vending machine that holds money and releases it when conditions are met. This enabled decentralised finance (DeFi), stablecoins, NFTs and thousands of other applications. In 2022 it switched to proof of stake, cutting its energy use by over 99%.</p>
+<h3>以太坊与智能合约</h3>
+<p>以太坊（2015 年上线）引入了<b>智能合约</b>：运行在区块链上、自动执行的小程序，就像一台持有资金、满足条件即放行的自动售货机。它催生了去中心化金融（DeFi）、稳定币、NFT 以及成千上万种应用。2022 年它转向权益证明，能耗下降超过 99%。</p>
 
-<h3>Why do crypto-assets have value?</h3>
-<p>Value comes from what people believe and use: scarcity (limited supply), utility (payments, applications), network effects (more users make it more useful), and speculation. Unlike a company, most coins do not produce profits, so price is driven largely by demand and sentiment. That is why they are so volatile.</p>
+<h3>加密资产为什么有价值？</h3>
+<p>价值来自人们相信什么、使用什么：稀缺性（数量有限）、实用性（支付、应用）、网络效应（用户越多越有用）以及投机。与公司不同，大多数代币不产生利润，所以价格主要由需求和情绪驱动，这正是它们波动剧烈的原因。</p>
 
-${B.ex('<p>Think of the first online marketplaces: many early websites vanished, but a few became giants and the underlying technology changed the world. Crypto may be similar: the technology can be real while most individual tokens fail. Being right about the technology does not make every coin a good investment.</p>')}
+${B.ex('<p>想想最早的网上商城：很多早期网站消失了，少数成了巨头，底层技术改变了世界。加密货币也可能如此：技术可以是真的，而大多数具体代币仍会失败。看对技术并不意味着每个币都是好投资。</p>')}
 
-${B.warn('<p>Crypto is young, volatile and full of scams. Bitcoin itself has dropped 70 to 85% from peak to bottom several times. Everything in this path assumes you only put in money you can afford to see fall dramatically.</p>')}
+${B.warn('<p>加密货币年轻、波动大、骗局横行。比特币本身从高点到低点多次下跌 70% 至 85%。本路径中的一切都假设你只投入能承受大幅亏损的钱。</p>')}
 
-${B.take(['A blockchain is a shared, tamper-evident record kept by many computers.', 'Bitcoin has a hard cap of 21 million coins; Ethereum adds programmable smart contracts.', 'Value comes from scarcity, use and belief, which makes prices very volatile.', 'Good technology does not guarantee a good investment.'])}`,
+${B.take(['区块链是由许多计算机共同维护、篡改会被发现的共享账本。', '比特币总量上限为 2100 万枚；以太坊增加了可编程的智能合约。', '价值来自稀缺性、使用和信念，因此价格波动极大。', '好技术并不保证好投资。'])}`,
       q: [
-        ['Why is it hard to tamper with a blockchain record?', ['It is kept secret', 'Each block includes a fingerprint of the previous one and many copies exist', 'Banks protect it', 'It is deleted regularly'], 1, 'Changing old data breaks later fingerprints, and you would have to change most copies at once.'],
-        ['What is the maximum number of bitcoins that can ever exist?', ['1 million', '21 million', '100 million', 'Unlimited'], 1, 'Bitcoin\'s supply cap is 21 million.'],
-        ['What does a smart contract do?', ['Replaces your wallet', 'Runs code on a blockchain that executes automatically when conditions are met', 'Guarantees profit', 'Reverses transactions'], 1, 'It is a program on the chain, like a digital vending machine.']
+        ['为什么很难篡改区块链记录？', ['因为它是保密的', '每个区块包含上一个区块的指纹，且有许多副本', '因为银行保护它', '因为它会被定期删除'], 1, '改动旧数据会破坏之后的指纹，而你还得同时改动大多数副本。'],
+        ['比特币最多能存在多少枚？', ['100 万', '2100 万', '1 亿', '无限'], 1, '比特币供应量上限是 2100 万枚。'],
+        ['智能合约是做什么的？', ['取代你的钱包', '在区块链上运行代码，满足条件时自动触发', '保证盈利', '撤销交易'], 1, '它是链上的程序，就像数字自动售货机。']
       ]
     },
     {
-      id: 'c2', m: 13, t: 'Wallets, keys and where to buy',
-      hook: 'Who actually holds your coins? The single most important concept in crypto safety.',
+      id: 'c2', m: 13, t: '钱包、密钥与在哪里购买',
+      hook: '你的币到底由谁掌管？加密货币安全中最重要的概念。',
       body: `
-<p>In crypto there is a rule you will hear everywhere: <b>"not your keys, not your coins"</b>. Understanding why will protect you better than any price analysis.</p>
+<p>在加密世界你会到处听到一条规则：<b>“Not your keys, not your coins”</b>（不是你的密钥，就不是你的币）。理解其中缘由，比任何行情分析都更能保护你。</p>
 
-<h3>Keys, addresses and seed phrases</h3>
+<h3>密钥、地址与助记词</h3>
 <ul>
-<li><b>Public address</b>: like your bank account number. Safe to share so people can send you coins.</li>
-<li><b>Private key</b>: the secret that authorises moving the coins. Whoever has it controls the coins, with no "forgot password" and no bank to call.</li>
-<li><b>Seed phrase (recovery phrase)</b>: usually 12 or 24 words that can recreate all your keys. It is the master key to the wallet.</li>
+<li><b>公开地址</b>：类似你的账号，可以放心分享，别人才能给你转币。</li>
+<li><b>私钥</b>：授权转移币的秘密。谁拥有它，谁就控制这些币；没有“忘记密码”，也没有银行可以打电话求助。</li>
+<li><b>助记词（恢复短语）</b>：通常是 12 或 24 个单词，可以恢复你所有的密钥。它是钱包的万能钥匙。</li>
 </ul>
-${B.warn('<p><b>Never</b> type your seed phrase into a website, send it to anyone, store it in photos, cloud notes or email. No genuine support person or company will ever ask for it.</p>')}
+${B.warn('<p><b>绝不</b>要把助记词输入任何网站，不要发给任何人，不要存进照片、云笔记或邮件。真正的客服或公司永远不会索要它。</p>')}
 
-<h3>Two ways to hold crypto</h3>
-${B.tbl(['', 'Custodial (exchange holds it)', 'Self-custody (you hold the keys)'], [
-        ['Convenience', 'Easy: login with password', 'More steps to learn'],
-        ['Who controls the coins', 'The company', 'You'],
-        ['Main risk', 'Exchange hacks, collapse, freezes or fraud (e.g. Mt. Gox in 2014, FTX in 2022)', 'Losing your seed phrase, mistakes, phishing'],
-        ['Recovery', 'Support and account recovery', 'None if you lose the seed phrase'],
-        ['Best for', 'Small amounts, learning, trading', 'Larger long-term holdings']
+<h3>持有加密货币的两种方式</h3>
+${B.tbl(['', '托管（交易所代持）', '自托管（你掌握密钥）'], [
+        ['便利性', '简单：用密码登录', '需要多学几步'],
+        ['谁控制币', '公司', '你'],
+        ['主要风险', '交易所被黑、倒闭、冻结或欺诈（如 2014 年 Mt. Gox、2022 年 FTX）', '丢失助记词、操作失误、钓鱼'],
+        ['找回方式', '客服与账户恢复', '丢失助记词则无法找回'],
+        ['最适合', '小额、学习、交易', '较大额的长期持仓']
       ])}
 
-<h3>Hot wallets and cold wallets</h3>
+<h3>热钱包与冷钱包</h3>
 <ul>
-<li><b>Hot wallet</b>: software wallet connected to the internet (phone or browser). Convenient for small spending amounts.</li>
-<li><b>Cold wallet / hardware wallet</b>: a small dedicated device that keeps keys offline and signs transactions. Best for long-term savings. Buy only directly from the manufacturer.</li>
+<li><b>热钱包</b>：联网的软件钱包（手机或浏览器）。适合日常小额使用。</li>
+<li><b>冷钱包 / 硬件钱包</b>：专用小设备，离线保存密钥并签署交易。最适合长期储蓄。只从厂商官方渠道购买。</li>
 </ul>
 
-<h3>Where to buy</h3>
+<h3>在哪里购买</h3>
 <ul>
-<li><b>Centralised exchanges (CEX)</b>: companies that let you buy with euros, cards or bank transfers after identity checks (KYC). Choose regulated platforms with a long track record and transparent fees.</li>
-<li><b>Decentralised exchanges (DEX)</b>: smart-contract marketplaces where you swap tokens straight from your wallet. More freedom and more risk; scam tokens are common.</li>
-<li><b>Regulated products</b>: in some countries, Bitcoin and Ethereum ETFs and ETPs let you gain exposure through a normal broker account, without handling keys (US spot Bitcoin ETFs launched in January 2024).</li>
+<li><b>中心化交易所（CEX）</b>：完成身份验证（KYC）后，可用欧元、银行卡或转账购买的公司。选择监管合规、历史悠久、费用透明的平台。</li>
+<li><b>去中心化交易所（DEX）</b>：基于智能合约的市场，直接用钱包兑换代币。自由度更高，风险也更高；骗局代币很常见。</li>
+<li><b>受监管产品</b>：一些国家的比特币和以太坊 ETF、ETP 让你通过普通券商账户参与，无需管理密钥（美国现货比特币 ETF 于 2024 年 1 月推出）。</li>
 </ul>
 
-<h3>Understand the costs</h3>
+<h3>弄清成本</h3>
 <ul>
-<li><b>Trading fee</b>: a percentage per trade (often 0.1% to 1.5%). Simple "instant buy" buttons usually cost more than the exchange's advanced order screen.</li>
-<li><b>Spread</b>: the difference between buy and sell price.</li>
-<li><b>Network (gas) fees</b>: paid to the blockchain when you send coins. They vary with congestion.</li>
-<li><b>Withdrawal fees</b>: charged by exchanges for moving coins out.</li>
+<li><b>交易手续费</b>：每笔交易按百分比收取（常见 0.1% 至 1.5%）。简易“即时买入”按钮通常比交易所的高级下单页面更贵。</li>
+<li><b>价差</b>：买入价与卖出价之间的差额。</li>
+<li><b>网络费用（Gas）</b>：转币时支付给区块链，随拥堵程度波动。</li>
+<li><b>提币费</b>：交易所对提走币收取的费用。</li>
 </ul>
 
-${B.ex('<p>Leo buys €1,000 of Bitcoin on an exchange. Because the total is small and he is learning, he leaves it there for now but turns on two-factor authentication (authenticator app) and a withdrawal whitelist. Six months later his holdings reach €5,000 and he buys a hardware wallet from the maker\'s website, sends €10 first as a test, checks it arrived, then moves the rest and stores the seed phrase on paper in two separate secure places.</p>')}
+${B.ex('<p>小李在交易所买入价值 1,000 € 的比特币。金额不大且还在学习，他暂时放在那里，但开启了双重验证（验证器应用）和提币白名单。六个月后持仓达到 5,000 €，他从厂商官网购买了硬件钱包，先转 10 € 测试，确认到账后再转剩余部分，并把助记词抄在纸上，分别存放在两个安全的地方。</p>')}
 
-${B.w('checklist', { key: 'c2', title: 'Safe first purchase checklist', accent: 'ci', items: 'I chose a regulated exchange with a clear fee table|I enabled two-factor authentication with an authenticator app (not SMS)|I created a unique, strong password in a password manager|I only buy an amount I can afford to see fall 80%|I understand the difference between my public address and my seed phrase|For larger amounts: I plan to use a hardware wallet bought from the manufacturer|I always send a small test transaction before a large transfer' })}
+${B.w('checklist', { key: 'c2', title: '安全首次购买清单', accent: 'ci', items: '我选择了费率表清晰的合规交易所|我用验证器应用（而非短信）开启了双重验证|我在密码管理器中设置了唯一的强密码|我只买入即使亏损 80% 也能承受的金额|我理解公开地址与助记词的区别|对于较大金额：我计划购买从厂商处直接购买的硬件钱包|大额转账前我总是先发一笔小额测试交易' })}
 
-${B.take(['Whoever holds the private key controls the coins; exchanges hold keys for you.', 'Your seed phrase is the master key: never share or digitise it.', 'Custodial is simple but carries company risk; self-custody gives control but puts the responsibility on you.', 'Check all costs: trading fees, spreads, network fees and withdrawal fees.'])}`,
+${B.take(['谁拥有私钥，谁就控制币；交易所替你保管密钥。', '助记词是万能钥匙：绝不分享或数字化保存。', '托管方便但有公司风险；自托管给你控制权，也把责任交给你。', '检查所有成本：交易费、价差、网络费和提币费。'])}`,
       q: [
-        ['Who should you share your seed phrase with?', ['Customer support', 'A friend you trust', 'Nobody, ever', 'Any exchange'], 2, 'Anyone with your seed phrase can take everything. Legitimate services never ask for it.'],
-        ['What is the main risk of keeping coins on an exchange?', ['Coins turn to paper', 'The company can be hacked, freeze withdrawals or collapse', 'There are no fees', 'Coins disappear every year'], 1, 'You depend on the company; failures such as Mt. Gox and FTX cost customers dearly.'],
-        ['Why send a small test transaction first?', ['It is required by law', 'To confirm the address is correct before sending a large amount', 'To get cashback', 'To reduce fees'], 1, 'Crypto transfers cannot be reversed, so a test reduces the risk of costly mistakes.']
+        ['你应该把助记词告诉谁？', ['客服', '值得信赖的朋友', '任何人都不行，永远不行', '任何交易所'], 2, '任何拿到助记词的人都能拿走一切。正规服务从不索要。'],
+        ['把币留在交易所的主要风险是什么？', ['币会变成纸', '公司可能被黑、冻结提现或倒闭', '没有手续费', '币每年都会消失'], 1, '你依赖于这家公司；Mt. Gox 和 FTX 的崩溃让客户损失惨重。'],
+        ['为什么要先发一笔小额测试交易？', ['法律要求', '在发送大额之前确认地址正确', '为了获得返现', '为了降低手续费'], 1, '加密货币转账不可撤销，测试能降低代价高昂的错误风险。']
       ]
     },
     {
-      id: 'c3', m: 14, t: 'The crypto map: Bitcoin, Ethereum, stablecoins, DeFi and beyond',
-      hook: 'Thousands of tokens exist. Here is how to sort them into groups, and where the risk sits in each.',
+      id: 'c3', m: 14, t: '加密货币地图：比特币、以太坊、稳定币、DeFi 等',
+      hook: '代币成千上万。学会把它们分组，并看清每一组的风险所在。',
       body: `
-<p>There are many thousands of crypto-assets. Most are tiny, many are worthless, and a few are major. A simple map helps you see the difference between a relatively established asset and a lottery ticket.</p>
+<p>加密资产有几千种。大多数规模很小，许多一文不值，少数举足轻重。一张简单的地图能帮你分辨相对成熟的资产和彩票。</p>
 
-<h3>The major categories</h3>
+<h3>主要类别</h3>
 <ul>
-<li><b>Bitcoin (BTC)</b>: the original and largest. Mostly a store-of-value and "digital gold" narrative. Simple, highly liquid, with the longest track record.</li>
-<li><b>Smart-contract platforms (Layer 1)</b>: blockchains where applications run. Ethereum is the largest. Others compete on speed or cost. Their value depends on how much real activity they attract.</li>
-<li><b>Layer 2s</b>: networks built on top of Ethereum that make transactions cheaper and faster.</li>
-<li><b>Stablecoins</b>: tokens designed to hold a steady value, usually 1 US dollar (or 1 euro). They are used for trading and payments. Their safety depends on what backs them and who manages it. Terra's algorithmic stablecoin collapsed in 2022, and even the major USDC briefly lost its dollar peg during a banking panic in March 2023.</li>
-<li><b>DeFi (decentralised finance) tokens</b>: lending, trading and insurance protocols run by code. Rewards can look high, but smart-contract bugs, hacks and "impermanent loss" in liquidity pools are real risks.</li>
-<li><b>NFTs</b>: unique digital items. Mostly speculative collectibles, and demand has been very uneven.</li>
-<li><b>Memecoins</b>: tokens built around jokes and communities (like dogs and frogs). Pure speculation and the most scam-heavy corner.</li>
-<li><b>Themed tokens</b> (AI, gaming, real-world assets): narratives that come and go.</li>
+<li><b>比特币（BTC）</b>：最早也是最大的。主要作为价值储存，被称为“数字黄金”。简单、流动性极高、历史最长。</li>
+<li><b>智能合约平台（Layer 1）</b>：运行应用的区块链。以太坊最大，其他的靠速度或成本竞争。它们的价值取决于能吸引多少真实活动。</li>
+<li><b>Layer 2</b>：建立在以太坊之上、让交易更便宜更快的网络。</li>
+<li><b>稳定币</b>：旨在保持稳定价值的代币，通常锚定 1 美元（或 1 欧元）。用于交易和支付。它们的安全性取决于有什么资产支撑、由谁管理。Terra 的算法稳定币在 2022 年崩盘，大型的 USDC 也曾在 2023 年 3 月银行恐慌期间短暂脱锚。</li>
+<li><b>DeFi 代币（去中心化金融）</b>：由代码运行的借贷、交易和保险协议。收益看起来可能很高，但智能合约漏洞、黑客攻击和流动性池中的“无常损失”都是真实风险。</li>
+<li><b>NFT</b>：独一无二的数字物品。多为投机性收藏品，需求起伏很大。</li>
+<li><b>迷因币</b>：围绕玩笑和社群（如狗和青蛙）的代币。纯粹投机，也是骗局最多的角落。</li>
+<li><b>主题代币</b>（AI、游戏、现实世界资产）：来来去去的叙事。</li>
 </ul>
 
-<h3>The risk pyramid</h3>
-<p>A useful picture: a wide base of relatively established assets, and a narrow, very risky top.</p>
-<div class="pyr" role="img" aria-label="Crypto risk pyramid from lower risk at the bottom to extreme risk at the top">
-  <div style="background:#C9C5EE;width:30%;min-width:170px">Memecoins, new tokens: extreme risk</div>
-  <div style="background:#A58FFF;width:50%;min-width:230px">Small caps, NFTs, themed tokens: very high</div>
-  <div style="background:#FFC21A;width:72%;min-width:260px">Large DeFi, Layer 1 and 2 platforms: high</div>
-  <div style="background:#14B37D;width:94%;min-width:280px">Bitcoin and Ethereum: still very volatile, but the most established</div>
+<h3>风险金字塔</h3>
+<p>一个有用的图景：宽阔的底座是相对成熟的资产，尖细的顶端是风险极高的资产。</p>
+<div class="pyr" role="img" aria-label="加密货币风险金字塔，从底部较低风险到顶部极端风险">
+  <div style="background:#C9C5EE;width:30%;min-width:170px">迷因币、新代币：极端风险</div>
+  <div style="background:#A58FFF;width:50%;min-width:230px">小市值、NFT、主题代币：很高</div>
+  <div style="background:#FFC21A;width:72%;min-width:260px">大型 DeFi、Layer 1 和 Layer 2：较高</div>
+  <div style="background:#14B37D;width:94%;min-width:280px">比特币和以太坊：仍然波动很大，但最成熟</div>
 </div>
-<p class="note">Even "established" crypto can lose 70% or more. The pyramid shows relative risk, not safety.</p>
+<p class="note">即便是“成熟”的加密货币也可能下跌 70% 或更多。金字塔显示的是相对风险，不是安全。</p>
 
-<h3>Market capitalisation tiers</h3>
-<p><b>Market cap</b> is price times circulating supply. As a rough guide: large caps are above about €10 billion, mid caps are from about €1 to €10 billion, and small caps are under €1 billion. Smaller means more potential upside, much more volatility, thinner liquidity and a higher chance of failure.</p>
+<h3>市值层级</h3>
+<p><b>市值</b>等于价格乘以流通数量。粗略参考：大型市值超过约 100 亿 €，中型市值约 10 亿至 100 亿 €，小型市值低于 10 亿 €。越小意味着上涨潜力越大，但波动大得多、流动性更薄、归零概率更高。</p>
 
-<h3>Staking and "yield"</h3>
-<p><b>Staking</b> means locking proof-of-stake coins to help secure the network in return for rewards. It is not free money: the reward is paid in the coin itself (so price risk remains), your coins may be locked for a period, and some platforms add smart-contract or counterparty risk. If a product promises high, fixed, "risk-free" yield, remember that collapsed lenders in 2022 offered exactly that.</p>
+<h3>质押与“收益”</h3>
+<p><b>质押</b>是锁定权益证明币来保障网络安全并获得奖励。这不是免费的钱：奖励以币本身支付（价格风险依然存在），你的币可能被锁定一段时间，一些平台还会增加智能合约或交易对手风险。如果某产品承诺高额、固定、“无风险”的收益，请记住，2022 年倒闭的借贷平台正是这样宣传的。</p>
 
-${B.ex('<p>Mia has €1,000 for crypto. She splits it: €700 in Bitcoin and Ethereum (her "core"), €250 spread across a few larger established projects she researched, and €50 as a "fun money" bet on a small coin. If that last bet goes to zero, she loses 5% of her crypto bucket and nothing breaks.</p>')}
+${B.ex('<p>小美有 1,000 € 用于加密货币。她这样分配：700 € 买比特币和以太坊（她的“核心”），250 € 分散到她研究过的几个较大的成熟项目，50 € 作为“娱乐资金”押注一个小币。最后这一注归零，她只损失加密资金的 5%，没有任何东西崩塌。</p>')}
 
-${B.warn('<p>Do not confuse "number of tokens" with "diversification". Most tokens move together with Bitcoin, so owning 30 altcoins often feels like owning one big bet with extra risk.</p>')}
+${B.warn('<p>不要把“代币数量”与“分散投资”混为一谈。大多数代币与比特币同涨同跌，所以持有 30 个山寨币往往更像一个附加了额外风险的大赌注。</p>')}
 
-${B.take(['Sort crypto into categories: Bitcoin, platforms, stablecoins, DeFi, NFTs, memecoins.', 'Risk rises sharply as you move from large, established assets to small, new tokens.', 'Stablecoins can lose their peg; staking rewards are not risk-free.', 'Many tokens are highly correlated, so they provide less diversification than they appear to.'])}`,
+${B.take(['把加密货币分类：比特币、平台、稳定币、DeFi、NFT、迷因币。', '从大型成熟资产转向小型新代币时，风险急剧上升。', '稳定币可能脱锚；质押奖励并非无风险。', '许多代币高度相关，分散效果不如看起来那么好。'])}`,
       q: [
-        ['What is a stablecoin designed to do?', ['Double in value yearly', 'Hold a steady value such as 1 dollar', 'Replace all banks', 'Hide your identity'], 1, 'They aim for a stable price, but the peg can fail.'],
-        ['Which category generally carries the highest risk of total loss?', ['Bitcoin', 'Large regulated ETFs', 'Newly launched memecoins', 'Savings accounts'], 2, 'Memecoins are speculative, often manipulated and frequently go to zero.'],
-        ['Market cap equals…', ['Price × circulating supply', 'Price × total number of traders', 'Daily volume only', 'Transaction fees'], 0, 'It is the current price multiplied by the coins in circulation.']
+        ['稳定币的目的是什么？', ['每年价值翻倍', '保持稳定价值，例如 1 美元', '取代所有银行', '隐藏你的身份'], 1, '它们旨在保持稳定价格，但锚定可能失败。'],
+        ['哪一类通常有最高的全部亏损风险？', ['比特币', '大型受监管 ETF', '新发行的迷因币', '储蓄账户'], 2, '迷因币是投机性的，常被操纵，经常归零。'],
+        ['市值等于……', ['价格 × 流通数量', '价格 × 交易者总数', '仅日成交量', '交易手续费'], 0, '它是当前价格乘以流通中的币数。']
       ]
     },
     {
-      id: 'c4', m: 13, t: 'How to evaluate a project: tokenomics and fundamentals',
-      hook: 'A checklist of questions that separates serious projects from hype, including the number that fools most beginners.',
+      id: 'c4', m: 13, t: '评估一个项目：代币经济学与基本面',
+      hook: '一份问题清单，帮你区分严肃项目与炒作，包括最容易误导新手的那个数字。',
       body: `
-<p>Unlike a company, a token usually has no earnings report. Still, you can ask structured questions. The aim is not to find a guaranteed winner, but to avoid obvious losers and understand what you are buying.</p>
+<p>与公司不同，代币通常没有财报。但你仍然可以提出结构化的问题。目标不是找到保证盈利的赢家，而是避开明显的输家，并弄清你买的是什么。</p>
 
-<h3>The 8-question checklist</h3>
+<h3>8 个问题清单</h3>
 <ol>
-<li><b>What problem does it solve, and for whom?</b> Can you explain it in two sentences?</li>
-<li><b>Do real people use it?</b> Look at active users, transaction counts, fees paid and total value locked (TVL) in DeFi, from independent sources.</li>
-<li><b>Does it generate revenue?</b> Fees paid by users are a healthy sign. "Revenue" from printing new tokens is not.</li>
-<li><b>Who is behind it?</b> Public, accountable team with a track record, versus anonymous founders and copy-pasted code.</li>
-<li><b>What is the tokenomics?</b> Maximum supply, how many tokens circulate, how many are released over time, and who owns them.</li>
-<li><b>Is the code audited?</b> Security audits help (but are not a guarantee). Check hacks in the project's history.</li>
-<li><b>Is there real liquidity?</b> Can you sell without crashing the price? Is it listed on reputable venues?</li>
-<li><b>What can go wrong?</b> Regulation, competition, technical failure, insider selling.</li>
+<li><b>它解决什么问题，为谁解决？</b>你能用两句话讲清楚吗？</li>
+<li><b>真有人在用吗？</b>从独立来源查看活跃用户、交易数、已付费用，以及 DeFi 的总锁仓价值（TVL）。</li>
+<li><b>它有收入吗？</b>用户支付的费用是健康信号。靠印新币产生的“收入”则不是。</li>
+<li><b>背后是谁？</b>公开、可追责、有履历的团队，对比匿名创始人和抄袭的代码。</li>
+<li><b>代币经济学如何？</b>最大供应量、当前流通多少、随时间释放多少，以及归谁所有。</li>
+<li><b>代码审计过吗？</b>安全审计有帮助（但不是保证）。查查项目历史上的黑客事件。</li>
+<li><b>有真实的流动性吗？</b>你能在不砸盘的情况下卖出吗？是否在正规平台上线？</li>
+<li><b>什么可能出错？</b>监管、竞争、技术故障、内部人抛售。</li>
 </ol>
 
-<h3>Tokenomics 101</h3>
+<h3>代币经济学入门</h3>
 <ul>
-<li><b>Circulating supply</b>: tokens available to trade now.</li>
-<li><b>Total / max supply</b>: all tokens that will ever exist (or exist now).</li>
-<li><b>Emission / inflation</b>: how quickly new tokens are created. High inflation dilutes holders unless demand grows faster.</li>
-<li><b>Distribution</b>: how much was allocated to founders, early investors and the community? If insiders hold a huge share, a dump is possible.</li>
-<li><b>Vesting and unlocks</b>: locked tokens released on a schedule. A big unlock (sometimes called a "cliff") can push prices down as recipients sell.</li>
-<li><b>Utility</b>: what is the token needed for (fees, staking, governance)? A token that nobody needs has only speculative value.</li>
+<li><b>流通量</b>：现在可交易的代币。</li>
+<li><b>总量 / 最大供应量</b>：将会存在（或已存在）的全部代币。</li>
+<li><b>发行 / 通胀</b>：新代币产生的速度。除非需求增长更快，否则高通胀会稀释持有者。</li>
+<li><b>分配</b>：多少归创始人、早期投资者和社区？若内部人持有巨额份额，可能出现抛售。</li>
+<li><b>归属期与解锁</b>：按计划释放的锁定代币。大规模解锁（有时叫“悬崖”）可能在接收者卖出时压低价格。</li>
+<li><b>用途</b>：代币有什么用（手续费、质押、治理）？没人需要的代币只有投机价值。</li>
 </ul>
 
-<h3>The number that fools beginners: market cap vs. FDV</h3>
-<p>A token can look "cheap" at a low market cap while most supply is still locked. <b>Fully diluted valuation (FDV)</b> shows what the value would be if all tokens existed. A big gap means a lot of future selling pressure. Try the calculator:</p>
+<h3>误导新手的数字：市值 vs. FDV</h3>
+<p>代币在大部分供应仍被锁定时，市值可能看起来很“便宜”。<b>完全稀释估值（FDV）</b>显示所有代币都存在时的价值。差距很大意味着未来有大量抛压。试试这个计算器：</p>
 ${B.w('supply')}
 
-<h3>Red flags</h3>
+<h3>危险信号</h3>
 <ul>
-<li>Promises of guaranteed returns or "risk-free yield".</li>
-<li>Anonymous team, no working product, copied white paper.</li>
-<li>A few wallets hold most of the supply.</li>
-<li>Liquidity is not locked, so developers could remove it ("rug pull").</li>
-<li>Pressure tactics, countdown timers and "buy now before it is too late".</li>
-<li>Rewards paid mainly by bringing in new investors (a Ponzi structure).</li>
-<li>Paid promotions by influencers with no disclosure.</li>
+<li>承诺保证回报或“无风险收益”。</li>
+<li>匿名团队、没有可用产品、抄袭白皮书。</li>
+<li>少数钱包持有大部分供应量。</li>
+<li>流动性未锁定，开发者可以撤走（“跑路”）。</li>
+<li>施压手段、倒计时和“再不买就晚了”。</li>
+<li>奖励主要靠拉新投资者来支付（庞氏结构）。</li>
+<li>没有披露的网红付费推广。</li>
 </ul>
 
-${B.tip('<p>A good habit: read the project\'s own documentation, check an independent data source for usage, and search for "[project name] scam", "hack" and "criticism". Read the bear case before you buy.</p>')}
+${B.tip('<p>一个好习惯：阅读项目自己的文档，查看一个独立的使用数据来源，并搜索“[项目名] 骗局”“被盗”“批评”。买之前先读看空的论点。</p>')}
 
-${B.ex('<p>Two tokens each trade at €1. Token A has 800M of 1,000M tokens already circulating and a clear use, so market cap is €800M and FDV €1B. Token B has 100M of 1,000M circulating: market cap €100M, FDV €1B. Token B looks 8 times "smaller" but 90% of its supply is still locked. When those tokens unlock, holders must absorb nine times the existing supply. Same price, very different risk.</p>')}
+${B.ex('<p>两个代币都是 1 € 一枚。代币 A 的 10 亿枚中已有 8 亿枚流通，用途明确，因此市值 8 亿 €，FDV 为 10 亿 €。代币 B 的 10 亿枚中只有 1 亿枚流通：市值 1 亿 €，FDV 10 亿 €。代币 B 看起来“小”了 8 倍，但它 90% 的供应仍被锁定。这些代币解锁时，持有者必须消化现有流通量的九倍。同样的价格，风险却截然不同。</p>')}
 
-${B.take(['Ask what the project does, who uses it, and how it earns real revenue.', 'Study supply, distribution, vesting and unlock schedules.', 'Compare market cap with fully diluted valuation to see future dilution.', 'Red flags: guaranteed returns, anonymous teams, concentrated supply, unlocked liquidity.'])}`,
+${B.take(['问清项目做什么、谁在用、真实收入从何而来。', '研究供应量、分配、归属期和解锁时间表。', '对比市值与完全稀释估值，看清未来的稀释。', '危险信号：保证回报、匿名团队、集中持有、未锁定的流动性。'])}`,
       q: [
-        ['A token has a small market cap but a huge FDV. This suggests…', ['Little future dilution', 'A lot of tokens are still to be released, adding selling pressure', 'Guaranteed growth', 'The token is a stablecoin'], 1, 'Locked supply will eventually enter circulation, diluting holders.'],
-        ['Which is a red flag?', ['Public team and audited code', 'Promised guaranteed daily returns', 'Clear documentation', 'Independent usage data'], 1, 'No legitimate investment can guarantee returns.'],
-        ['What is a "rug pull"?', ['A price rally', 'Developers withdrawing liquidity or abandoning a project after taking investors\' money', 'A wallet upgrade', 'A staking reward'], 1, 'It is an exit scam that leaves holders with worthless tokens.']
+        ['某代币市值很小但 FDV 巨大。这表明……', ['未来稀释很少', '还有大量代币待释放，将增加抛压', '增长有保证', '该代币是稳定币'], 1, '被锁定的供应迟早会流通，稀释持有者。'],
+        ['下列哪项是危险信号？', ['公开团队和经过审计的代码', '承诺每日保证回报', '文档清晰', '独立的使用数据'], 1, '没有正规投资可以保证回报。'],
+        ['什么是“跑路”（Rug Pull）？', ['价格上涨', '开发者拿走投资者的钱后撤走流动性或放弃项目', '钱包更新', '质押奖励'], 1, '这是一种退出骗局，让持有者手握一文不值的代币。']
       ]
     },
     {
-      id: 'c5', m: 14, t: 'Building a crypto portfolio: sizing, DCA and cycles',
-      hook: 'How much, how often, and what to expect. Position size is the decision that matters most.',
+      id: 'c5', m: 14, t: '构建加密投资组合：仓位、定投与周期',
+      hook: '买多少、多久买一次、会发生什么。仓位大小是最重要的那个决定。',
       body: `
-<p>Most crypto losses do not come from picking the wrong coin. They come from betting too much on any coin. The first question is not "what to buy" but "<b>how much of my wealth can I afford to put here?</b>"</p>
+<p>大多数加密货币亏损并不是因为选错了币，而是因为在某个币上押得太多。第一个问题不是“买什么？”，而是“<b>我能承受在这里投入多少财富？</b>”</p>
 
-<h3>Decide the size with the "80% drop test"</h3>
-<p>Bitcoin has fallen 70 to 85% from peak to trough several times, and smaller assets often fall more. Ask yourself: if this entire bucket dropped 80% and stayed there for two years, would my life plan and my sleep survive? Use the calculator.</p>
+<h3>用“下跌 80% 测试”确定仓位</h3>
+<p>比特币从高点到低点多次下跌 70% 至 85%，较小的资产往往跌得更多。问问自己：如果这笔钱整体亏掉 80% 并停留两年，我的生活计划和睡眠能撑住吗？用计算器试试。</p>
 ${B.w('cryptosize')}
-<p>Many cautious advisers suggest small allocations, often in the range of 1 to 5% of investable wealth for people who want some exposure. That is not a rule or advice, only an example of how professionals think: size it so that a total loss would be an annoyance, not a disaster.</p>
+<p>许多谨慎的顾问建议小比例配置，对想要一些敞口的人来说，常见区间是可投资资产的 1% 至 5%。这既不是规则也不是建议，只是展示专业人士如何思考：仓位要让全部亏光只是烦恼，而不是灾难。</p>
 
-<h3>A simple structure: core and satellites</h3>
+<h3>简单结构：核心与卫星</h3>
 <ul>
-<li><b>Core (for example 60 to 80% of your crypto bucket)</b>: Bitcoin and Ethereum, the most established.</li>
-<li><b>Satellites (for example 20 to 40%)</b>: a handful of researched larger projects.</li>
-<li><b>Lottery tickets (optional, 0 to 5% of the bucket)</b>: tiny, risky bets you are ready to lose entirely.</li>
+<li><b>核心（例如加密资金的 60% 至 80%）</b>：比特币和以太坊，最成熟的资产。</li>
+<li><b>卫星（例如 20% 至 40%）</b>：少数经过研究的较大项目。</li>
+<li><b>彩票（可选，占资金 0 至 5%）</b>：你愿意全部亏掉的微小高风险押注。</li>
 </ul>
 
-<h3>DCA: your friend in a volatile market</h3>
-<p>Because prices swing so much, buying a fixed amount weekly or monthly (DCA) removes the pressure of timing the market. You buy more when prices are low and less when they are high. It also helps with emotions. You can revisit the DCA game from the Investor path.</p>
+<h3>定投：波动市场中的朋友</h3>
+<p>由于价格波动剧烈，每周或每月买入固定金额（定投）能让你不必为择时而焦虑。价格低时多买，价格高时少买。它对情绪也有帮助。你可以回看投资者路径中的定投游戏。</p>
 
-<h3>Cycles: patterns, not promises</h3>
-<p>Bitcoin has historically shown big boom-and-bust cycles of roughly four years, often linked to the halving, with prior peaks followed by drops of 70 to 85%. Many investors build their timing around this, but past cycles are a small sample, and markets learn. Do not bet your plan on a pattern repeating.</p>
+<h3>周期：规律，而非承诺</h3>
+<p>比特币历史上呈现约四年的大幅繁荣与萧条周期，常与减半相关，此前的高点之后出现过 70% 至 85% 的下跌。许多投资者据此安排时机，但过去的周期样本很少，而且市场会学习。别把你的计划押在某个规律会重演上。</p>
 
-<h3>Take profits on purpose</h3>
-<p>Euphoria makes people forget to sell. Decide in advance: for example, "If my crypto bucket grows to more than 10% of my wealth, I rebalance back to 5%", or "I sell a quarter of any position that triples". Written rules beat greed.</p>
+<h3>有意识地落袋为安</h3>
+<p>狂热会让人忘记卖出。事先决定：例如“如果我的加密资金涨到超过我财富的 10%，就再平衡回 5%”，或者“每个涨了三倍的仓位卖出四分之一”。书面规则胜过贪婪。</p>
 
-<h3>Rebalancing and tax awareness</h3>
-<p>Selling can trigger taxes. Rebalance by directing new contributions where needed, and keep records of every purchase and sale (see the taxes lesson).</p>
+<h3>再平衡与税务意识</h3>
+<p>卖出可能触发税务。通过把新增资金投向需要的地方来再平衡，并记录每一次买入和卖出（见税务一课）。</p>
 
-${B.ex('<p>Tom puts 3% of his €30,000 savings into crypto (€900), buying €75 a month through DCA. When the market drops 70%, his bucket loses about €630, a hit of 2.1% of his total wealth. He keeps buying cheaply. When it later rallies 5x, he trims back to his target. He neither got rich nor got wrecked, and he stayed in the game.</p>')}
+${B.ex('<p>小汤把 30,000 € 储蓄的 3%（900 €）投入加密货币，每月定投 75 €。市场下跌 70% 时，他的资金亏掉约 630 €，占总财富的 2.1%。他继续低价买入。后来市场涨到五倍，他按目标比例减仓。他没有暴富也没有破产，而是一直留在场内。</p>')}
 
-${B.warn('<p>Never invest money you need for rent, tuition or emergencies. Never borrow to buy crypto. Never put your entire savings in a single coin because it "cannot fail".</p>')}
+${B.warn('<p>永远不要投入你需要用于房租、学费或应急的钱。永远不要借钱买加密货币。永远不要因为某个币“不会失败”就把全部储蓄押在上面。</p>')}
 
-${B.take(['Size comes first: use the 80% drop test to decide how much is safe.', 'Core and satellite: mostly major assets, a small slice for speculation.', 'DCA reduces timing risk and emotional stress.', 'Cycles are patterns, not guarantees. Have written take-profit and rebalancing rules.'])}`,
+${B.take(['仓位优先：用下跌 80% 测试决定多少是安全的。', '核心与卫星：以大型资产为主，投机只占一小部分。', '定投降低择时风险和情绪压力。', '周期是规律，不是保证。为落袋和再平衡定下书面规则。'])}`,
       q: [
-        ['What is the purpose of the "80% drop test"?', ['To predict the future price', 'To make sure your position size is survivable if prices crash hard', 'To choose a wallet', 'To avoid fees'], 1, 'If you could not handle an 80% fall in the bucket, it is too large.'],
-        ['In a core-and-satellite crypto portfolio, the core is usually…', ['Memecoins', 'Bitcoin and Ethereum', 'The newest launches', 'Leveraged tokens'], 1, 'The most established assets form the base; riskier ideas are limited satellites.'],
-        ['Why write down take-profit and rebalancing rules in advance?', ['To avoid greed and euphoria making decisions', 'Because exchanges require it', 'To increase fees', 'To impress others'], 0, 'Predefined rules help you act calmly when prices surge.']
+        ['“下跌 80% 测试”的目的是什么？', ['预测未来价格', '确保价格暴跌时你的仓位仍可承受', '选择钱包', '避免手续费'], 1, '如果你无法承受资金下跌 80%，说明仓位太大。'],
+        ['在核心卫星加密组合中，核心通常是……', ['迷因币', '比特币和以太坊', '最新发行的币', '杠杆代币'], 1, '最成熟的资产构成基础；风险更高的想法只是有限的卫星。'],
+        ['为什么要提前为落袋和再平衡定下书面规则？', ['防止贪婪和狂热做出决定', '因为交易所要求', '为了增加手续费', '为了给别人留下印象'], 0, '提前定好的规则帮助你在价格上涨时保持冷静。']
       ]
     },
     {
-      id: 'c6', m: 14, t: 'Security and scams: how not to lose everything',
-      hook: 'In crypto there is no bank to call. Learn the scams that cost people millions, and play the Safe-or-Scam game.',
+      id: 'c6', m: 14, t: '安全与骗局：如何不输光一切',
+      hook: '加密货币没有可以打电话求助的银行。了解让人损失数百万的骗局套路，并玩一玩“安全还是骗局”游戏。',
       body: `
-<p>Because crypto transactions cannot be reversed, scammers love it. The good news: almost every scam relies on the same few tricks, and once you recognise them, they lose power.</p>
+<p>由于加密交易无法撤销，骗子们爱死了它。好消息是：几乎每个骗局都依赖同样的几招，一旦你认出来，它们就失去威力。</p>
 
-<h3>The most common scams</h3>
+<h3>最常见的骗局</h3>
 <ul>
-<li><b>Phishing</b>: fake emails, texts or websites that copy a real exchange or wallet to steal your login or seed phrase. Always type the address yourself or use a saved bookmark.</li>
-<li><b>Fake support</b>: someone messages you "from the exchange" offering help. Real support does not DM you first or ask for passwords or recovery phrases.</li>
-<li><b>Giveaway scams</b>: "send 1 ETH and get 2 back", often featuring famous people or hacked accounts.</li>
-<li><b>Rug pulls and pump-and-dumps</b>: developers or groups hype a token, then sell their holdings and vanish.</li>
-<li><b>Romance / "pig-butchering" scams</b>: a friendly stranger builds trust over weeks and guides you to a fake investment platform that shows fake profits, until you try to withdraw.</li>
-<li><b>Wallet drainers</b>: malicious sites that trick you into signing a transaction giving them permission to empty your wallet. Be careful with "Connect wallet" buttons and unlimited approvals.</li>
-<li><b>Address poisoning</b>: scammers send tiny transactions from an address that looks like one you used, hoping you copy it from your history by mistake.</li>
-<li><b>Fake apps and extensions</b>: counterfeit wallets in app stores or browser stores.</li>
-<li><b>Ponzi schemes</b>: promises of fixed high returns, paid with money from new investors until the scheme collapses.</li>
-<li><b>Recovery scams</b>: after a loss, "recovery experts" promise to retrieve your coins for an upfront fee. They are scammers too.</li>
+<li><b>钓鱼</b>：假冒真实交易所或钱包的虚假邮件、消息或网站，用来窃取你的凭证或助记词。始终自己输入网址或使用保存的书签。</li>
+<li><b>假客服</b>：有人“以交易所名义”给你发消息，提出帮忙。真正的客服不会先联系你，也不会索要密码或恢复短语。</li>
+<li><b>赠币骗局</b>：“发送 1 ETH，返还 2 ETH”，常借用名人或被盗账号。</li>
+<li><b>跑路与拉高出货</b>：开发者或团伙推广一个代币，然后卖掉持仓消失。</li>
+<li><b>杀猪盘 / 情感骗局</b>：友好的陌生人花数周建立信任，把你引向一个显示虚假盈利的假投资平台，直到你想提现。</li>
+<li><b>钱包盗取器</b>：恶意网站诱导你签署交易，授权他们清空你的钱包。对“连接钱包”按钮和无限授权保持警惕。</li>
+<li><b>地址投毒</b>：骗子从与你常用地址相似的地址发来微小交易，希望你从历史记录中误复制。</li>
+<li><b>假应用和插件</b>：应用商店或浏览器商店里的假钱包。</li>
+<li><b>庞氏骗局</b>：承诺固定高回报，用新投资者的钱来支付，直到体系崩溃。</li>
+<li><b>追回骗局</b>：亏损之后，“追回专家”声称收取预付费后帮你拿回币。他们同样是骗子。</li>
 </ul>
 
-<h3>Your security setup</h3>
-${B.w('checklist', { key: 'c6', title: 'Crypto security checklist', accent: 'ci', items: 'Unique, long passwords for every exchange and wallet service, in a password manager|Authenticator-app two-factor authentication (not SMS) on all accounts|Withdrawal address whitelisting and anti-phishing codes switched on|Seed phrase written on paper and stored in two separate, safe places, never photographed|Hardware wallet bought directly from the manufacturer for larger holdings|Bookmarked exchange websites, never clicking links in emails or ads|Separate email address for crypto accounts|Small test transaction before every large transfer|Regular review of token approvals and revoking unused ones' })}
+<h3>你的安全设置</h3>
+${B.w('checklist', { key: 'c6', title: '加密货币安全清单', accent: 'ci', items: '每个交易所和钱包服务使用唯一的长密码，存放在密码管理器中|所有账户使用验证器应用的双重验证（不用短信）|已开启提币地址白名单和防钓鱼码|助记词手写在纸上，存放在两个分开的安全地点，从不拍照|较大持仓使用从厂商直接购买的硬件钱包|交易所网址保存为书签，从不点击邮件或广告中的链接|为加密账户使用单独的邮箱|任何大额转账前先发小额测试交易|定期检查代币授权并撤销不用的授权' })}
 
-<h3>Golden rules</h3>
+<h3>黄金法则</h3>
 <ol>
-<li>If it sounds too good to be true, it is.</li>
-<li>Urgency is a weapon. Scammers create deadlines so you cannot think.</li>
-<li>Nobody gives free money, and nobody needs your seed phrase.</li>
-<li>Verify using a second channel. Call the company on a number from its official site.</li>
-<li>Keep most funds in cold storage and a small "spending" amount in a hot wallet.</li>
+<li>好得不像真的，那就不是真的。</li>
+<li>紧迫感是武器。骗子设置期限，让你无法思考。</li>
+<li>没人会白送钱，也没人需要你的助记词。</li>
+<li>通过第二渠道核实。拨打公司官网上的电话。</li>
+<li>大部分资金放在冷存储，只在热钱包里放少量“零花钱”。</li>
 </ol>
 
-<h3>Play: Safe or scam?</h3>
-<p>Nine real-world situations. Decide whether the move is safe or risky, and read why.</p>
+<h3>游戏：安全还是骗局？</h3>
+<p>九个真实情境。判断这样做是安全还是有风险，并看看原因。</p>
 ${B.w('scam')}
 
-<h3>If you are scammed</h3>
-<p>Act quickly: stop contact, move any remaining funds to a new wallet, change passwords, report to the exchange involved, your local police and fraud-reporting authorities. Recovery is unlikely, which is exactly why prevention matters.</p>
+<h3>如果你被骗了</h3>
+<p>迅速行动：停止联系，把剩余资金转到新钱包，更改密码，向相关交易所、当地警方和反诈机构报告。追回的可能性不大，这正是预防如此重要的原因。</p>
 
-${B.take(['Crypto transfers are irreversible, so prevention is everything.', 'Never share your seed phrase; real support never asks for it.', 'Use app-based 2FA, a password manager and cold storage for larger amounts.', 'Pressure, guaranteed returns and unsolicited DMs are classic scam signals.'])}`,
+${B.take(['加密货币转账不可逆，所以预防就是一切。', '绝不分享助记词；真正的客服从不索要。', '使用基于应用的双重验证、密码管理器，并将较大金额放在冷存储。', '压力、保证回报和主动私信都是典型的骗局信号。'])}`,
       q: [
-        ['A "support agent" DMs you first and asks for your recovery phrase. This is…', ['Normal procedure', 'A scam', 'Required for security', 'A reward programme'], 1, 'Genuine support will never do this.'],
-        ['What is a good way to approach a new crypto website?', ['Click any link in an ad', 'Type the address yourself or use a trusted bookmark', 'Use an unverified browser extension', 'Share your wallet password to verify'], 1, 'Fake sites copy real ones; a bookmark avoids lookalikes.'],
-        ['A stranger you met online guides you to a platform showing big gains but asks for more deposits to withdraw. This is typical of…', ['A normal exchange', 'A pig-butchering scam', 'A tax rule', 'A staking reward'], 1, 'Legitimate platforms do not require extra deposits to release your own money.']
+        ['一位“客服”主动联系你并索要恢复短语。这是……', ['正常流程', '骗局', '出于安全需要', '奖励计划'], 1, '真正的客服绝不会这样做。'],
+        ['访问新的加密网站，哪种方式比较好？', ['点击广告里的任意链接', '自己输入网址或使用可信书签', '使用未经核实的浏览器插件', '共享钱包密码以验证'], 1, '假网站会模仿真网站；书签可避免山寨。'],
+        ['你在网上认识的陌生人把你引向一个盈利很高的平台，但提现前要求继续存款。这是典型的……', ['正常交易所', '杀猪盘骗局', '税收规则', '质押奖励'], 1, '正规平台不会要求额外存款来释放你自己的钱。']
       ]
     },
     {
-      id: 'c7', m: 10, t: 'Taxes, regulation and keeping records',
-      hook: 'Crypto gains are usually taxable. A simple record-keeping habit saves headaches and money.',
+      id: 'c7', m: 10, t: '税务、监管与记录保存',
+      hook: '加密货币收益通常需要纳税。养成简单的记录习惯，能省去麻烦也省钱。',
       body: `
-<p>This lesson gives general principles. <b>Tax and legal rules differ by country and change often</b>, so always check your local tax authority and, if the amounts matter, talk to a qualified tax professional.</p>
+<p>本课讲的是一般原则。<b>税务和法律规定因国家而异，且经常变化</b>，因此务必查阅当地税务机关的规定，金额较大时请咨询合格的税务专业人士。</p>
 
-<h3>What is often taxable</h3>
-<p>In many countries, authorities treat crypto-assets as property or investments. Events that commonly create a tax duty include:</p>
+<h3>通常需要纳税的情形</h3>
+<p>在许多国家，监管部门把加密资产视为财产或投资资产。常常触发纳税义务的事件包括：</p>
 <ul>
-<li><b>Selling crypto for fiat money</b> (euros, dollars) at a profit.</li>
-<li><b>Swapping one crypto for another</b>. In many places, this counts as selling the first and buying the second.</li>
-<li><b>Paying for goods or services</b> with crypto.</li>
-<li><b>Earning crypto</b> as income: work, mining, staking rewards or airdrops, often taxed as income at the time you receive them.</li>
+<li><b>把加密货币卖成法币</b>（欧元、美元）并获利。</li>
+<li><b>把一种加密货币换成另一种</b>。许多地方将其视为卖出前者、买入后者。</li>
+<li><b>用加密货币支付</b>商品或服务。</li>
+<li><b>以加密货币获得收入</b>：工作报酬、挖矿、质押奖励或空投，往往在收到时按收入征税。</li>
 </ul>
-<p>Often <b>not</b> taxable (but check locally): buying crypto with fiat, moving crypto between your own wallets, and simply holding.</p>
+<p>通常<b>不</b>需要纳税（但请核查当地规定）：用法币买入加密货币、在自己的钱包之间转移，以及单纯持有。</p>
 
-<h3>How gains are calculated</h3>
-<p>Gain = sale price − purchase cost (your "cost basis"), minus allowed fees. Some countries tax gains at a flat rate, others at progressive rates, and some give favourable treatment to assets held for more than a year. Losses may offset gains.</p>
-${B.ex('<p>You buy 0.1 BTC for €2,000 and later sell it for €3,500. Gain = €1,500. If your local rule taxes gains at, for example, 25% (illustrative only), the tax would be €375. If you instead swap that BTC for another coin worth €3,500, many tax systems would still treat it as a sale and calculate the same gain, even though you never touched euros.</p>')}
+<h3>收益如何计算</h3>
+<p>收益 = 卖出价格 − 买入成本（你的“成本基础”），再减去允许扣除的费用。有些国家对收益统一税率，有些累进征税，一些国家对持有超过一年的资产给予优惠。亏损可以抵扣收益。</p>
+${B.ex('<p>你以 2,000 € 买入 0.1 个 BTC，之后以 3,500 € 卖出。收益 = 1,500 €。如果你所在地的规则对收益按 25% 征税（仅为举例），税款为 375 €。如果你把这些 BTC 换成价值 3,500 € 的另一种币，许多税制仍会视为卖出，计算同样的收益，即使你从未接触过欧元。</p>')}
 
-<h3>Keep good records from day one</h3>
+<h3>从一开始就做好记录</h3>
 <ul>
-<li>Date, type and amount of every purchase, sale, swap, transfer and reward.</li>
-<li>The euro (or local currency) value at the time of each event.</li>
-<li>Fees paid.</li>
-<li>Wallet addresses and exchange accounts used.</li>
-<li>Export transaction histories (CSV files) every year from every exchange, since platforms can close or lose data.</li>
+<li>每次买入、卖出、兑换、转账和奖励的日期、类型和数量。</li>
+<li>每个事件发生时的欧元价值（或本地货币价值）。</li>
+<li>支付的费用。</li>
+<li>使用过的钱包地址和交易所账户。</li>
+<li>每年从每个交易所导出交易历史（CSV 文件），因为平台可能关闭或丢失数据。</li>
 </ul>
-<p>Specialised crypto tax software can import your exchanges and wallets and calculate gains. Many accountants know how to use them.</p>
+<p>专门的加密税务软件可以导入你的交易所和钱包并计算收益。许多税务专业人士也知道如何使用。</p>
 
-<h3>Regulation: a changing landscape</h3>
+<h3>监管：不断变化的格局</h3>
 <ul>
-<li>In the European Union, the <b>MiCA</b> regulation sets rules for crypto-asset issuers and service providers (fully applicable since the end of 2024), including licensing, disclosure and stablecoin rules. EU tax-reporting rules for crypto platforms (DAC8) start from 2026, so authorities increasingly receive data about your transactions.</li>
-<li>Other regions are building their own frameworks. Rules can restrict certain products, such as derivatives for retail clients.</li>
+<li>在欧盟，<b>MiCA</b> 法规为加密资产发行方和服务提供商制定规则（自 2024 年底起全面适用），包括牌照、披露和稳定币规则。欧盟针对加密平台的税务申报规则（DAC8）自 2026 年起实施，因此税务机关会越来越多地获得你的交易数据。</li>
+<li>其他地区正在建立自己的框架。规则可能限制某些产品，例如面向散户的衍生品。</li>
 </ul>
-<p>Practical meaning: prefer <b>licensed, regulated platforms</b>, expect identity checks, and assume tax authorities can see more than before.</p>
+<p>实际含义：优先选择<b>持牌、受监管的平台</b>，预期要做身份验证，并假定税务机关看到的比过去更多。</p>
 
-${B.warn('<p>Beware of "tax-free" crypto schemes and anyone who claims you do not need to report. Evading tax is illegal and increasingly detectable.</p>')}
+${B.warn('<p>警惕“免税”加密方案，以及任何声称你无需申报的人。逃税是违法的，而且越来越容易被追查。</p>')}
 
-${B.take(['Selling, swapping, spending and earning crypto often trigger taxes, depending on your country.', 'Track cost basis, dates, values and fees for every transaction.', 'Export your records regularly; consider crypto tax software.', 'Use regulated platforms and expect more transparency from authorities.'])}`,
+${B.take(['卖出、兑换、花费和赚取加密货币，视所在国家，常常会触发税务。', '记录每笔交易的成本基础、日期、价值和费用。', '定期导出记录；考虑使用加密税务软件。', '使用受监管的平台，并预期监管部门拥有更高的透明度。'])}`,
       q: [
-        ['In many countries, swapping one crypto for another is treated as…', ['Nothing, never taxable', 'A sale of the first asset (taxable event)', 'A gift', 'A loan'], 1, 'Check local rules, but a swap is often considered a disposal.'],
-        ['What do you need to calculate a gain correctly?', ['Only today\'s price', 'Purchase cost, sale proceeds and fees with dates', 'Your age', 'Your wallet colour'], 1, 'Cost basis and proceeds determine the gain or loss.'],
-        ['Why export your transaction history regularly?', ['Exchanges can close or lose data and you need records for tax', 'It increases returns', 'It is required for staking', 'It removes fees'], 0, 'Your own records protect you if a platform disappears.']
+        ['在许多国家，把一种加密货币换成另一种被视为……', ['什么都不是，从不征税', '卖出前一种资产（应税事件）', '赠与', '贷款'], 1, '请查阅当地规定，但兑换常被视为处置。'],
+        ['要正确计算收益，你需要什么？', ['只要今天的价格', '带日期的买入成本、卖出收入和费用', '你的年龄', '钱包的颜色'], 1, '成本基础和收入决定盈亏。'],
+        ['为什么要定期导出交易历史？', ['交易所可能关闭或丢失数据，而你需要税务记录', '它能提高回报', '质押需要它', '它能免除费用'], 0, '自己的记录能在平台消失时保护你。']
       ]
     },
     {
-      id: 'c8', m: 10, t: 'Your long-term crypto plan and exit strategy',
-      hook: 'Turn this path into a one-page plan: why you hold, how much, how you stay safe and when you take profits.',
+      id: 'c8', m: 10, t: '你的长期加密计划与退出策略',
+      hook: '把这条路径变成一页计划：为什么持有、持有多少、如何保持安全，以及何时落袋为安。',
       body: `
-<p>A written plan is the difference between investing and gambling. Use this lesson to assemble yours.</p>
+<p>书面计划是投资与赌博的区别。用这一课来拟定你的计划。</p>
 
-<h3>The one-page crypto plan</h3>
-${B.tbl(['Section', 'Your answer'], [
-        ['Why I hold crypto', 'My thesis in two sentences (for example: "long-term exposure to a new asset class, small slice")'],
-        ['How much', 'Maximum percent of my investable wealth (for example 3%) and the euro amount'],
-        ['What I hold', 'Core assets (for example BTC / ETH) and the maximum for satellites and speculation'],
-        ['How I buy', 'DCA schedule: amount, day of the month, platform'],
-        ['Where I store', 'Exchange for small amounts; hardware wallet for the rest; backup locations for the seed phrase'],
-        ['When I rebalance or take profit', 'Rules, such as: "if crypto exceeds 6% of my wealth I trim to 3%"'],
-        ['What would change my mind', 'Events that would invalidate my thesis (for example a major protocol failure or regulatory change)'],
-        ['Taxes and records', 'Where I keep my transaction history and when I review it'],
-        ['In a crash I will', 'Keep the plan, not check prices daily, not borrow, not sell in panic']
+<h3>一页加密计划</h3>
+${B.tbl(['部分', '你的答案'], [
+        ['我为什么持有加密货币', '用两句话写下我的论点（例如：“长期小比例参与一类新资产”）'],
+        ['持有多少', '占我可投资资产的最大百分比（例如 3%）及对应的欧元金额'],
+        ['持有什么', '核心资产（例如 BTC / ETH）以及卫星和投机部分的上限'],
+        ['如何买入', '定投计划：金额、每月哪天、哪个平台'],
+        ['如何保管', '小额放交易所；其余放硬件钱包；助记词的备份地点'],
+        ['何时再平衡或落袋', '规则，例如：“如果加密货币超过我财富的 6%，就减到 3%”'],
+        ['什么会改变我的看法', '会推翻我论点的事件（例如协议严重故障或监管变化）'],
+        ['税务与记录', '我把交易历史存放在哪里、何时检查'],
+        ['遇到崩盘时我会', '坚持计划，不天天看价格，不借钱，不恐慌卖出']
       ])}
 
-<h3>Plan for the unexpected</h3>
+<h3>为意外做好计划</h3>
 <ul>
-<li><b>Inheritance and access</b>: if something happened to you, could your family access the funds? Write instructions and store them securely (for example with a lawyer). Many coins have been lost forever when the only person who knew the seed phrase died.</li>
-<li><b>Backups</b>: more than one copy of the seed phrase in different secure places, protected from fire and water (metal backup plates exist).</li>
-<li><b>Simplicity</b>: complexity breeds mistakes. Fewer assets, fewer platforms, fewer moving parts.</li>
+<li><b>继承与访问</b>：如果你出了意外，家人能拿到这些资金吗？写下说明并妥善保管（例如交给律师）。许多币因为唯一知道助记词的人去世而永久丢失。</li>
+<li><b>备份</b>：在不同的安全地点保存不止一份助记词副本，防火防水（有金属备份板可选）。</li>
+<li><b>简单</b>：复杂性会带来错误。更少的资产、更少的平台、更少的活动部件。</li>
 </ul>
 
-<h3>Exit strategy</h3>
-<p>You do not have to hold forever. Typical exit plans:</p>
+<h3>退出策略</h3>
+<p>你不必永远持有。常见的退出方案：</p>
 <ul>
-<li><b>Ladder out</b>: sell small portions at pre-set higher prices (for example sell 10% each time the price rises 50%).</li>
-<li><b>Rebalance out</b>: whenever the asset exceeds your target share of wealth, trim back.</li>
-<li><b>Goal-based</b>: sell to fund a defined goal (such as a home deposit) when the target is reached.</li>
+<li><b>阶梯式退出</b>：在预先设定的更高价格分批小额卖出（例如价格每涨 50% 卖出 10%）。</li>
+<li><b>再平衡退出</b>：每当该资产超过你的目标财富占比，就削减。</li>
+<li><b>目标导向</b>：为资助某个明确目标（比如买房首付）而卖出，目标达成时执行。</li>
 </ul>
-${B.ex('<p>Priya sets a rule: "When my crypto is worth 3x what I invested, I withdraw my original investment and let the rest ride." This locks in her principal and removes the stress of watching it. If the price falls afterwards, she has already recovered her cost. This is only an example of a rule, not a recommendation.</p>')}
+${B.ex('<p>小普设了一条规则：“当我的加密货币价值达到投入本金的三倍时，我取出最初的本金，让剩下的继续运行。”这保护了她的本金，也免去了盯盘的压力。之后价格下跌，她的成本也已经收回。这只是一条规则的例子，并非推荐。</p>')}
 
-<h3>Review rhythm</h3>
+<h3>复盘节奏</h3>
 <ul>
-<li><b>Monthly</b>: confirm the DCA ran, check security.</li>
-<li><b>Quarterly</b>: review allocation and update records.</li>
-<li><b>Yearly</b>: reconsider the thesis and tax position.</li>
+<li><b>每月</b>：确认定投已执行，检查安全。</li>
+<li><b>每季度</b>：复查配置并更新记录。</li>
+<li><b>每年</b>：重新审视论点和税务状况。</li>
 </ul>
 
-${B.w('checklist', { key: 'c8', title: 'My crypto plan checklist', accent: 'ci', items: 'I wrote my plan on one page including my maximum percentage|My DCA schedule is automatic or in my calendar|My seed phrase has two safe backups and a family access plan|I know my take-profit and rebalancing rules|My transaction records are exported and stored|I have a rule for what I will do in an 80% crash' })}
+${B.w('checklist', { key: 'c8', title: '我的加密计划清单', accent: 'ci', items: '我把计划写在了一页纸上，包括我的最大百分比|我的定投计划已自动运行或在日历中|我的助记词有两份安全备份，并给家人留有访问方案|我知道自己落袋和再平衡的规则|我的交易记录已导出并保存|我有一条应对下跌 80% 崩盘时该怎么做的规则' })}
 
-${B.key('<p><b>Congratulations.</b> You now know more about crypto safety than most people who own it. If you want to explore the active side (trading, leverage and bots), the Crypto Trader path covers it, and with a serious warning attached.</p>')}
+${B.key('<p><b>恭喜你。</b>现在你对加密货币安全的了解，比大多数持有者都多。如果想探索更主动的一面（交易、杠杆和机器人），加密交易者路径会讲到，并附有严肃的警告。</p>')}
 
-${B.take(['Write a one-page plan: thesis, size, holdings, schedule, storage and exit rules.', 'Plan for inheritance, backups and simplicity.', 'Choose an exit strategy before you need one: ladder out, rebalance or goal-based.', 'Review on a regular rhythm instead of watching the price daily.'])}`,
+${B.take(['写一页计划：论点、仓位、持仓、时间表、保管和退出规则。', '为继承、备份和简单性做好规划。', '在需要之前就选好退出策略：阶梯式、再平衡或目标导向。', '按固定节奏复盘，而不是整天盯着价格。'])}`,
       q: [
-        ['Why is an inheritance or access plan important in crypto?', ['It increases returns', 'Without the seed phrase, family members cannot recover the funds', 'It is a tax rule', 'It lowers fees'], 1, 'Coins can be lost permanently if nobody else can access them.'],
-        ['What does "ladder out" mean?', ['Selling everything at once', 'Selling small portions at pre-set higher prices', 'Buying at the peak', 'Moving to an exchange'], 1, 'It spreads out selling decisions and removes the need to time the top.'],
-        ['What is the best review rhythm for a long-term investor?', ['Hourly price checks', 'Monthly basic checks, quarterly allocation review, yearly thesis and tax review', 'Never', 'Only when the price crashes'], 1, 'Regular but infrequent reviews keep you on plan without anxiety.']
+        ['为什么继承或访问计划对加密货币很重要？', ['它能提高回报', '没有助记词，亲属无法恢复资金', '这是一条税务规则', '它能降低手续费'], 1, '如果没有其他人能访问，币可能永久丢失。'],
+        ['“阶梯式退出”是什么意思？', ['一次性全部卖出', '在预先设定的更高价格分批小额卖出', '在最高点买入', '换到另一家交易所'], 1, '它分散卖出决策，免去必须抓住最高点的压力。'],
+        ['长期投资者最好的复盘节奏是什么？', ['每小时查看价格', '每月基础检查、每季度复查配置、每年复查论点和税务', '从不', '只在价格暴跌时'], 1, '定期但不频繁的复盘让你不带焦虑地保持方向。']
       ]
     }
   ]);
