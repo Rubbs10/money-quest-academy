@@ -1,0 +1,12 @@
+MONEY QUEST ACADEMY - site estatico (HTML + JS, sem servidor, sem base de dados)
+
+Como publicar (gratis, 5 minutos):
+1. Netlify: netlify.com > Add new site > Deploy manually > arrastar esta pasta (ou o zip).
+2. Cloudflare Pages: Create > Pages > Upload assets > enviar a pasta.
+3. GitHub Pages: criar repositorio, enviar estes ficheiros, Settings > Pages.
+4. Vercel: vercel.com > Add new > Project > importar a pasta.
+
+Dominio proprio: comprar (ex. .com) e ligar em "Domain settings" da plataforma escolhida.
+Abrir tambem funciona com duplo clique em index.html (precisa de internet para as fontes).
+
+Para mudar o link do Trading Lab ou o preco: procurar "gumroad" em content-misc.js e app.js.
